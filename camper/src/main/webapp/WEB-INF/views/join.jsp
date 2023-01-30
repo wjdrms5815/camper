@@ -54,13 +54,13 @@
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
 											<div class="col-12">
-												<input type="email" name="demo-name" id="Email" value="" placeholder="Email" />
+												<input type="text" name="signUpid" id="signUpid" value="" placeholder="ID" />
 											</div>
                                             <div class="col-12">
-												<input type="password" name="demo-name" id="Password" value="" placeholder="Password" />
+												<input type="password" name="Password" id="Password" value="" placeholder="Password" />
 											</div>
 											<div class="col-12">
-												<input type="password" name="demo-name" id="PasswordCheck" value="" placeholder="PasswordCheck" />
+												<input type="password" name="PasswordCheck" id="PasswordCheck" value="" placeholder="PasswordCheck" />
 											</div>
 											<div class="col-12">
 											<select name="spwdq" id="spwdq" required>
@@ -77,16 +77,16 @@
 												<input type="text" name="spwda" id="spwda" value="" required placeholder="Answer">
 											</div>
 											<div class="col-6">
-												<input type="text" name="demo-name" id="NickName" value="" placeholder="FirstName" />
+												<input type="text" name="signUpFirstName" id="signUpFirstName" value="" placeholder="FirstName" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="demo-name" id="FirstName" value="" placeholder="LastName" />
+												<input type="text" name="signUpLastName" id="signUpLastName" value="" placeholder="LastName" />
 											</div>
 												 <div class="col-6 col-12-small">
-													<input type="text" name="szipcode" id="u_zipcode" value=""  placeholder="Address" required>
+													<input type="text" name="szipcode" id="uZipcode" value=""  placeholder="Address" required>
 												</div>	
 													<div class="col-6 col-12-small">	
-													<input type="button" name="find_zipcode" id="find_zipcode" value="우편번호 찾기" style="display: inline;">
+													<input type="button" name="findZipcode" id="findZipcode" value="우편번호 찾기" style="display: inline;">
 												</div>
 												<div class="col-12">	
 													<input type="text" name="saddress" id="u_address" value=""  placeholder="Address" required>
