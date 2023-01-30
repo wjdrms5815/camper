@@ -19,6 +19,12 @@ public class HomeController {
         return "elements";
     }
     
+    //findId
+    @RequestMapping("/findIw")
+    public String findId() {
+        return "findIw";
+    }
+    
     //findPw
     @RequestMapping("/findPw")
     public String findPw() {

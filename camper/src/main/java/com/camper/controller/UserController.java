@@ -15,7 +15,6 @@ import com.camper.mapper.UserMapper;
 public class UserController {
 	
 	@Autowired UserMapper userMapper;
-	//
 	@RequestMapping("list")
 	
 	public String list(Model m) {
