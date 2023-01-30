@@ -89,7 +89,7 @@
                               <option value="기억에 남는 추억의 장소는?">기억에 남는 추억의 장소는?</option>
                               <option value="자신의 인생 좌우명은?">자신의 인생 좌우명은?</option>
                               <option value="가장 기억에 남는 선생님 성함은?">가장 기억에 남는 선생님 성함은?</option>
-                              <option value="자신의 보물 제1호는?">자신의 보물 제1호는?</option>
+                              <option value="자신의 보물 제 1호는?">자신의 보물 제1호는?</option>
                               <option value="유년시절 가장 생각나는 친구의 이름은?">유년시절 가장 생각나는 친구의 이름은?</option>
                               <option value="다시 태어나면 되고 싶은 것은?">다시 태어나면 되고 싶은 것은?</option>
                               <option value="인상 깊게 읽은 책 이름은?">인상 깊게 읽은 책 이름은?</option>
