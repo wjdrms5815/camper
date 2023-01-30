@@ -36,37 +36,23 @@
 					<div id="main">
 						<div class="inner2">
                             <div class="col-12" style="text-align: center;">
-							<h1>비밀번호</h1>
+							<h1>Find ID</h1>
                         </div>			<!-- Form -->
 								<section>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
 											<div class="col-12">
-												<input type="email" name="demo-name" id="demo-name" value="" placeholder="Email" />
+												<input type="text" name="findaddress" id="findaddress" value="" placeholder="Address" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="demo-name" id="NickName" value="" placeholder="FirstName" />
+												<input type="text" name="findNickName" id="findNickName" value="" placeholder="FirstName" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="demo-name" id="FirstName" value="" placeholder="LastName" />
-											</div>
-											<div class="col-12">
-												<select name="spwdq" id="spwdq" required>
-													<option value="기억에 남는 추억의 장소는?">기억에 남는 추억의 장소는?</option>
-													<option value="자신의 인생 좌우명은?">자신의 인생 좌우명은?</option>
-													<option value="가장 기억에 남는 선생님 성함은?">가장 기억에 남는 선생님 성함은?</option>
-													<option value="자신의 보물 제1호는?">자신의 보물 제1호는?</option>
-													<option value="유년시절 가장 생각나는 친구의 이름은?">유년시절 가장 생각나는 친구의 이름은?</option>
-													<option value="다시 태어나면 되고 싶은 것은?">다시 태어나면 되고 싶은 것은?</option>
-													<option value="인상 깊게 읽은 책 이름은?">인상 깊게 읽은 책 이름은?</option>
-												</select>
-												</div>
-												<div class="col-12">
-												<input type="text" name="spwda" id="spwda" value="" required placeholder="Answer">
+												<input type="text" name="findLastName" id="findLastName" value="" placeholder="LastName" />
 											</div>
 
 											<div class="col-12" style="text-align: center;">
-                                                <input type="submit" value="비밀번호 찾기" class="primary" />
+                                                <input type="submit" value="Find ID" class="primary" />
 											</div>
 										</div>
 									</form>
