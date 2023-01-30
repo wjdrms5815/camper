@@ -36,19 +36,19 @@
 					<div id="main">
 						<div class="inner2">
                             <div class="col-12" style="text-align: center;">
-							<h1>비밀번호 찾기</h1>
+							<h1>Find PW</h1>
                         </div>			<!-- Form -->
 								<section>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
 											<div class="col-12">
-												<input type="email" name="demo-name" id="demo-name" value="" placeholder="Email" />
+												<input type="text" name="findpwId" id="findpwId" value="" placeholder="ID" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="demo-name" id="NickName" value="" placeholder="FirstName" />
+												<input type="text" name="findpwFirstName" id="findpwFirstName" value="" placeholder="FirstName" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="demo-name" id="FirstName" value="" placeholder="LastName" />
+												<input type="text" name="findpwLastName" id="findpwLastName" value="" placeholder="LastName" />
 											</div>
 											<div class="col-12">
 												<select name="spwdq" id="spwdq" required>
@@ -66,7 +66,7 @@
 											</div>
 
 											<div class="col-12" style="text-align: center;">
-                                                <input type="submit" value="비밀번호 찾기" class="primary" />
+                                                <input type="submit" value="Find Pw" class="primary" />
 											</div>
 										</div>
 									</form>
