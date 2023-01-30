@@ -20,7 +20,7 @@ public class HomeController {
     }
     
     //findId
-    @RequestMapping("/findIw")
+    @RequestMapping("/findId")
     public String findId() {
         return "findIw";
     }
