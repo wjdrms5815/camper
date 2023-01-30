@@ -15,22 +15,9 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
+		<jsp:include page = "header.jsp"></jsp:include>
 		<!-- Wrapper -->
 			<div id="wrapper">
-
-				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-
-							<!-- Logo -->
-                            <div ></div>
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Camper</span>
-								</a>
-
-						</div>
-					</header>
-
 
 				<!-- Main -->
 					<div id="main">
