@@ -22,7 +22,7 @@ public class HomeController {
     //findId
     @RequestMapping("/findId")
     public String findId() {
-        return "findIw";
+        return "findId";
     }
     
     //findPw
