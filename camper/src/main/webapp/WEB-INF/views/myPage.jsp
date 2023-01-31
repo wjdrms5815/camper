@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE HTML>
 <!--
@@ -8,6 +8,7 @@
    License: pixelarity.com/license
 -->
 <html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <head>
       <title>My Page</title>
       <meta charset="utf-8" />
@@ -27,7 +28,7 @@
             <div class="inner2">
                <header>
                   <div class="col-12" style="text-align: center;">
-                  <h1>¸¶ÀÌ ÆäÀÌÁö</h1>
+                  <h1>ë§ˆì´ íŽ˜ì´ì§€</h1>
                   </div>
                </header>
                <div class="box">
@@ -35,62 +36,62 @@
                      <div class="row gtr-50 gtr-uniform">
                      
                         <div class="col-12">
-                           <div id = "id">¾ÆÀÌµð</div>
-                            <c:forEach var="output" items="${ user }">
+                           <div id = "id">ì•„ì´ë””</div>
 					        <tr>
-					          <td>${ output.uid }</td>
-					          
+					          <td>${ mypage.uid }</td>
 					        </tr>
-					      </c:forEach>
                            <hr class = "one">
                         </div>
                         
                         <div class="col-6 col-12-mobilep">
-                           <input type="password" name="password" id="password" value="" placeholder="ºñ¹Ð¹øÈ£" />
+                           <input type="password" name="password" id="password" value="" placeholder=${ mypage.upw } />
                         </div>
                         <div class="col-6 col-12-mobilep">
-                           <input type="password" name="newPassword" id="newPassword" value="" placeholder="»õ·Î¿î ºñ¹Ð¹øÈ£" />
+                           <input type="password" name="newPassword" id="newPassword" value="" placeholder="íŒ¨ìŠ¤ì›Œë“œ ìž¬ìž…ë ¥" />
                         </div>
                         
                         <div class="col-12">
-                           <select id = "passQustion">
-                              <option value="±â¾ï¿¡ ³²´Â Ãß¾ïÀÇ Àå¼Ò´Â?">±â¾ï¿¡ ³²´Â Ãß¾ïÀÇ Àå¼Ò´Â?</option>
-                              <option value="ÀÚ½ÅÀÇ ÀÎ»ý ÁÂ¿ì¸íÀº?">ÀÚ½ÅÀÇ ÀÎ»ý ÁÂ¿ì¸íÀº?</option>
-                              <option value="°¡Àå ±â¾ï¿¡ ³²´Â ¼±»ý´Ô ¼ºÇÔÀº?">°¡Àå ±â¾ï¿¡ ³²´Â ¼±»ý´Ô ¼ºÇÔÀº?</option>
-                              <option value="ÀÚ½ÅÀÇ º¸¹° Á¦ 1È£´Â?">ÀÚ½ÅÀÇ º¸¹° Á¦1È£´Â?</option>
-                              <option value="À¯³â½ÃÀý °¡Àå »ý°¢³ª´Â Ä£±¸ÀÇ ÀÌ¸§Àº?">À¯³â½ÃÀý °¡Àå »ý°¢³ª´Â Ä£±¸ÀÇ ÀÌ¸§Àº?</option>
-                              <option value="´Ù½Ã ÅÂ¾î³ª¸é µÇ°í ½ÍÀº °ÍÀº?">´Ù½Ã ÅÂ¾î³ª¸é µÇ°í ½ÍÀº °ÍÀº?</option>
-                              <option value="ÀÎ»ó ±í°Ô ÀÐÀº Ã¥ ÀÌ¸§Àº?">ÀÎ»ó ±í°Ô ÀÐÀº Ã¥ ÀÌ¸§Àº?</option>
+                           <select id="passQustion" name="passQustion">
+                              <option value="1">ê¸°ì–µì— ë‚¨ëŠ” ì¶”ì–µì˜ ìž¥ì†ŒëŠ”?</option>
+                              <option value="2">ìžì‹ ì˜ ì¸ìƒ ì¢Œìš°ëª…ì€?</option>
+                              <option value="3">ê°€ìž¥ ê¸°ì–µì— ë‚¨ëŠ” ì„ ìƒë‹˜ ì„±í•¨ì€?</option>
+                              <option value="4">ìžì‹ ì˜ ë³´ë¬¼ ì œ 1í˜¸ëŠ”?</option>
+                              <option value="5">ìœ ë…„ì‹œì ˆ ê°€ìž¥ ìƒê°ë‚˜ëŠ” ì¹œêµ¬ì˜ ì´ë¦„ì€?</option>
+                              <option value="6">ë‹¤ì‹œ íƒœì–´ë‚˜ë©´ ë˜ê³  ì‹¶ì€ ê²ƒì€?</option>
+                              <option value="7">ì¸ìƒ ê¹Šê²Œ ì½ì€ ì±… ì´ë¦„ì€?</option>
                            </select>
-                        <input type="text" name="answer" id="answer" value="" placeholder="Á¤´ä" />
+                           <br>
+                        <input type="text" name="answer" id="answer" value="" placeholder=${ mypage.uanswer } />
                         </div>
                         
                         
                         <div class="col-6 col-12-mobilep">
-                           <input type="text" name="firstName" id="firstName" value="" placeholder="¼º" />
+                           <input type="text" name="firstName" id="firstName" value="" placeholder="${ mypage.uname }" />
                         </div>
-                        <div class="col-6 col-12-mobilep">
-                           <input type="text" name="LastName" id="LastName" value="" placeholder= "ÀÌ¸§" />
+<!--                         <div class="col-6 col-12-mobilep">
+                           <input type="text" name="LastName" id="LastName" value="" placeholder= "ì´ë¦„" />
                         </div>
-                        
-                      
+                         -->
+                         <div class="col-6 col-12-mobilep"></div>
+                         <br>
                         <div class="col-6">
-                           <input type="text" name="myZipcode" id="myZipcode" value="" placeholder="¿ìÆí¹øÈ£" />
+                           <input type="text" name="myZipcode" id="myZipcode" value="" placeholder="${ mypage.upostcode }" />
                         </div>
                         <div class="col-3">
-                           <input type="button" name="find_zipcode" id="find_zipcode" value="¿ìÆí¹øÈ£ Ã£±â" />
+                           <input type="button" name="find_zipcode" id="find_zipcode" value="ìš°íŽ¸ë²ˆí˜¸ ì°¾ê¸°" />
                         </div>
                         <div class="col-12">
-                           <input type="text" name="address" id="address" value="" placeholder="ÁÖ¼Ò" />
+                           <input type="text" name="address" id="address" value="" placeholder="${ mypage.uaddr }" />
                         </div>
                         <div class="col-12">
-                           <input type="text" name="addressDetail" id="addressDetail" value="" placeholder="»ó¼¼ ÁÖ¼Ò" />
+                           <input type="text" name="addressDetail" id="addressDetail" value="" placeholder="${ mypage.uaddrdetail }" />
                         </div>
                         
                         <div class = "col-12">
                         <br>
                            <ul class = "actions special">
-                              <li><input type = "submit" value = "È®ÀÎ"></li>
+                              <li><input type = "submit" value = "í™•ì¸"></li>
+                              <li><input type="button" value="ì·¨ì†Œ"></li>
                            </ul>
                         </div>
                      </div>
@@ -100,23 +101,12 @@
             </section>
 
          <!-- Footer -->
-            <footer id="footer">
-
-                  <ul class="icons">
-                     <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-                     <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-                     <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-                     <li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-                     <li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-                     <li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-                  </ul>
-                  <ul class="copyright">
-                     <li>&copy; Untitled. All rights reserved.</li>
-                  </ul>
-            </footer>
 
       </div>
-
+      
+      <script>
+      $("#passQustion").val(${mypage.qid}).prop("selected", true);
+      </script>
       <!-- Scripts -->
          <script src="assets/js/jquery.min.js"></script>
          <script src="assets/js/jquery.dropotron.min.js"></script>
@@ -125,6 +115,5 @@
          <script src="assets/js/breakpoints.min.js"></script>
          <script src="assets/js/util.js"></script>
          <script src="assets/js/main.js"></script>
-
    </body>
 </html>

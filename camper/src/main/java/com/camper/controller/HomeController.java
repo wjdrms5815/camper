@@ -65,13 +65,13 @@ public class HomeController {
     //myPage
 //postMapping(데이터를 입력(회원가입 로그인))
 //getMapping(데이터를 불러옴(마이페이지, 게시판))
-    @GetMapping("/myPage")
-    public String myPage(Model m)throws Exception {
-    	List<UserVO> user = userMapper.getAllUser();
-    	System.out.println(user);
-		m.addAttribute("user",user);
-		return "myPage";
-    }
+//    @GetMapping("/myPage")
+//    public String myPage(Model m)throws Exception {
+//    	List<UserVO> user = userMapper.getAllUser();
+//    	System.out.println(user);
+//		m.addAttribute("user",user);
+//		return "myPage";
+//    }
     //payment
     @RequestMapping("/payment")
     public String payment() {
