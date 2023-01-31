@@ -8,7 +8,7 @@
 -->
 <html>
 	<head>
-		<title>Untitled</title>
+		<title>Find ID</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -25,23 +25,23 @@
 					<div id="main">
 						<div class="inner2">
                             <div class="col-12" style="text-align: center;">
-							<h1>Find ID</h1>
+							<h1>아이디 찾기</h1>
                         </div>			<!-- Form -->
 								<section>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
 											<div class="col-12">
-												<input type="text" name="findaddress" id="findaddress" value="" placeholder="Address" />
+												<input type="text" name="findaddress" id="findaddress" value="" placeholder="주소" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="findNickName" id="findNickName" value="" placeholder="FirstName" />
+												<input type="text" name="findNickName" id="findNickName" value="" placeholder="성" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="findLastName" id="findLastName" value="" placeholder="LastName" />
+												<input type="text" name="findLastName" id="findLastName" value="" placeholder="이름" />
 											</div>
 
 											<div class="col-12" style="text-align: center;">
-                                                <input type="submit" value="Find ID" class="primary" />
+                                                <input type="submit" value="확인" class="primary" />
 											</div>
 										</div>
 									</form>

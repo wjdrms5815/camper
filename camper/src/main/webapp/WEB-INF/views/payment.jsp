@@ -8,7 +8,7 @@
 -->
 <html>
 	<head>
-		<title>Untitled</title>
+		<title>Payment</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -20,27 +20,13 @@
 
 				<!-- Header -->
 				<jsp:include page = "header.jsp"></jsp:include>
-					
-				<!-- Menu -->
-					<nav id="menu">
-						<h2>Menu</h2>
-						<ul>
-							<li><a href="index.html">Home</a></li>
-							<li><a href="generic.html">Ipsum veroeros</a></li>
-							<li><a href="generic.html">Tempus etiam</a></li>
-							<li><a href="generic.html">Consequat dolor</a></li>
-							<li><a href="elements.html">Elements</a></li>
-							<li><a href="join.html">Join</a></li>
-							<li><a href="myPage.html">My page</a></li>
-						</ul>
-					</nav>
 
 			<!-- Main -->
 				<section id="main" class="container medium">
 				<div class="inner">
 					<header>
 						<div class="col-12" style="text-align: center;">
-						<h1>Payment</h1>
+						<h1>결제</h1>
 						</div>
 					</header>
 					<div class="box">
@@ -48,7 +34,7 @@
 							<div class="row gtr-50 gtr-uniform">
 							
 								<div class="col-12">
-									<label>Payment Method</label>
+									<label>결제 수단</label>
 								</div>
 								<div class = "col-12">
 									<select id = "pamentMethod">
@@ -59,7 +45,7 @@
 								</div>
 								
 								<div class="col-12">
-									<label>Card Num</label>
+									<label>카드 번호</label>
 								</div>
 								<div class = "col-12">
 									<input type="text" name="cardNum" id="cardNum" value="" placeholder="0000-0000-0000-0000" />
@@ -67,10 +53,10 @@
 								
 								
 								<div class="col-9">
-									<label>Validity</label>
+									<label>유효기간</label>
 								</div>
 								<div class="col-3">
-									<label>Cvc Num</label>
+									<label>CVC</label>
 								</div>
 								
 								<div class="col-2">
@@ -112,40 +98,39 @@
 									<input type="text" name="cvc" id="cvc" value="" placeholder="cvc" />
 								</div>
 								
+								
 								<div class="col-12">
-									<label>Name</label>
+									<hr><h3>개인정보 입력</h3></hr>
+								</div>
+								
+								<div class="col-6 col-12-mobilep">
+									<input type="text" name="firstName" id="firstName" value="" placeholder="성" />
 								</div>
 								<div class="col-6 col-12-mobilep">
-									<input type="text" name="firstName" id="firstName" value="" placeholder="FirstName" />
-								</div>
-								<div class="col-6 col-12-mobilep">
-									<input type="text" name="LastName" id="LastName" value="" placeholder= "LastName" />
+									<input type="text" name="LastName" id="LastName" value="" placeholder= "이름" />
 								</div>
 								
 								<div class="col-12">
-									<label>Address</label>
+									<input type="text" name="phone" id="phone" value="" placeholder="010-0000-0000" />
 								</div>
+								
 								<div class="col-6">
-									<input type="text" name="address" id="address" value="" placeholder="Address" />
+									<input type="text" name="address" id="address" value="" placeholder="우편번호" />
 								</div>
 								<div class="col-3">
 									<input type="button" name="find_zipcode" id="find_zipcode" value="우편번호 찾기" />
 								</div>
 								<div class="col-12">
-									<input type="text" name="addressDetail" id="addressDetail" value="" placeholder="Address Detail" />
+									<input type="text" name="addressDetail" id="addressDetail" value="" placeholder="주소" />
 								</div>
 								
-								<div class="col-12">
-									<label>Phone</label>
-								</div>
-								<div class="col-12">
-									<input type="text" name="phone" id="phone" value="" placeholder="010-0000-0000" />
-								</div>
+							
+								
 								
 								<div class = "col-12">
 								<br>
 									<ul class = "actions special">
-										<li><input type = "submit" value = "Continue"></li>
+										<li><input type = "submit" value = "확인"></li>
 									</ul>
 								</div>
 							</div>

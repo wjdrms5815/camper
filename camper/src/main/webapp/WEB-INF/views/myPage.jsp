@@ -8,7 +8,7 @@
 -->
 <html>
    <head>
-      <title>Untitled</title>
+      <title>My Page</title>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
       <link rel="stylesheet" href="assets/css/main.css" />
@@ -20,27 +20,13 @@
 
             <!-- Header -->
 			<jsp:include page = "header.jsp"></jsp:include>
-               
-            <!-- Menu -->
-               <nav id="menu">
-                  <h2>Menu</h2>
-                  <ul>
-                     <li><a href="index.html">Home</a></li>
-                     <li><a href="generic.html">Ipsum veroeros</a></li>
-                     <li><a href="generic.html">Tempus etiam</a></li>
-                     <li><a href="generic.html">Consequat dolor</a></li>
-                     <li><a href="elements.html">Elements</a></li>
-                     <li><a href="join.html">Join</a></li>
-                     <li><a href="myPage.html">My page</a></li>
-                  </ul>
-               </nav>
 
          <!-- Main -->
             <section id="main" class="container medium">
             <div class="inner2">
                <header>
                   <div class="col-12" style="text-align: center;">
-                  <h1>My Page</h1>
+                  <h1>마이 페이지</h1>
                   </div>
                </header>
                <div class="box">
@@ -48,26 +34,17 @@
                      <div class="row gtr-50 gtr-uniform">
                      
                         <div class="col-12">
-                           <label>ID</label>
-                        </div>
-                        <div class="col-12">
-                           <div id = "id">ID</div>
+                           <div id = "id">아이디</div>
                            <hr class = "one">
                         </div>
                         
-                        <div class="col-12">
-                           <label>Password</label>
+                        <div class="col-6 col-12-mobilep">
+                           <input type="password" name="password" id="password" value="" placeholder="비밀번호" />
                         </div>
                         <div class="col-6 col-12-mobilep">
-                           <input type="password" name="password" id="password" value="" placeholder="Password" />
-                        </div>
-                        <div class="col-6 col-12-mobilep">
-                           <input type="password" name="newPassword" id="newPassword" value="" placeholder="New Password" />
+                           <input type="password" name="newPassword" id="newPassword" value="" placeholder="새로운 비밀번호" />
                         </div>
                         
-                        <div class="col-12">
-                           <label>Password Confirmation Question</label>
-                        </div>
                         <div class="col-12">
                            <select id = "passQustion">
                               <option value="기억에 남는 추억의 장소는?">기억에 남는 추억의 장소는?</option>
@@ -78,39 +55,35 @@
                               <option value="다시 태어나면 되고 싶은 것은?">다시 태어나면 되고 싶은 것은?</option>
                               <option value="인상 깊게 읽은 책 이름은?">인상 깊게 읽은 책 이름은?</option>
                            </select>
-                        <input type="text" name="answer" id="answer" value="" placeholder="Answer" />
+                        <input type="text" name="answer" id="answer" value="" placeholder="정답" />
                         </div>
                         
-                        <div class="col-12">
-                           <label>Name</label>
+                        
+                        <div class="col-6 col-12-mobilep">
+                           <input type="text" name="firstName" id="firstName" value="" placeholder="성" />
                         </div>
                         <div class="col-6 col-12-mobilep">
-                           <input type="text" name="firstName" id="firstName" value="" placeholder="FirstName" />
-                        </div>
-                        <div class="col-6 col-12-mobilep">
-                           <input type="text" name="LastName" id="LastName" value="" placeholder= "LastName" />
+                           <input type="text" name="LastName" id="LastName" value="" placeholder= "이름" />
                         </div>
                         
-                        <div class="col-12">
-                           <label>Address</label>
-                        </div>
+                      
                         <div class="col-6">
-                           <input type="text" name="myZipcode" id="myZipcode" value="" placeholder="Zip Code" />
+                           <input type="text" name="myZipcode" id="myZipcode" value="" placeholder="우편번호" />
                         </div>
                         <div class="col-3">
                            <input type="button" name="find_zipcode" id="find_zipcode" value="우편번호 찾기" />
                         </div>
                         <div class="col-12">
-                           <input type="text" name="address" id="address" value="" placeholder="Address" />
+                           <input type="text" name="address" id="address" value="" placeholder="주소" />
                         </div>
                         <div class="col-12">
-                           <input type="text" name="addressDetail" id="addressDetail" value="" placeholder="Address Detail" />
+                           <input type="text" name="addressDetail" id="addressDetail" value="" placeholder="상세 주소" />
                         </div>
                         
                         <div class = "col-12">
                         <br>
                            <ul class = "actions special">
-                              <li><input type = "submit" value = "Modify"></li>
+                              <li><input type = "submit" value = "확인"></li>
                            </ul>
                         </div>
                      </div>
