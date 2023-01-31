@@ -35,6 +35,12 @@
                      
                         <div class="col-12">
                            <div id = "id">¾ÆÀÌµð</div>
+                            <c:forEach var="output" items="${ user }">
+					        <tr>
+					          <td>${ output.uid }</td>
+					          
+					        </tr>
+					      </c:forEach>
                            <hr class = "one">
                         </div>
                         

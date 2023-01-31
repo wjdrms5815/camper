@@ -7,7 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.camper.controller.dto.User;
+import com.camper.domain.UserVO;
 import com.camper.mapper.UserMapper;
 
 @Controller
@@ -15,12 +15,12 @@ import com.camper.mapper.UserMapper;
 public class UserController {
 	
 	@Autowired UserMapper userMapper;
-	@RequestMapping("list")
+	
 	
 	public String list(Model m) {
-		List<User> user = userMapper.findAll();
+		List<UserVO> user = userMapper.getAllUser();
 		m.addAttribute("user",user);
-		return "list";
+		return "myPage";
 	}
 
 }

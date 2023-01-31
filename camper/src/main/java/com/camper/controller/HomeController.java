@@ -1,11 +1,22 @@
 package com.camper.controller;
 
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.camper.domain.UserVO;
+import com.camper.mapper.UserMapper;
+
 @Controller
+@RequestMapping("/")
 public class HomeController {
 
+	@Autowired UserMapper userMapper;
+	
 	//메인페이지
     @RequestMapping("/index")
     public String index() {
@@ -52,11 +63,15 @@ public class HomeController {
     }
     
     //myPage
-    @RequestMapping("/myPage")
-    public String myPage() {
-        return "myPage";
+//postMapping(데이터를 입력(회원가입 로그인))
+//getMapping(데이터를 불러옴(마이페이지, 게시판))
+    @GetMapping("/myPage")
+    public String myPage(Model m)throws Exception {
+    	List<UserVO> user = userMapper.getAllUser();
+    	System.out.println(user);
+		m.addAttribute("user",user);
+		return "myPage";
     }
-    
     //payment
     @RequestMapping("/payment")
     public String payment() {

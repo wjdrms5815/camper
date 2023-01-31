@@ -9,13 +9,19 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
+import org.springframework.stereotype.Repository;
 
-import com.camper.controller.dto.User;
+import com.camper.domain.UserVO;
 
 @Mapper
+@Repository
 public interface UserMapper {
-    @Select("SELECT * FROM users")
-    List<User> findAll();
+	/* 이전에 직접 매핑
+	 * @Select("SELECT * FROM users") List<User> findAll();
+	 */
+	
+	/*xml에서 매핑한 id를 불러옴*/
+	List<UserVO> getAllUser();
     
     
     
