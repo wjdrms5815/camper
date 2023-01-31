@@ -20,7 +20,10 @@ create table users(
 	uAddrDetail varchar(50),
 	uWallet integer,
 	uRsvTime timestamp,
-	uAnswer varchar(30) /*사용자가 회원가입시 한 대답*/
+	qId integer,
+	uAnswer varchar(30), /*사용자가 회원가입시 한 대답*/
+	CONSTRAINT fk_qId FOREIGN KEY(qId) REFERENCES "joinqna"(qId) ON DELETE CASCADE ON UPDATE CASCADE
+	
 );
 
 create table campinfo(
