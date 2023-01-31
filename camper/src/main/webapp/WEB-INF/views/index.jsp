@@ -17,7 +17,6 @@
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
-
 				<!-- Header -->
 				<jsp:include page = "header.jsp"></jsp:include>
 

@@ -33,6 +33,7 @@
 								<section>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
+										
 											<div class="col-12">
 												<input type="text" name="findpwId" id="findpwId" value="" placeholder="¾ÆÀÌµð" />
 											</div>

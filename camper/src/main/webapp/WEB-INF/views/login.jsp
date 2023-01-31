@@ -47,6 +47,7 @@
 												<input type="checkbox" id="demo-human" name="demo-human" checked>
 												<label for="demo-human">Not a robot</label>
 											</div> -->
+											
 											<div class="col-12" style="text-align: center;">
                                                 <input type="submit" value="로그인" class="primary" />
                                                 <input type="submit" value="회원가입" />
