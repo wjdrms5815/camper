@@ -1,7 +1,7 @@
 CREATE TABLE IF NOT EXISTS public.users
 (
     "uId" varchar(30) ,
-    "uPw" varcharg(20) ,
+    "uPw" varchar(20) ,
     "uName" varchar(10) ,
     "uPostcode" varchar(10) ,
     "uAddr" varchar(50) ,
