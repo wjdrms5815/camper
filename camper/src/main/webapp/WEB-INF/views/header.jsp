@@ -37,7 +37,7 @@
 					<h2>Menu</h2>
 					<ul>
 						<div class="nav">
-						<li><a href="/index">메인화면</a></li>
+						<li><a href="/">메인화면</a></li>
 						</div>
 						
 						<!-- <li><a href="#" data-toggle="dropdown">로그인</a></li>
