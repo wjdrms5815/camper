@@ -31,7 +31,17 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-				<jsp:include page = "header.jsp"></jsp:include>
+					<header id="header">
+						<div class="inner">
+
+							<!-- Logo -->
+                            <div ></div>
+								<a href="index.html" class="logo">
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Camper</span>
+								</a>
+
+						</div>
+					</header>
 
 
 				<!-- Main -->
@@ -42,37 +52,23 @@
                         </div>			<!-- Form -->
 								<section>
 									<form method="post" action="#">
-											<fieldset>
-												<legend>
-													<input type="checkbox">
-													<label for="rest">
-													예약자명
-													<div>박지연</div>
-													예약 장소
-													<div>진주 캠핑소사이어티 럭셔리글램핑&피크닉</div>
-													결제 금액
-													<div>120000원</div>
+													<input type="checkbox" id="demo-human1">
+													<label for="demo-human1">
+													예약자명 : <span>박지연</span>
+													<br>
+													예약 장소 : <span>진주 캠핑소사이어티 럭셔리글램핑&피크닉</span>
+													<br>
+													결제 금액 : <span>120000원</span>
 													</label>
-												</legend>
-											</fieldset>
-											
-											<div class="row gtr-uniform">
-												<input type="checkbox">
-												<div class="col-12">
-													예약자명
-													<div>육정근</div>
-												</div>
-												<div class="col-12">
-													예약 장소
-													<div>거창 휴일엔펜션&캠핑</div>
-												</div>
-												<div class="col-12">
-													결제 금액
-													<div>150000원</div>
-												</div>
-													
-												</div>	
-											
+
+													<input type="checkbox" id="demo-human2">
+													<label for="demo-human2">
+													예약자명 : <span>육정근</span>
+													<br>
+													예약 장소 : <span>파주 영어마을 캠핑</span>
+													<br>
+													결제 금액 : <span>150000원</span>
+													</label>
 											
                                             <br>
 											
