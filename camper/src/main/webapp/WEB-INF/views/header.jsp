@@ -66,9 +66,9 @@
 						<li><a href="generic.html">Consequat dolor</a></li>
 						<li><a href="elements.html">Elements</a></li> -->
 						
-						
+						<div id="nav">
 						<li><a href="myPage.html">마이 페이지</a></li>
-						
+						</div>
 						
 					</ul>
 				</nav>
