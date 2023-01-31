@@ -15,7 +15,7 @@ create table users(
 	uId varchar(30) primary key,
 	uPw varchar(20),
 	uName varchar(10),
-	uPostCode varchar(10),
+	uPostCode varchar(30),
 	uAddr varchar(50),
 	uAddrDetail varchar(50),
 	uWallet integer,
