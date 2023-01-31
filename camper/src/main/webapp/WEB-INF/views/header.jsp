@@ -5,6 +5,16 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#nav ul.sub").hide();
+			$("#nav div.menu li").hover(function(){
+				$("ul",this).slideToggle("fast");
+			});
+		});
+	</script>
+	
 </head>
 <body>
 	<div id="wrapper">
@@ -19,25 +29,47 @@
 				<!-- Nav -->
 				<nav>
 					<ul>
-						<li><a href="#menu">Menu</a></li>
+						<li><a href="#menu">메뉴</a></li>
 					</ul>
 				</nav>
 				<!-- Menu -->
 				<nav id="menu">
 					<h2>Menu</h2>
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="#" data-toggle="dropdown">Login</a></li>
+						<div class="nav">
+						<li><a href="index.html">메인화면</a></li>
+						</div>
+						
+						<!-- <li><a href="#" data-toggle="dropdown">로그인</a></li>
 						<ul class="dropdown-menu">
-							<li><a href="#">SignUp</a></li>
-							<li><a href="#">Login</a></li>
-							<li><a href="#">FindId</a></li>
-							<li><a href="#">FindPw</a></li>
-						</ul>
-						<li><a href="generic.html">Tempus etiam</a></li>
+							<li><a href="#">회원가입</a></li>
+							<li><a href="#">로그인</a></li>
+							<li><a href="#">아이디 찾기</a></li>
+							<li><a href="#">비밀번호 찾기</a></li>
+						</ul> -->
+						
+						
+						<div id="nav">
+						 <div class="menu">
+						  <li><a href="#">로그인</a>
+						   <ul class="sub">
+						    <li><a href="#">회원가입</a></li>
+						    <li><a href="#">로그인</a></li>
+						    <li><a href="#">아이디 찾기</a></li>
+						    <li><a href="#">비밀번호 찾기</a></li>
+						   </ul>
+						  </li>
+						 </div>
+						</div>
+						
+						<!-- <li><a href="generic.html">상세 페이지</a></li>
 						<li><a href="generic.html">Consequat dolor</a></li>
-						<li><a href="elements.html">Elements</a></li>
-						<li><a href="myPage.html">MyPage</a></li>
+						<li><a href="elements.html">Elements</a></li> -->
+						
+						
+						<li><a href="myPage.html">마이 페이지</a></li>
+						
+						
 					</ul>
 				</nav>
 			</div>
