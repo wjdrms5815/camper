@@ -6,7 +6,14 @@ insert into campinfo (cName ,cInfo ,cTel ,cLocation ,cStartDate ,cEndDate,cMoney
 insert into campinfo (cName ,cInfo ,cTel ,cLocation ,cStartDate ,cEndDate,cMoney ) values('캠프5', '캠프정보5', '캠프번호5', '캠프장소5', now(),now(),1000);
 /*더미파일* 더미파일 추가는 이런 형식으로 추가해주세요/
 
-
+/*joinqna 필수 insert 값*/
+insert into joinqna(qques) values('기억에 남는 추억의 장소는?');
+insert into joinqna(qques) values('자신의 인생 좌우명은?');
+insert into joinqna(qques) values('가장 기억에 남는 선생님 성함은?');
+insert into joinqna(qques) values('자신의 보물 제 1호는?');
+insert into joinqna(qques) values('유년시절 가장 생각나는 친구의 이름은?');
+insert into joinqna(qques) values('다시 태어나면 되고 싶은 것은?');
+insert into joinqna(qques) values('인상 깊게 읽은 책 이름은?');
 
 
 
