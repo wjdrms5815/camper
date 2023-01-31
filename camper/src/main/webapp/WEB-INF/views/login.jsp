@@ -19,17 +19,7 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-
-							<!-- Logo -->
-                            <div ></div>
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Camper</span>
-								</a>
-
-						</div>
-					</header>
+				<jsp:include page = "header.jsp"></jsp:include>
 
 
 				<!-- Main -->

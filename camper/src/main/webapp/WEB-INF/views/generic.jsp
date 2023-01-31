@@ -19,23 +19,7 @@
 			<div id="wrapper">
 
 				<!-- Header -->
-					<header id="header">
-						<div class="inner">
-
-							<!-- Logo -->
-								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">CAMPER</span>
-								</a>
-
-							<!-- Nav -->
-								<nav>
-									<ul>
-										<li><a href="#menu">Menu</a></li>
-									</ul>
-								</nav>
-
-						</div>
-					</header>
+				<jsp:include page = "header.jsp"></jsp:include>
 
 				<!-- Menu -->
 					<nav id="menu">

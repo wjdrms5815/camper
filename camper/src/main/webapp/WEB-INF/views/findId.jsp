@@ -15,9 +15,11 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-		<jsp:include page = "header.jsp"></jsp:include>
 		<!-- Wrapper -->
 			<div id="wrapper">
+			
+			<!-- Header -->
+			<jsp:include page = "header.jsp"></jsp:include>
 
 				<!-- Main -->
 					<div id="main">
