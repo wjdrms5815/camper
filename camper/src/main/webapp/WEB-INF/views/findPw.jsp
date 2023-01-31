@@ -28,19 +28,19 @@
 					<div id="main">
 						<div class="inner2">
                             <div class="col-12" style="text-align: center;">
-							<h1>Find PW</h1>
+							<h1>비밀번호 찾기</h1>
                         </div>			<!-- Form -->
 								<section>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
 											<div class="col-12">
-												<input type="text" name="findpwId" id="findpwId" value="" placeholder="ID" />
+												<input type="text" name="findpwId" id="findpwId" value="" placeholder="아이디" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="findpwFirstName" id="findpwFirstName" value="" placeholder="FirstName" />
+												<input type="text" name="findpwFirstName" id="findpwFirstName" value="" placeholder="성" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="findpwLastName" id="findpwLastName" value="" placeholder="LastName" />
+												<input type="text" name="findpwLastName" id="findpwLastName" value="" placeholder="이름" />
 											</div>
 											<div class="col-12">
 												<select name="spwdq" id="spwdq" required>
@@ -54,11 +54,12 @@
 												</select>
 												</div>
 												<div class="col-12">
-												<input type="text" name="spwda" id="spwda" value="" required placeholder="Answer">
+												<input type="text" name="spwda" id="spwda" value="" required placeholder="정답">
 											</div>
 
 											<div class="col-12" style="text-align: center;">
-                                                <input type="submit" value="Find Pw" class="primary" />
+                                                <input type="submit" value="확인" class="primary" />
+                                                <input type="button" value="취소" />
 											</div>
 										</div>
 									</form>

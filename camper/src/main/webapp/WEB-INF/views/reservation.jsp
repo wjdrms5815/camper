@@ -38,7 +38,7 @@
 					<div id="main">
 						<div class="inner2">
                             <div class="col-12" style="text-align: center;">
-							<h1>Reservation Check</h1>
+							<h1>예약내역</h1>
                         </div>			<!-- Form -->
 								<section>
 									<form method="post" action="#">

@@ -37,19 +37,19 @@
 					<div id="main">
 						<div class="inner2">
                             <div class="col-12" style="text-align: center;">
-							<h1>Join</h1>
+							<h1>회원가입</h1>
                         </div>			<!-- Form -->
 								<section>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
 											<div class="col-12">
-												<input type="text" name="signUpid" id="signUpid" value="" placeholder="ID" />
+												<input type="text" name="signUpid" id="signUpid" value="" placeholder="아이디" />
 											</div>
                                             <div class="col-12">
-												<input type="password" name="Password" id="Password" value="" placeholder="Password" />
+												<input type="password" name="Password" id="Password" value="" placeholder="비밀번호" />
 											</div>
 											<div class="col-12">
-												<input type="password" name="PasswordCheck" id="PasswordCheck" value="" placeholder="PasswordCheck" />
+												<input type="password" name="PasswordCheck" id="PasswordCheck" value="" placeholder="비밀번호 재입력" />
 											</div>
 											<div class="col-12">
 											<select name="spwdq" id="spwdq" required>
@@ -63,25 +63,25 @@
 											</select>
 											</div>
 											<div class="col-12">
-												<input type="text" name="spwda" id="spwda" value="" required placeholder="Answer">
+												<input type="text" name="spwda" id="spwda" value="" required placeholder="정답">
 											</div>
 											<div class="col-6">
-												<input type="text" name="signUpFirstName" id="signUpFirstName" value="" placeholder="FirstName" />
+												<input type="text" name="signUpFirstName" id="signUpFirstName" value="" placeholder="성" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="signUpLastName" id="signUpLastName" value="" placeholder="LastName" />
+												<input type="text" name="signUpLastName" id="signUpLastName" value="" placeholder="이름" />
 											</div>
 												 <div class="col-6 col-12-small">
-													<input type="text" name="szipcode" id="uZipcode" value=""  placeholder="Address" required>
+													<input type="text" name="szipcode" id="uZipcode" value=""  placeholder="우편번호" required>
 												</div>	
 													<div class="col-6 col-12-small">	
 													<input type="button" name="findZipcode" id="findZipcode" value="우편번호 찾기" style="display: inline;">
 												</div>
 												<div class="col-12">	
-													<input type="text" name="saddress" id="u_address" value=""  placeholder="Address" required>
+													<input type="text" name="saddress" id="u_address" value=""  placeholder="주소" required>
 												</div>
 												<div class="col-12">	
-												<input type="text" name="saddressdetail" id="u_address_detail" value="" placeholder="AddressDetail"required>
+												<input type="text" name="saddressdetail" id="u_address_detail" value="" placeholder="상세주소"required>
 												</div> 
 												
 											</div>		
@@ -90,8 +90,8 @@
                                             <br>
 											
 											<div class="col-12" style="text-align: center;">
-                                                <input type="submit" value="Join" class="primary" />
-												<input type="reset" value="reset"  />
+                                                <input type="submit" value="회원가입" class="primary" />
+												<input type="reset" value="내용삭제"  />
 											</div>
 										</div>
 									</form>
