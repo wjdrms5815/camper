@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE HTML>
 <!--
 	Phantom by Pixelarity
@@ -28,39 +29,39 @@
 					<div id="main">
 						<div class="inner2">
                             <div class="col-12" style="text-align: center;">
-							<h1>ºñ¹Ð¹øÈ£ Ã£±â</h1>
+							<h1>ï¿½ï¿½Ð¹ï¿½È£ Ã£ï¿½ï¿½</h1>
                         </div>			<!-- Form -->
 								<section>
 									<form method="post" action="#">
 										<div class="row gtr-uniform">
 										
 											<div class="col-12">
-												<input type="text" name="findpwId" id="findpwId" value="" placeholder="¾ÆÀÌµð" />
+												<input type="text" name="findpwId" id="findpwId" value="" placeholder="ï¿½ï¿½ï¿½Ìµï¿½" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="findpwFirstName" id="findpwFirstName" value="" placeholder="¼º" />
+												<input type="text" name="findpwFirstName" id="findpwFirstName" value="" placeholder="ï¿½ï¿½" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="findpwLastName" id="findpwLastName" value="" placeholder="ÀÌ¸§" />
+												<input type="text" name="findpwLastName" id="findpwLastName" value="" placeholder="ï¿½Ì¸ï¿½" />
 											</div>
 											<div class="col-12">
 												<select name="spwdq" id="spwdq" required>
-													<option value="±â¾ï¿¡ ³²´Â Ãß¾ïÀÇ Àå¼Ò´Â?">±â¾ï¿¡ ³²´Â Ãß¾ïÀÇ Àå¼Ò´Â?</option>
-													<option value="ÀÚ½ÅÀÇ ÀÎ»ý ÁÂ¿ì¸íÀº?">ÀÚ½ÅÀÇ ÀÎ»ý ÁÂ¿ì¸íÀº?</option>
-													<option value="°¡Àå ±â¾ï¿¡ ³²´Â ¼±»ý´Ô ¼ºÇÔÀº?">°¡Àå ±â¾ï¿¡ ³²´Â ¼±»ý´Ô ¼ºÇÔÀº?</option>
-													<option value="ÀÚ½ÅÀÇ º¸¹° Á¦1È£´Â?">ÀÚ½ÅÀÇ º¸¹° Á¦1È£´Â?</option>
-													<option value="À¯³â½ÃÀý °¡Àå »ý°¢³ª´Â Ä£±¸ÀÇ ÀÌ¸§Àº?">À¯³â½ÃÀý °¡Àå »ý°¢³ª´Â Ä£±¸ÀÇ ÀÌ¸§Àº?</option>
-													<option value="´Ù½Ã ÅÂ¾î³ª¸é µÇ°í ½ÍÀº °ÍÀº?">´Ù½Ã ÅÂ¾î³ª¸é µÇ°í ½ÍÀº °ÍÀº?</option>
-													<option value="ÀÎ»ó ±í°Ô ÀÐÀº Ã¥ ÀÌ¸§Àº?">ÀÎ»ó ±í°Ô ÀÐÀº Ã¥ ÀÌ¸§Àº?</option>
+													<option value="ï¿½ï¿½ï¿¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ß¾ï¿½ï¿½ï¿½ ï¿½ï¿½Ò´ï¿½?">ï¿½ï¿½ï¿¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ß¾ï¿½ï¿½ï¿½ ï¿½ï¿½Ò´ï¿½?</option>
+													<option value="ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½Î»ï¿½ ï¿½Â¿ï¿½ï¿½ï¿½ï¿½?">ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½Î»ï¿½ ï¿½Â¿ï¿½ï¿½ï¿½ï¿½?</option>
+													<option value="ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?">ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?</option>
+													<option value="ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½1È£ï¿½ï¿½?">ï¿½Ú½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½1È£ï¿½ï¿½?</option>
+													<option value="ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½?">ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½?</option>
+													<option value="ï¿½Ù½ï¿½ ï¿½Â¾î³ªï¿½ï¿½ ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½?">ï¿½Ù½ï¿½ ï¿½Â¾î³ªï¿½ï¿½ ï¿½Ç°ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½?</option>
+													<option value="ï¿½Î»ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¥ ï¿½Ì¸ï¿½ï¿½ï¿½?">ï¿½Î»ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã¥ ï¿½Ì¸ï¿½ï¿½ï¿½?</option>
 												</select>
 												</div>
 												<div class="col-12">
-												<input type="text" name="spwda" id="spwda" value="" required placeholder="Á¤´ä">
+												<input type="text" name="spwda" id="spwda" value="" required placeholder="ï¿½ï¿½ï¿½ï¿½">
 											</div>
 
 											<div class="col-12" style="text-align: center;">
-                                                <input type="submit" value="È®ÀÎ" class="primary" />
-                                                <input type="button" value="Ãë¼Ò" />
+                                                <input type="submit" value="È®ï¿½ï¿½" class="primary" />
+                                                <input type="button" value="ï¿½ï¿½ï¿½" />
 											</div>
 										</div>
 									</form>
