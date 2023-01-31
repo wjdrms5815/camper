@@ -27,14 +27,17 @@
 					<h2>Menu</h2>
 					<ul>
 						<li><a href="index.html">Home</a></li>
-						<li><a href="#" data-toggle="dropdown">MyPage</a></li>
+						<li><a href="#" data-toggle="dropdown">Login</a></li>
 						<ul class="dropdown-menu">
-							<li><a href="#">Update</a></li>
-							<li><a href="#">History</a></li>
+							<li><a href="#">SignUp</a></li>
+							<li><a href="#">Login</a></li>
+							<li><a href="#">FindId</a></li>
+							<li><a href="#">FindPw</a></li>
 						</ul>
 						<li><a href="generic.html">Tempus etiam</a></li>
 						<li><a href="generic.html">Consequat dolor</a></li>
 						<li><a href="elements.html">Elements</a></li>
+						<li><a href="myPage.html">MyPage</a></li>
 					</ul>
 				</nav>
 			</div>
