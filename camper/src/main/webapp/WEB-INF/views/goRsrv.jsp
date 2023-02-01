@@ -38,7 +38,7 @@
 									<label>카드</label>
 								</div>
 								<div class = "col-12">
-									<select id = "pamentMethod">
+									<select id = "pamentMethod" name="rcard">
 										<option value = "visa">Visa</option>
 										<option value = "mastercard">MasterCard</option>
 										<option value = "jcb">JCB</option>
@@ -49,7 +49,7 @@
 									<label>카드 번호</label>
 								</div>
 								<div class = "col-12">
-									<input type="text" name="cardNum" id="cardNum" value="" placeholder="0000-0000-0000-0000" />
+									<input type="text" name="rcardnum" id="rcardnum" value="" placeholder="0000-0000-0000-0000" />
 								</div>
 								
 								
@@ -61,7 +61,7 @@
 								</div>
 								
 								<div class="col-2">
-									<select id = "validity">
+									<select id = "rvalmon" name="rvalmon">
 										<option value = "01">01</option>
 										<option value = "02">02</option>
 										<option value = "03">03</option>
@@ -78,7 +78,7 @@
 								</div>
 								
 								<div class="col-3">
-									<select id = "validity">
+									<select id = "rvalyear" name="rvalyear">
 										<option value = "2023">2023</option>
 										<option value = "2024">2024</option>
 										<option value = "2025">2025</option>
@@ -105,35 +105,39 @@
 								</div>
 								
 								<div class="col-6 col-12-mobilep">
-									<input type="text" name="firstName" id="firstName" value="" placeholder="성" />
+									<input type="text" name="rfirstname" id="rfirstname" value="" placeholder="성" />
 								</div>
 								<div class="col-6 col-12-mobilep">
-									<input type="text" name="LastName" id="LastName" value="" placeholder= "이름" />
+									<input type="text" name="rlastname" id="rlastname" value="" placeholder= "이름" />
 								</div>
 								
 								<div class="col-12">
-									<input type="text" name="phone" id="phone" value="" placeholder="010-0000-0000" />
+									<input type="text" name="rphonenum" id="rphonenum" value="" placeholder="010-0000-0000" />
 								</div>
 								
 								<div class="col-6">
-									<input type="text" name="address" id="u_address" value="" placeholder="우편번호" />
+									<input type="text" name="raddress" id="u_address" value="" placeholder="우편번호" />
 								</div>
 								<div class="col-3">
 									<input type="button" name="find_zipcode" id="find_zipcode" value="우편번호 찾기" />
 								</div>
 
 								<div class="col-12">
-									<input type="text" name="addressdetail" id="u_address_detail" value="" placeholder="상세주소" />
+									<input type="text" name="raddressdetail" id="u_address_detail" value="" placeholder="상세주소" />
 								</div>
 								
 								<div class="col-12">
 									<br><h3>캠핑 상세정보</h3>
 								</div>
-								
+								<input type="hidden" name="rmoney">
+								<input type="hidden" name="rstartdate">
+								<input type="hidden" name="renddate">
+								<input type="hidden" name="rplace">
+								<input type="hidden" name="rtel">
 								<div class="col-12">
 								<table style="border:1px">
 									<tr>
-										<td><span style="float: left;" id="cmoney" name="cmoney">\:${board.cmoney}</span></td>
+										<td><span style="float: left;" id="cmoney" >\:${board.cmoney}</span></td>
 										<td><span style="float: right;">예약 날짜 : ${board.cstartDate} ~ ${board.cendDate}</span></td>
 									</tr>
 									<tr>
