@@ -6,7 +6,8 @@ import lombok.Data;
 public class MyPageVO {
 	private String uid;
 	private String upw;
-	private String uname;
+	private String ufirstname;
+	private String ulastname;
 	private Long upostcode;
 	private String uaddr;
 	private String uaddrdetail;

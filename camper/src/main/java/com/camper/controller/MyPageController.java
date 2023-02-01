@@ -40,6 +40,6 @@ public class MyPageController {
 	public String myPage(MyPageVO vo){
 		myPageMapper.updateMyPage(vo);
 		System.out.println(vo);
-		return "redirect:/";
+		return "redirect:/member/myPage";
 	}
 }

@@ -7,7 +7,7 @@
 </select>
 
 <update id="updateMyPage">
-	update users set upw=#{upw}, uname=#{uname}, upostcode=#{upostcode}, uaddr=#{uaddr}, uaddrdetail=#{uaddrdetail}, qid=#{qid}, uanswer=#{uanswer}
+	update users set upw=#{upw}, ufirstname=#{ufirstname}, ulastname=#{ulastname}, upostcode=#{upostcode}, uaddr=#{uaddr}, uaddrdetail=#{uaddrdetail}, qid=#{qid}, uanswer=#{uanswer}
 	where uid=#{uid}
 </update>
 
