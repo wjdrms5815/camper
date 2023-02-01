@@ -71,9 +71,6 @@
 												</div>
 												<div class="col-12">
 													<input type="text" name="addressdetail" id="u_address_detail" value="" placeholder="惑技林家" />
-												</div>
-												<div class="col-12">	
-												<input type="text" name="saddressdetail" id="u_address_detail" value="" placeholder="惑技林家"required>
 												</div> 
 												
 											</div>		
