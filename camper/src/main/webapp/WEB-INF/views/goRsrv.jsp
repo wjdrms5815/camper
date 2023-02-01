@@ -9,7 +9,7 @@
 -->
 <html>
 	<head>
-		<title>Payment</title>
+		<title>Camper</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -35,7 +35,7 @@
 							<div class="row gtr-50 gtr-uniform">
 							
 								<div class="col-12">
-									<label>보유 캐시</label>
+									<label>카드</label>
 								</div>
 								<div class = "col-12">
 									<select id = "pamentMethod">
@@ -101,7 +101,7 @@
 								
 								
 								<div class="col-12">
-									<hr><h3>개인정보 입력</h3></hr>
+									<hr><h3>개인정보 입력</h3>
 								</div>
 								
 								<div class="col-6 col-12-mobilep">
@@ -116,17 +116,18 @@
 								</div>
 								
 								<div class="col-6">
-									<input type="text" name="address" id="address" value="" placeholder="우편번호" />
+									<input type="text" name="address" id="u_address" value="" placeholder="우편번호" />
 								</div>
 								<div class="col-3">
 									<input type="button" name="find_zipcode" id="find_zipcode" value="우편번호 찾기" />
 								</div>
+
 								<div class="col-12">
-									<input type="text" name="addressDetail" id="addressDetail" value="" placeholder="주소" />
+									<input type="text" name="addressdetail" id="u_address_detail" value="" placeholder="상세주소" />
 								</div>
 								
 								<div class="col-12">
-									<hr><h3>캠핑 상세정보</h3></hr>
+									<br><h3>캠핑 상세정보</h3>
 								</div>
 								
 								<div class="col-12">
@@ -147,32 +148,17 @@
 								
 								
 								<div class = "col-12">
-								<br>
+								<hr>
 									<ul class = "actions special">
 										<li><input type = "submit" value = "결제"></li>
+										<li><input type = "button" onclick="history.back()" value = "취소" class="primary"></li>
 									</ul>
 								</div>
 							</div>
 						</form>
 					</div>
-					
+					</div>
 				</section>
-
-			<!-- Footer -->
-				<footer id="footer">
-
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Untitled. All rights reserved.</li>
-						</ul>
-				</footer>
 
 		</div>
 
@@ -184,6 +170,18 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
+			<script>
+			$("#find_zipcode").click(function(){
+	               new daum.Postcode({
+	                  oncomplete:function(data) {
+	                     jQuery("#u_zipcode").val(data.zonecode);
+	                     jQuery("#u_address").val(data.address);
+	                     jQuery("#u_detail_address").focus();
+	                  }
+	               }).open();
+	            });
+			</script>
 
 	</body>
 </html>

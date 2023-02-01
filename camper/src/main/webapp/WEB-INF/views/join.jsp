@@ -16,17 +16,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
-	<script>
-		$("#find_zipcode").click(function(){
-               new daum.Postcode({
-                  oncomplete:function(data) {
-                     jQuery("#u_zipcode").val(data.zonecode);
-                     jQuery("#u_address").val(data.address);
-                     jQuery("#u_detail_address").focus();
-                  }
-               }).open();
-            });
-	</script>
+	
 	<body class="is-preload">
 		<!-- Wrapper -->
 			<div id="wrapper">
@@ -40,8 +30,9 @@
                             <div class="col-12" style="text-align: center;">
 							<h1>회원가입</h1>
                         </div>			<!-- Form -->
-								<section>
+
 									<form method="post" action="#">
+									<div class="box">
 										<div class="row gtr-uniform">
 											<div class="col-12">
 												<input type="text" name="signUpid" id="signUpid" value="" placeholder="아이디" />
@@ -72,14 +63,14 @@
 											<div class="col-6">
 												<input type="text" name="signUpLastName" id="signUpLastName" value="" placeholder="이름" />
 											</div>
-												 <div class="col-6 col-12-small">
-													<input type="text" name="szipcode" id="uZipcode" value=""  placeholder="우편번호" required>
-												</div>	
-													<div class="col-6 col-12-small">	
-													<input type="button" name="findZipcode" id="findZipcode" value="우편번호 찾기" style="display: inline;">
+												 <div class="col-6">
+													<input type="text" name="address" id="u_address" value="" placeholder="우편번호" />
 												</div>
-												<div class="col-12">	
-													<input type="text" name="saddress" id="u_address" value=""  placeholder="주소" required>
+												<div class="col-3">
+													<input type="button" name="find_zipcode" id="find_zipcode" value="우편번호 찾기" />
+												</div>
+												<div class="col-12">
+													<input type="text" name="addressdetail" id="u_address_detail" value="" placeholder="상세주소" />
 												</div>
 												<div class="col-12">	
 												<input type="text" name="saddressdetail" id="u_address_detail" value="" placeholder="상세주소"required>
@@ -95,8 +86,8 @@
 												<input type="reset" value="내용삭제"  />
 											</div>
 										</div>
+										
 									</form>
-								</section>
 
 
 						</div>
@@ -111,6 +102,18 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
+			<script>
+			$("#find_zipcode").click(function(){
+	               new daum.Postcode({
+	                  oncomplete:function(data) {
+	                     jQuery("#u_zipcode").val(data.zonecode);
+	                     jQuery("#u_address").val(data.address);
+	                     jQuery("#u_detail_address").focus();
+	                  }
+	               }).open();
+	            });
+			</script>
+			
 	</body>
 	
 </html>
