@@ -26,18 +26,26 @@
 					<div id="main">
 						<div class="inner">
 							<h1>${board.cname}</h1>
-							<span class="image main"><img src="${board.cimage}" alt="" style="float: center; width:100%; height:300px;"/></span>
-							<p>
-								<div style="display: inline-block; margin: 0 5px;  float: right;">
-									예약 날짜 : <input type="date"> ~ <input type="date"><button style="margin-left: 10px;">예약하기</button>
-								</div>
-							</p>
-							<p>
-								<img src="images/map.png" width="30px" height="30px" style="margin-right: 5px;">${board.cplace}
-							</p>
-							<p>
-								<img src="images/call.png" width="30px" height="30px" style="margin-right: 5px;">${board.ctel}
-							</p>
+							<span class="image main"><img src="${board.cimage}" alt="" style="float: center; width:100%; height:300px;"/></span><hr>
+							<table>
+								<tr>
+									<td></td>
+									<td><span style="float: right;">
+									예약 날짜 : <input type="date" value="${board.cstartDate}"> ~ <input type="date" value="${board.cendDate}"></span>
+									</td>
+								</tr>
+								<tr>
+									<td><img src="images/call.png" width="30px" height="30px" style="margin-right: 5px;"> ${board.ctel}</td>
+									<td><span style="float: right;"><a href="/goRsrv?cid=${board.cid}" class="button">예약하기</a></span></td>
+								</tr>
+								<tr>
+									<td><img src="images/map.png" width="30px" height="30px" style="margin-right: 5px;"> ${board.cplace}</td>
+									<td><span style="float: right;" id="cmoney" name="cmoney">\:${board.cmoney}</span></td>
+								</tr>
+							</table>
+							
+							<hr>
+							<h2>${board.cname}</h2>
 							<p>${board.cinfo}</p>
 							</div>
 					</div>

@@ -39,4 +39,13 @@ public class BoardController {
 		System.out.println("상세정보 : " + boardMapper.getDetailCampInfo(cid));
 		return "detailInfo";
 	}
+	
+	
+	//예약하기 이동
+	@GetMapping("/goRsrv")
+	public String goRsrv(Model m, Long cid) {
+		m.addAttribute("board", boardMapper.getDetailCampInfo(cid));
+		System.out.println("예약하러가기 : " + boardMapper.getDetailCampInfo(cid));
+		return "goRsrv";
+	}
 }

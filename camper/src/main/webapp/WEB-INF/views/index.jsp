@@ -32,7 +32,7 @@
 							<article class="style${board.cid}">
 								
 									<span class="image">
-										<img src=${board.cimage} alt="" style="float: center; width:100%; height:300px;">
+										<img src="${board.cimage}" alt="" style="float: center; width:100%; height:300px;">
 <%-- 										${board.cid} --%>
 									<span style="float: left;" id="ctel" name="ctel">Tel:${board.ctel}</span>
 									<span style="float: right;" id="cmoney" name="cmoney">\:${board.cmoney}</span>
