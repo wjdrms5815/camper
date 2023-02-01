@@ -8,7 +8,7 @@ public class BoardVO {
 	private String cname;
 	private String cinfo;
 	private String ctel;
-	private String cloaction;
+	private String cplace;
 	private String cstartDate;
 	private String cendDate;
 	private int cmoney;

@@ -2,8 +2,31 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.camper.mapper.BoardMapper">
 
+ <sql id="criteria">
+        <if test="type != null and keyword != null">
+            <trim prefix="(" suffix=") AND" prefixOverrides="OR">
+                <foreach item="type" collection="typeArr">
+                    <trim prefix="OR">
+                        <choose>
+                            <when test="type == 'W'.toString()">
+                                (userName LIKE CONCAT('%',#{keyword},'%'))
+                            </when>
+                            <when test="type == 'S'.toString()">
+                                (subjectName LIKE CONCAT('%',#{keyword},'%'))
+                            </when>
+                        </choose>
+                    </trim>
+                </foreach>
+            </trim>
+        </if>
+    </sql>
+    
 <select id="getAllCampInfo" resultType="com.camper.domain.BoardVO">
-	select * from campInfo;
+	select * from campInfo
+</select>
+
+<select id="getDetailCampInfo" resultType="com.camper.domain.BoardVO">
+	select * from campInfo where cId= #{cid}
 </select>
 
 

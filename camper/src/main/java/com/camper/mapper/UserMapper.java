@@ -20,7 +20,7 @@ public interface UserMapper {
 	 * @Select("SELECT * FROM users") List<User> findAll();
 	 */
 	
-	/*xml에서 매핑한 id를 불러옴*/
+	/*zz*/
 	List<UserVO> getAllUser();
     
     

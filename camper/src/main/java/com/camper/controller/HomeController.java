@@ -46,7 +46,7 @@ public class HomeController {
     //generic 상세보기
     @RequestMapping("/generic")
     public String generic() {
-        return "generic";
+        return "detailInfo";
     }
     
     //join 회원가입

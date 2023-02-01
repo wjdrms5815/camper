@@ -33,13 +33,14 @@
 								
 									<span class="image">
 										<img src=${board.cimage} alt="" / style="";>
+										${board.cid}
 										
 									</span>
-									<a href="/generic">
+									<a href="/goDetail?cid=${board.cid}">
 										<h2>${board.cname}</h2>
 										<div class="content">
 											${board.cinfo}
-											${board.ctel}${board.cloaction}<Br>
+											${board.ctel}${board.cplace}<Br>
 											${board.cmoney}
 										</div>
 									</a>
