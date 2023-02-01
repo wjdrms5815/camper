@@ -4,7 +4,7 @@
 <!DOCTYPE HTML>
 <!--
 	Phantom by Pixelarity
-	pixelarity.com | hello@pixelarity.com
+	pixelarity.com | hello@p ixelarity.com
 	License: pixelarity.com/license
 -->
 <html>

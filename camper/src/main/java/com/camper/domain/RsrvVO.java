@@ -3,6 +3,7 @@ package com.camper.domain;
 import lombok.Data;
 
 @Data
+//예약VO
 public class RsrvVO {
 	private String rid;
 	private int cid;
@@ -21,4 +22,5 @@ public class RsrvVO {
 	private String renddate;
 	private String rplace;
 	private String rtel;
+	
 }
