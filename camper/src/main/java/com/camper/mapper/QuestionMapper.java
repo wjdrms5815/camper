@@ -1,16 +1,15 @@
 package com.camper.mapper;
 
 import java.util.List;
+
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
-import com.camper.domain.MyPageVO;
+import com.camper.domain.QuestionVO;
 
 @Mapper
 @Repository
-public interface MyPageMapper {
+public interface QuestionMapper {
 	
-	MyPageVO getMyPage();
-	
-	public void updateMyPage(MyPageVO vo);
+	List<QuestionVO> getQuestion();
 }
