@@ -5,4 +5,10 @@
 <select id="getMyPage" resultType="com.camper.domain.MyPageVO">
 	select * from users;
 </select>
+
+<update id="updateMyPage">
+	update users set upw=#{upw}, uname=#{uname}, upostcode=#{upostcode}, uaddr=#{uaddr}, uaddrdetail=#{uaddrdetail}, qid=#{qid}, uanswer=#{uanswer}
+	where uid=#{uid}
+</update>
+
 </mapper>
