@@ -23,6 +23,7 @@ public interface UserMapper {
 	/*zz*/
 	List<UserVO> getAllUser();
     
+    public int loginOkay(String uid, String upw);
     
     
 }

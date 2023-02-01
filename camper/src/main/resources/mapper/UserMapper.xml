@@ -6,5 +6,11 @@
 	select * from users;
 </select>
 
+<!-- 로그인 -->
+<select id="loginOkay" resultType="int">
+	select count(*) from users where uid = #{uid} and upw = #{upw}
+</select>
+
+
 
 </mapper>
