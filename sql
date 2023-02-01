@@ -1,3 +1,6 @@
+
+
+/**/
 /*campinfo 더미파일*/
 insert into campinfo (cName ,cInfo ,cTel ,cplace ,cStartDate ,cEndDate,cMoney, cImage) values('캠프', '캠프정보', '캠프번호', '캠프장소', now(),now(), 83500, '/images/eximage.jpg');
 insert into campinfo (cName ,cInfo ,cTel ,cplace ,cStartDate ,cEndDate,cMoney, cImage ) values('여름밤 그리고 캠핑', '여름밤 그리고 캠핑정보', '010-1232-1232', '대한민국', now(),now(),10000, '/images/ex.jpg');
@@ -21,7 +24,8 @@ insert into joinqna(qques) values('인상 깊게 읽은 책 이름은?');
 create table users(
 	uId varchar(30) primary key,
 	uPw varchar(20),
-	uName varchar(10),
+	uFirstName varchar(10),
+	uLastName varchar(10),
 	uPostCode varchar(30),
 	uAddr varchar(50),
 	uAddrDetail varchar(50),
@@ -49,6 +53,20 @@ create table reservation(
 	rId serial primary key,
 	cId integer,
 	uId varchar(30),
+	rCard varchar(20),
+	rCardNum varchar(20),
+	rValMon varchar(20),
+	rValYear varchar(20),
+	rFirstName varchar(20),
+	rLastName varchar(20),
+	rPhoneNum varchar(20),
+	rAddress varchar(20),
+	rAddressDetail varchar(20),
+	rMoney varchar(20),
+	rStartDate date,
+	rEndDate date,
+	rPlace varchar(20),
+	rTel varchar(20),
 	CONSTRAINT fk_cId FOREIGN KEY(cId) REFERENCES "campinfo"(cId) ON DELETE CASCADE ON UPDATE cascade,
 	CONSTRAINT fk_uId FOREIGN KEY(uId) REFERENCES "users"(uId) ON DELETE CASCADE ON UPDATE CASCADE
 );
