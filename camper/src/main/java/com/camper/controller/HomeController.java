@@ -85,5 +85,18 @@ public class HomeController {
         return "reservation";
     }
     
+//    //404
+//    @RequestMapping("/error1")
+//    public String error1() {
+//        return "error1";
+//    }
+//    
+//    //505
+//    @RequestMapping("/error2")
+//    public String error2() {
+//        return "error2";
+//    }
+    
+    
 }
 

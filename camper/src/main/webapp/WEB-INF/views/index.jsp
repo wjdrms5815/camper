@@ -32,16 +32,17 @@
 							<article class="style${board.cid}">
 								
 									<span class="image">
-										<img src=${board.cimage} alt="" / style="";>
-										${board.cid}
-										
+										<img src=${board.cimage} alt="" style="float: center; width:100%; height:300px;">
+<%-- 										${board.cid} --%>
+									<span style="float: left;" id="ctel" name="ctel">Tel:${board.ctel}</span>
+									<span style="float: right;" id="cmoney" name="cmoney">\:${board.cmoney}</span>
+							
 									</span>
 									<a href="/goDetail?cid=${board.cid}">
 										<h2>${board.cname}</h2>
 										<div class="content">
-											${board.cinfo}
-											${board.ctel}${board.cplace}<Br>
-											${board.cmoney}
+											<br><br>${board.cplace}
+
 										</div>
 									</a>
 									

@@ -26,7 +26,7 @@
 					<div id="main">
 						<div class="inner">
 							<h1>${board.cname}</h1>
-							<span class="image main"><img src="images/pic13.jpg" alt="" /></span>
+							<span class="image main"><img src="${board.cimage}" alt="" style="float: center; width:100%; height:300px;"/></span>
 							<p>
 								<div style="display: inline-block; margin: 0 5px;  float: right;">
 									예약 날짜 : <input type="date"> ~ <input type="date"><button style="margin-left: 10px;">예약하기</button>

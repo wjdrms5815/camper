@@ -24,7 +24,7 @@
 
 			<!-- Main -->
 				<section id="main" class="container medium">
-				<div class="inner">
+				<div class="inner2">
 					<header>
 						<div class="col-12" style="text-align: center;">
 						<h1>∞·¡¶</h1>
