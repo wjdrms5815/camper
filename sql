@@ -18,9 +18,6 @@ insert into joinqna(qques) values('유년시절 가장 생각나는 친구의 �
 insert into joinqna(qques) values('다시 태어나면 되고 싶은 것은?');
 insert into joinqna(qques) values('인상 깊게 읽은 책 이름은?');
 
-insert into reservation
-(cId, uId, rCard ,rCardNum ,rValMon ,rValYear ,rFirstName ,rLastName,rPhoneNum, rAddress, rAddressDetail, rMoney, rStartDate, rEndDate, rPlace, rTel)
-values(1, 'wjdrms', 'Visa', '1234123412341234', '10','24','yuk','jeonggeun','01012341234','강남대로11','비트교육센터','100000',now(),now(),'캠핑장소','010캠핑캠핑1234');
 
 /*-------------------------------------------------------더미파일-------------------------------------------------------*/
 
@@ -39,6 +36,7 @@ create table users(
 	uAnswer varchar(30), /*사용자가 회원가입시 한 대답*/
 	CONSTRAINT fk_qId FOREIGN KEY(qId) REFERENCES "joinqna"(qId) ON DELETE CASCADE ON UPDATE CASCADE
 );
+
 /*캠핑정보*/
 create table campinfo(
 	cid serial primary key,
@@ -49,6 +47,7 @@ create table campinfo(
 	cstartDate date,
 	cendDate date,
 	cmoney integer,
+	ccheck varchar(10) default '0',
 	cimage varchar(30)
 );
 /*예약 현황 테이블*/
