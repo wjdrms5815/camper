@@ -3,7 +3,7 @@
 <mapper namespace="com.camper.mapper.MyPageMapper">
 
 <select id="getMyPage" resultType="com.camper.domain.MyPageVO">
-	select * from users;
+	select * from users where uid=#{userId}
 </select>
 
 <update id="updateMyPage">

@@ -40,8 +40,8 @@
 						<li><a href="/">메인화면</a></li>
 						</div>
 						<div id="nav">
-						<li><a href="/member/myPage">마이 페이지</a></li>
-						<li><a href="/member/reservation">예약 내역</a></li>
+						<li><a href="/myPage">마이 페이지</a></li>
+						<li><a href="/reservation">예약 내역</a></li>
 						</div>
 						<div id="nav">
 						 <div class="menu">

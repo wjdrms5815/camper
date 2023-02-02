@@ -45,15 +45,16 @@
 					<h1>예약내역</h1>
 				</div>
 				<!-- Form -->
-				<form action="/member/reservationDelete" method="post">
+				<form action="/reservationDelete" method="post">
 					<section>
 						<c:forEach var="reservation" items="${reservation}">
 							<div class="col-12">
 								<input type="checkbox" name="rid" value="${reservation.rid}">
+								<input type="hidden" name="uid" value="${reservation.uid }">
 								<div style="margin-left: 50px; margin-top: -20px;">
 								예약자명 : <span>${reservation.rfirstname}${reservation.rlastname }</span><br> 
-								예약 장소 : <span>${reservation.rplace}</span><br>
-								결제 금액 : <span>${reservation.rmoney}</span>
+								예약 장소 : <span>${reservation.cplace}</span><br>
+								결제 금액 : <span>${reservation.cmoney}</span>
 								</div>
 							</div>
 							<br>

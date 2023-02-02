@@ -45,7 +45,7 @@ public class UserController {
 			
 			session.setAttribute("sessionId", userMapper.getUid(map.get("uid"))); // 세션값 등록 
 		    model.addAttribute("sessionId", session.getAttribute("sessionId"));
-			 
+			 System.out.println(session.getAttribute("sessionId"));
 	        
 			return "redirect:/";
 		}

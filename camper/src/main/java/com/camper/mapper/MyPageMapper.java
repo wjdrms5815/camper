@@ -10,7 +10,7 @@ import com.camper.domain.MyPageVO;
 @Repository
 public interface MyPageMapper {
 	
-	MyPageVO getMyPage();
+	MyPageVO getMyPage(String userId);
 	
 	public void updateMyPage(MyPageVO vo);
 }

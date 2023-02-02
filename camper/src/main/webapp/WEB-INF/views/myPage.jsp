@@ -44,7 +44,7 @@
 								<div id="id">아이디</div>
 								<tr>
 									<%--  <td>${ mypage.uid }</td> --%>
-									<input type="text" name="uid" value="${mypage.uid}" enabled />
+									<input type="text" name="uid" value="${mypage.uid}" disabled/>
 								</tr>
 							</div>
 

@@ -10,19 +10,23 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.camper.domain.ReservationVO;
 import com.camper.domain.RsrvVO;
 import com.camper.mapper.ReservationMapper;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
-@RequestMapping("/member")
+@RequestMapping("/")
 public class ReservationController {
 	
 	@Autowired
 	ReservationMapper reservationMapper;
 	
 	@GetMapping("/reservation")
-	public String getReservation(Model model) {
-		List<RsrvVO> reservation = reservationMapper.getAllReservation();
+	public String getReservation(Model model, HttpSession session) {
+		String userId = (String) session.getAttribute("sessionId");
+		List<ReservationVO> reservation = reservationMapper.getAllReservation(userId);
 		System.out.println(reservation);
 		model.addAttribute("reservation", reservation);
 		return "reservation";
@@ -34,7 +38,7 @@ public class ReservationController {
 			System.out.println(rid.get(i));
 			reservationMapper.removeReservation(Integer.parseInt(rid.get(i)));
 		}
-		return "redirect:/member/reservation";
+		return "redirect:/reservation";
 	}
 	
 }

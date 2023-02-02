@@ -16,6 +16,8 @@ import com.camper.domain.QuestionVO;
 import com.camper.mapper.MyPageMapper;
 import com.camper.mapper.QuestionMapper;
 
+import jakarta.servlet.http.HttpSession;
+
 @Controller
 @RequestMapping("/")
 public class MyPageController {
@@ -27,8 +29,9 @@ public class MyPageController {
 	QuestionMapper questionMapper;
 
 	@GetMapping("/myPage")
-	public String myPage(Model model) throws Exception {
-		MyPageVO mypage = myPageMapper.getMyPage();
+	public String myPage(Model model, HttpSession session) throws Exception {
+		String userId = (String) session.getAttribute("sessionId");
+		MyPageVO mypage = myPageMapper.getMyPage(userId);
 		List<QuestionVO> question = questionMapper.getQuestion();
 		System.out.println(mypage);
 		model.addAttribute("mypage", mypage);
