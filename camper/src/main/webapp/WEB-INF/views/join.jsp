@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE HTML>
 
@@ -28,64 +28,64 @@
 					<div id="main">
 						<div class="inner2">
                             <div class="col-12" style="text-align: center;">
-							<h1>È¸¿ø°¡ÀÔ</h1>
+							<h1>íšŒì›ê°€ìž…</h1>
                         </div>			<!-- Form -->
 
 						<form method="post" action="/user/signUp">
 						<div class="box">
 							<div class="row gtr-uniform">
 								<div class="col-7">
-									<input type="text" name="uid" id="uid" value="" placeholder="¾ÆÀÌµð" />
-									<span id = "spanid" name = "spanid" style = "color:red; font-size:5pt"></span>
+									<input type="text" name="uid" id="uid" value="" placeholder="ì•„ì´ë””" />
+									<span id = "spanid" name = "spanid" style = "color:red; font-size:8pt"></span>
 								</div>
 								<div class="col-4">
-									<input type="button" name="uidCheck" id="uidCheck" value="Áßº¹È®ÀÎ" action = "/user/idCheck"/>
+									<input type="button" name="uidCheck" id="uidCheck" value="ì¤‘ë³µí™•ì¸" action = "/user/idCheck"/>
 								</div>
 								
                                 <div class="col-12">
-									<input type="password" name="upw" id="upw" value="" placeholder="ºñ¹Ð¹øÈ£" />
+									<input type="password" name="upw" id="upw" value="" placeholder="ë¹„ë°€ë²ˆí˜¸" />
 								</div>
 								
 								<div class="col-12">
-									<input type="password" name="passwordCheck" id="passwordCheck" value="" placeholder="ºñ¹Ð¹øÈ£ ÀçÀÔ·Â" />
-									<span id = "spanpw" name = "spanpw" style = "color:red; font-size:5pt"></span>
+									<input type="password" name="passwordCheck" id="passwordCheck" value="" placeholder="ë¹„ë°€ë²ˆí˜¸ ìž¬ìž…ë ¥" />
+									<span id = "spanpw" name = "spanpw" style = "color:red; font-size:8pt"></span>
 								</div>
 								
 								<div class="col-12">
 								<select name="qid" id="qid" >
-									<option value =1>±â¾ï¿¡ ³²´Â Ãß¾ïÀÇ Àå¼Ò´Â?</option>
-									<option value =2>ÀÚ½ÅÀÇ ÀÎ»ý ÁÂ¿ì¸íÀº?</option>
-									<option value =3>°¡Àå ±â¾ï¿¡ ³²´Â ¼±»ý´Ô ¼ºÇÔÀº?</option>
-									<option value =4>ÀÚ½ÅÀÇ º¸¹° Á¦1È£´Â?</option>
-									<option value =5>À¯³â½ÃÀý °¡Àå »ý°¢³ª´Â Ä£±¸ÀÇ ÀÌ¸§Àº?</option>
-									<option value =6>´Ù½Ã ÅÂ¾î³ª¸é µÇ°í ½ÍÀº °ÍÀº?</option>
-									<option value =7>ÀÎ»ó ±í°Ô ÀÐÀº Ã¥ ÀÌ¸§Àº?</option>
+									<option value =1>ê¸°ì–µì— ë‚¨ëŠ” ì¶”ì–µì˜ ìž¥ì†ŒëŠ”?</option>
+									<option value =2>ìžì‹ ì˜ ì¸ìƒ ì¢Œìš°ëª…ì€?</option>
+									<option value =3>ê°€ìž¥ ê¸°ì–µì— ë‚¨ëŠ” ì„ ìƒë‹˜ ì„±í•¨ì€?</option>
+									<option value =4>ìžì‹ ì˜ ë³´ë¬¼ ì œ1í˜¸ëŠ”?</option>
+									<option value =5>ìœ ë…„ì‹œì ˆ ê°€ìž¥ ìƒê°ë‚˜ëŠ” ì¹œêµ¬ì˜ ì´ë¦„ì€?</option>
+									<option value =6>ë‹¤ì‹œ íƒœì–´ë‚˜ë©´ ë˜ê³  ì‹¶ì€ ê²ƒì€?</option>
+									<option value =7>ì¸ìƒ ê¹Šê²Œ ì½ì€ ì±… ì´ë¦„ì€?</option>
 								</select>
 								</div>
 								
 								<div class="col-12">
-									<input type="text" name="uanswer" id="uanswer" value="" required placeholder="Á¤´ä">
+									<input type="text" name="uanswer" id="uanswer" value="" required placeholder="ì •ë‹µ">
 								</div>
 								
 								<div class="col-6">
-									<input type="text" name="ufirstname" id="ufirstname" value="" placeholder="¼º" />
+									<input type="text" name="ufirstname" id="ufirstname" value="" placeholder="ì„±" />
 								</div>
 								
 								<div class="col-6">
-									<input type="text" name="ulastname" id="ulastname" value="" placeholder="ÀÌ¸§" />
+									<input type="text" name="ulastname" id="ulastname" value="" placeholder="ì´ë¦„" />
 								</div>
 								
 								 <div class="col-6">
-									<input type="text" name="upostcode" id="upostcode" value="" placeholder="¿ìÆí¹øÈ£" />
+									<input type="text" name="upostcode" id="upostcode" value="" placeholder="ìš°íŽ¸ë²ˆí˜¸" />
 								</div>
 								<div class="col-3">
-									<input type="button" name="find_zipcode" id="find_zipcode" value="¿ìÆí¹øÈ£ Ã£±â" />
+									<input type="button" name="find_zipcode" id="find_zipcode" value="ìš°íŽ¸ë²ˆí˜¸ ì°¾ê¸°" />
 								</div>
 								<div class="col-12">
-									<input type="text" name="uaddr" id="uaddr" value="" placeholder ="ÁÖ¼Ò" />
+									<input type="text" name="uaddr" id="uaddr" value="" placeholder ="ì£¼ì†Œ" />
 								</div> 
 								<div class="col-12">
-									<input type="text" name="uaddrdetail" id="uaddrdetail" value="" placeholder ="»ó¼¼ÁÖ¼Ò" />
+									<input type="text" name="uaddrdetail" id="uaddrdetail" value="" placeholder ="ìƒì„¸ì£¼ì†Œ" />
 								</div>
 									
 								</div>		
@@ -94,8 +94,8 @@
                                          <br>
 								
 								<div class="col-12" style="text-align: center;">
-                                             <input type="submit" value="È¸¿ø°¡ÀÔ" class="primary" />
-									<input type="reset" value="³»¿ë»èÁ¦"  />
+                                             <input type="submit" value="íšŒì›ê°€ìž…" class="primary" />
+									<input type="reset" value="ë‚´ìš©ì‚­ì œ"  />
 								</div>
 							</div>
 							
@@ -130,10 +130,10 @@
 				var p2 = $(this).val();
 				var nullpw = "";
 				if(p1==p2){
-					$('#spanpw').text("ºñ¹Ð¹øÈ£°¡ ÀÏÄ¡ÇÕ´Ï´Ù.");
+					$('#spanpw').text("ë¹„ë°€ë²ˆí˜¸ê°€ ì¼ì¹˜í•©ë‹ˆë‹¤.");
 				}
 				else{
-					$('#spanpw').text("ºñ¹Ð¹øÈ£°¡ ÀÏÄ¡ÇÏÁö ¾Ê½À´Ï´Ù.");
+					$('#spanpw').text("ë¹„ë°€ë²ˆí˜¸ê°€ ì¼ì¹˜í•˜ì§€ ì•ŠìŠµë‹ˆë‹¤.");
 				}
 				
 			});
@@ -142,10 +142,10 @@
 			$('#uid').keyup(function(){
 				var id = $(this).val();
 				if(!idRegular.test($('#uid').val())){
-					$('#spanid').text("»ç¿ëÇÒ ¼ö ÀÖ´Â ¾ÆÀÌµðÀÔ´Ï´Ù.");
+					$('#spanid').text("ì‚¬ìš©í•  ìˆ˜ ìžˆëŠ” ì•„ì´ë””ìž…ë‹ˆë‹¤.");
 				}
 				else{
-					$('#spanid').text("Æ¯¼ö¹®ÀÚ´Â »ç¿ëÇÒ ¼ö ¾ø½À´Ï´Ù.");
+					$('#spanid').text("íŠ¹ìˆ˜ë¬¸ìžëŠ” ì‚¬ìš©í•  ìˆ˜ ì—†ìŠµë‹ˆë‹¤.");
 				}
 			});
 			</script>
