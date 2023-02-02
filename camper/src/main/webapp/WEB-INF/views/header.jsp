@@ -53,7 +53,7 @@
 						  </li>
 						 </div>
 						<c:if test="${not empty userId}">
-							<li><a href="/logout">로그아웃</a></li>
+							<li><a href="/user/logout">로그아웃</a></li>
 						</c:if>
 						<!-- <li><a href="generic.html">상세 페이지</a></li>
 						<li><a href="generic.html">Consequat dolor</a></li>
