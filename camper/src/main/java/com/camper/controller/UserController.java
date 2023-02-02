@@ -11,14 +11,18 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.camper.domain.UserVO;
+import com.camper.mapper.QuestionMapper;
 import com.camper.mapper.UserMapper;
 
 @Controller
 @RequestMapping("/user")
 public class UserController {
 	
-	@Autowired UserMapper userMapper;
+	@Autowired 
+	UserMapper userMapper;
 	
+	@Autowired
+	QuestionMapper questionMapper;
 	
 	public String list(Model m) {
 		List<UserVO> user = userMapper.getAllUser();
@@ -39,11 +43,22 @@ public class UserController {
 			return "login";
 		}
 	}
+	
 	//회원가입
-	@PostMapping("/SignUp")
+	@PostMapping("/signUp")
 	public String signUpPage(UserVO vo) {
-		
-		return null;
+		userMapper.signUpOkay(vo);
+		System.out.println(vo);
+		return "login";
+	}
+	
+	//아이디 중복 체크
+	public String idCheck(UserVO vo) throws Exception{
+		UserVO userid = userMapper.idCheck(vo);
+		if(userid == null) {
+			return "null";
+		}
+		return "success";
 	}
 	//public String getLogin(Model m, Long uid, Long upw) {
 		

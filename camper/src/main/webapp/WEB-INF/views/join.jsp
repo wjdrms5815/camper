@@ -31,60 +31,75 @@
 							<h1>회원가입</h1>
                         </div>			<!-- Form -->
 
-									<form method="post" action="#">
-									<div class="box">
-										<div class="row gtr-uniform">
-											<div class="col-12">
-												<input type="text" name="signUpid" id="signUpid" value="" placeholder="아이디" />
-											</div>
-                                            <div class="col-12">
-												<input type="password" name="Password" id="Password" value="" placeholder="비밀번호" />
-											</div>
-											<div class="col-12">
-												<input type="password" name="PasswordCheck" id="PasswordCheck" value="" placeholder="비밀번호 재입력" />
-											</div>
-											<div class="col-12">
-											<select name="spwdq" id="spwdq" required>
-												<option value="기억에 남는 추억의 장소는?">기억에 남는 추억의 장소는?</option>
-												<option value="자신의 인생 좌우명은?">자신의 인생 좌우명은?</option>
-												<option value="가장 기억에 남는 선생님 성함은?">가장 기억에 남는 선생님 성함은?</option>
-												<option value="자신의 보물 제1호는?">자신의 보물 제1호는?</option>
-												<option value="유년시절 가장 생각나는 친구의 이름은?">유년시절 가장 생각나는 친구의 이름은?</option>
-												<option value="다시 태어나면 되고 싶은 것은?">다시 태어나면 되고 싶은 것은?</option>
-												<option value="인상 깊게 읽은 책 이름은?">인상 깊게 읽은 책 이름은?</option>
-											</select>
-											</div>
-											<div class="col-12">
-												<input type="text" name="spwda" id="spwda" value="" required placeholder="정답">
-											</div>
-											<div class="col-6">
-												<input type="text" name="signUpFirstName" id="signUpFirstName" value="" placeholder="성" />
-											</div>
-											<div class="col-6">
-												<input type="text" name="signUpLastName" id="signUpLastName" value="" placeholder="이름" />
-											</div>
-												 <div class="col-6">
-													<input type="text" name="address" id="u_address" value="" placeholder="우편번호" />
-												</div>
-												<div class="col-3">
-													<input type="button" name="find_zipcode" id="find_zipcode" value="우편번호 찾기" />
-												</div>
-												<div class="col-12">
-													<input type="text" name="addressdetail" id="u_address_detail" value="" placeholder="상세주소" />
-												</div> 
-												
-											</div>		
-											
-											
-                                            <br>
-											
-											<div class="col-12" style="text-align: center;">
-                                                <input type="submit" value="회원가입" class="primary" />
-												<input type="reset" value="내용삭제"  />
-											</div>
-										</div>
-										
-									</form>
+						<form method="post" action="/user/signUp">
+						<div class="box">
+							<div class="row gtr-uniform">
+								<div class="col-7">
+									<input type="text" name="uid" id="uid" value="" placeholder="아이디" />
+									<span id = "spanid" name = "spanid" style = "color:red; font-size:5pt"></span>
+								</div>
+								<div class="col-4">
+									<input type="button" name="uidCheck" id="uidCheck" value="중복확인" action = "/user/idCheck"/>
+								</div>
+								
+                                <div class="col-12">
+									<input type="password" name="upw" id="upw" value="" placeholder="비밀번호" />
+								</div>
+								
+								<div class="col-12">
+									<input type="password" name="passwordCheck" id="passwordCheck" value="" placeholder="비밀번호 재입력" />
+									<span id = "spanpw" name = "spanpw" style = "color:red; font-size:5pt"></span>
+								</div>
+								
+								<div class="col-12">
+								<select name="qid" id="qid" >
+									<option value =1>기억에 남는 추억의 장소는?</option>
+									<option value =2>자신의 인생 좌우명은?</option>
+									<option value =3>가장 기억에 남는 선생님 성함은?</option>
+									<option value =4>자신의 보물 제1호는?</option>
+									<option value =5>유년시절 가장 생각나는 친구의 이름은?</option>
+									<option value =6>다시 태어나면 되고 싶은 것은?</option>
+									<option value =7>인상 깊게 읽은 책 이름은?</option>
+								</select>
+								</div>
+								
+								<div class="col-12">
+									<input type="text" name="uanswer" id="uanswer" value="" required placeholder="정답">
+								</div>
+								
+								<div class="col-6">
+									<input type="text" name="ufirstname" id="ufirstname" value="" placeholder="성" />
+								</div>
+								
+								<div class="col-6">
+									<input type="text" name="ulastname" id="ulastname" value="" placeholder="이름" />
+								</div>
+								
+								 <div class="col-6">
+									<input type="text" name="upostcode" id="upostcode" value="" placeholder="우편번호" />
+								</div>
+								<div class="col-3">
+									<input type="button" name="find_zipcode" id="find_zipcode" value="우편번호 찾기" />
+								</div>
+								<div class="col-12">
+									<input type="text" name="uaddr" id="uaddr" value="" placeholder ="주소" />
+								</div> 
+								<div class="col-12">
+									<input type="text" name="uaddrdetail" id="uaddrdetail" value="" placeholder ="상세주소" />
+								</div>
+									
+								</div>		
+								
+								
+                                         <br>
+								
+								<div class="col-12" style="text-align: center;">
+                                             <input type="submit" value="회원가입" class="primary" />
+									<input type="reset" value="내용삭제"  />
+								</div>
+							</div>
+							
+						</form>
 
 
 						</div>
@@ -109,8 +124,32 @@
 	                  }
 	               }).open();
 	            });
-			</script>
 			
+			$('#passwordCheck').keyup(function(){
+				var p1 = $('#upw').val();
+				var p2 = $(this).val();
+				var nullpw = "";
+				if(p1==p2){
+					$('#spanpw').text("비밀번호가 일치합니다.");
+				}
+				else{
+					$('#spanpw').text("비밀번호가 일치하지 않습니다.");
+				}
+				
+			});
+			
+			var idRegular = RegExp(/[^a-zA-Z0-9]$/);
+			$('#uid').keyup(function(){
+				var id = $(this).val();
+				if(!idRegular.test($('#uid').val())){
+					$('#spanid').text("사용할 수 있는 아이디입니다.");
+				}
+				else{
+					$('#spanid').text("특수문자는 사용할 수 없습니다.");
+				}
+			});
+			</script>
+					
 	</body>
 	
 </html>

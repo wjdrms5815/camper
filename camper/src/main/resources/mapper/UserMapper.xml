@@ -2,15 +2,28 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.camper.mapper.UserMapper">
 
-<select id="getAllUser" resultType="com.camper.domain.UserVO">
-	select * from users;
-</select>
-
-<!-- 로그인 -->
-<select id="loginOkay" resultType="int">
-	select count(*) from users where uid = #{uid} and upw = #{upw}
-</select>
-
-
+	<select id="getAllUser" resultType="com.camper.domain.UserVO">
+		select * from users;
+	</select>
+	
+	<!-- 로그인 -->
+	<select id="loginOkay" resultType="int">
+		select count(*) from users where uid = #{uid} and upw = #{upw}
+	</select>
+	
+	<!-- 회원가입 -->
+	<select id = "signUpOkay" resultType = "com.camper.domain.UserVO">
+		insert into users (uid, upw, ufirstname, ulastname, 
+		upostcode, uaddr, uaddrdetail, 
+		 ursvtime, qid, uanswer) 
+		values(#{uid}, #{upw}, #{ufirstname}, #{ulastname}, 
+		#{upostcode}, #{uaddr}, #{uaddrdetail}, 
+		now(), ${qid}, #{uanswer});
+	</select>
+	
+	<!-- 아이디 중복 체크 -->
+	<select id = "idCheck" resultType = "com.camper.domain.UserVO">
+		select * from uid where uid = #{uid} 
+	</select>
 
 </mapper>

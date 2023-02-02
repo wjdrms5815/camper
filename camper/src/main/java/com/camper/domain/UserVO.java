@@ -7,9 +7,13 @@ import lombok.Data;
 public class UserVO {
 	private String uid;
 	private String upw;
-	private String uname;
+	private String ufirstname;
+	private String ulastname;
 	private Long upostcode;
 	private String uaddr;
+	private String uaddrdetail;
 	private String uwallet;
 	private String ursTime;
+	private int qid;
+	private String uanswer;
 }

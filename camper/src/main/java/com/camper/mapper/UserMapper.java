@@ -20,10 +20,17 @@ public interface UserMapper {
 	 * @Select("SELECT * FROM users") List<User> findAll();
 	 */
 	
-	/*zz*/
+	/*전체 유저*/
 	List<UserVO> getAllUser();
     
+	/*로그인*/
     public int loginOkay(String uid, String upw);
+    
+    /*회원가입*/
+    public void signUpOkay(UserVO vo);
+    
+    /*아이디 비교*/
+    public UserVO idCheck(UserVO vo);
     
     
 }
