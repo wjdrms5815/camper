@@ -17,7 +17,7 @@ import com.camper.mapper.MyPageMapper;
 import com.camper.mapper.QuestionMapper;
 
 @Controller
-@RequestMapping("/member")
+@RequestMapping("/")
 public class MyPageController {
 	
 	@Autowired
@@ -40,6 +40,6 @@ public class MyPageController {
 	public String myPage(MyPageVO vo){
 		myPageMapper.updateMyPage(vo);
 		System.out.println(vo);
-		return "redirect:/member/myPage";
+		return "redirect:/myPage";
 	}
 }

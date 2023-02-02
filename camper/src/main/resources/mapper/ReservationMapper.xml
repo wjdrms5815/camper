@@ -7,6 +7,6 @@
 </select>
 
 <delete id="removeReservation">
-	delete from reservation where rid=#{rid}
+	delete from reservation where rid=#{rid} 
 </delete>
 </mapper>
