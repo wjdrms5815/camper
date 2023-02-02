@@ -2216,22 +2216,9 @@ input, select, textarea {
       min-height: 3.75em;
    }
 
-   input[type="checkbox"],
-   input[type="radio"] {
-      -moz-appearance: none;
-      -webkit-appearance: none;
-      -ms-appearance: none;
-      appearance: none;
-      display: block;
-      float: left;
-      margin-right: -2em;
-      opacity: 0;
-      width: 1em;
-      z-index: -1;
-   }
 
-      input[type="checkbox"] + label,
-      input[type="radio"] + label {
+      input[type="checkbox"],
+      input[type="radio"]{
          text-decoration: none;
          color: #585858;
          cursor: pointer;
@@ -2243,22 +2230,9 @@ input, select, textarea {
          position: relative;
       }
 
-         input[type="checkbox"] + label:before,
-         input[type="radio"] + label:before {
-            -moz-osx-font-smoothing: grayscale;
-            -webkit-font-smoothing: antialiased;
-            display: inline-block;
-            font-style: normal;
-            font-variant: normal;
-            text-rendering: auto;
-            line-height: 1;
-            text-transform: none !important;
-            font-family: 'Font Awesome 5 Free';
-            font-weight: 900;
-         }
 
-         input[type="checkbox"] + label:before,
-         input[type="radio"] + label:before {
+         input[type="checkbox"]:before,
+         input[type="radio"]:before {
             border-radius: 4px;
             border: solid 1px #c9c9c9;
             content: '';
@@ -2273,25 +2247,25 @@ input, select, textarea {
             width: 2.25em;
          }
 
-      input[type="checkbox"]:checked + label:before,
-      input[type="radio"]:checked + label:before {
+      input[type="checkbox"]:checked:before,
+      input[type="radio"]:checked:before {
          background: #585858;
          border-color: #585858;
          color: #ffffff;
          content: '\f00c';
       }
 
-      input[type="checkbox"]:focus + label:before,
-      input[type="radio"]:focus + label:before {
+      input[type="checkbox"]:focus:before,
+      input[type="radio"]:focus:before {
          border-color: #ffffff;
          box-shadow: 0 0 0 1px #ffffff;
       }
 
-   input[type="checkbox"] + label:before {
+   input[type="checkbox"]:before {
       border-radius: 4px;
    }
 
-   input[type="radio"] + label:before {
+   input[type="radio"]:before {
       border-radius: 100%;
    }
 

@@ -1,6 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE HTML>
 
 <!--
@@ -9,81 +9,75 @@
 	License: pixelarity.com/license
 -->
 <html>
-	<head>
-		<title>Untitled</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<script>
-		$("#find_zipcode").click(function(){
-               new daum.Postcode({
-                  oncomplete:function(data) {
-                     jQuery("#u_zipcode").val(data.zonecode);
-                     jQuery("#u_address").val(data.address);
-                     jQuery("#u_detail_address").focus();
-                  }
-               }).open();
-            });
-	</script>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
+<head>
+<title>Untitled</title>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="/assets/css/main.css" />
+<noscript>
+	<link rel="stylesheet" href="/assets/css/noscript.css" />
+</noscript>
+</head>
+<script>
+	$("#find_zipcode").click(function() {
+		new daum.Postcode({
+			oncomplete : function(data) {
+				jQuery("#u_zipcode").val(data.zonecode);
+				jQuery("#u_address").val(data.address);
+				jQuery("#u_detail_address").focus();
+			}
+		}).open();
+	});
+</script>
+<body class="is-preload">
+	<!-- Wrapper -->
+	<div id="wrapper">
 
-				<!-- Header -->
-				<jsp:include page = "header.jsp"></jsp:include>
-
-
-				<!-- Main -->
-					<div id="main">
-						<div class="inner2">
-                            <div class="col-12" style="text-align: center;">
-							<h1>¿¹¾à³»¿ª</h1>
-                        </div>			<!-- Form -->
-								<section>
-									<form method="post" action="#">
-													<input type="checkbox" id="demo-human1">
-													<label for="demo-human1">
-													¿¹¾àÀÚ¸í : <span>¹ÚÁö¿¬</span>
-													<br>
-													¿¹¾à Àå¼Ò : <span>ÁøÁÖ Ä·ÇÎ¼Ò»çÀÌ¾îÆ¼ ·°¼Å¸®±Û·¥ÇÎ&ÇÇÅ©´Ğ</span>
-													<br>
-													°áÁ¦ ±İ¾× : <span>120000¿ø</span>
-													</label>
-
-													<input type="checkbox" id="demo-human2">
-													<label for="demo-human2">
-													¿¹¾àÀÚ¸í : <span>À°Á¤±Ù</span>
-													<br>
-													¿¹¾à Àå¼Ò : <span>ÆÄÁÖ ¿µ¾î¸¶À» Ä·ÇÎ</span>
-													<br>
-													°áÁ¦ ±İ¾× : <span>150000¿ø</span>
-													</label>
-											
-                                            <br>
-											
-											<div class="col-12" style="text-align: center;">
-                                                <input type="submit" value="¿¹¾àÃë¼Ò" class="primary" />
-												<input type="reset" value="µÚ·Î°¡±â"  />
-											</div>
-										</div>
-									</form>
-								</section>
+		<!-- Header -->
+		<jsp:include page="header.jsp"></jsp:include>
 
 
+		<!-- Main -->
+		<div id="main">
+			<div class="inner2">
+				<div class="col-12" style="text-align: center;">
+					<h1>ì˜ˆì•½ë‚´ì—­</h1>
+				</div>
+				<!-- Form -->
+				<form action="/member/reservationDelete" method="post">
+					<section>
+						<c:forEach var="reservation" items="${reservation}">
+							<div class="col-12">
+								<input type="checkbox" name="rid" value="${reservation.rid}">
+								<div style="margin-left: 50px; margin-top: -20px;">
+								ì˜ˆì•½ìëª… : <span>${reservation.rfirstname}${reservation.rlastname }</span><br> 
+								ì˜ˆì•½ ì¥ì†Œ : <span>${reservation.rplace}</span><br>
+								ê²°ì œ ê¸ˆì•¡ : <span>${reservation.rmoney}</span>
+								</div>
+							</div>
+							<br>
+						</c:forEach>
+						<div class="col-12" style="text-align: center;">
+							<input type="submit" class="primary" value="ì˜ˆì•½ì·¨ì†Œ"> <input
+								type="button" value="ë’¤ë¡œê°€ê¸°">
 						</div>
-					</div>
-
 			</div>
+			</section>
+			</form>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
-	</body>
-	
+
+		</div>
+	</div>
+
+	</div>
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
+</body>
+
 </html>
