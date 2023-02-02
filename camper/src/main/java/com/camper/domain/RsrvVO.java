@@ -12,6 +12,7 @@ public class RsrvVO {
 	private String rcardnum;
 	private String rvalmon;
 	private String rvalyear;
+	private String rcvc;
 	private String rfirstname;
 	private String rlastname;
 	private String rphonenum;

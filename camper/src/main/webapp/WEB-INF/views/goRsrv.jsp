@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE HTML>
 <!--
@@ -32,14 +33,14 @@
 						</div>
 					</header>
 					<div class="box">
-						<form method="post" action="/goRsrv">
+						<form method="post" action="/goRsrv" id="submitRsrv">
 							<div class="row gtr-50 gtr-uniform">
 							
 								<div class="col-12">
 									<label>카드</label>
 								</div>
 								<div class = "col-12">
-									<select id = "pamentMethod" name="rcard">
+									<select id = "pamentMethod" name="rcard" id="rcard">
 										<option value = "visa">Visa</option>
 										<option value = "mastercard">MasterCard</option>
 										<option value = "jcb">JCB</option>
@@ -97,7 +98,7 @@
 								<div class = "col-4"></div>
 								
 								<div class="col-3">
-									<input type="text" name="cvc" id="cvc" value="" placeholder="cvc" />
+									<input type="text" name="rcvc" id="rcvc" value="" placeholder="cvc" />
 								</div>
 								
 								
@@ -114,17 +115,6 @@
 								
 								<div class="col-12">
 									<input type="text" name="rphonenum" id="rphonenum" value="" placeholder="010-0000-0000" />
-								</div>
-								
-								<div class="col-6">
-									<input type="text" name="raddress" id="u_address" value="" placeholder="우편번호" />
-								</div>
-								<div class="col-3">
-									<input type="button" name="find_zipcode" id="find_zipcode" value="우편번호 찾기" />
-								</div>
-
-								<div class="col-12">
-									<input type="text" name="raddressdetail" id="u_address_detail" value="" placeholder="상세주소" />
 								</div>
 								
 								<div class="col-12">
@@ -157,9 +147,10 @@
 								<div class = "col-12">
 								<hr>
 									<ul class = "actions special">
-										<li><input type = "submit" value = "결제"></li>
+										<li><input type = "button" value = "결제" id="goRsrv"></li>
 										<li><input type = "button" onclick="history.back()" value = "취소" class="primary"></li>
 									</ul>
+									<p id="checking" style="height: 1px; color: #13a2dd; text-align: center;" ></p>
 								</div>
 							</div>
 						</form>
@@ -189,6 +180,39 @@
 	               }).open();
 	            });
 			</script>
+			<script>
+			$(document).ready(function (e) {
+				$("#goRsrv").click(function () {
+					const rcardnum = $("#rcardnum").val().replaceAll(" ", "");
+					const rvalmon = $("#rvalmon").val().replaceAll(" ", "");
+					const rvalyear = $("#rvalyear").val().replaceAll(" ", "");
+					const rcvc = $("#rcvc").val().replaceAll(" ", "");
+					const rfirstname = $("#rfirstname").val().replaceAll(" ", "");
+					const rlastname = $("#rlastname").val().replaceAll(" ", "");
+					const rphonenum = $("#rphonenum").val().replaceAll(" ", "");
+					const raddress = $("#raddress");
+					const raddressdetail = $("#raddressdetail");
 
+					if (!rcardnum) {
+						alert("카드번호를 입력하세요.");
+					} else if (!rvalmon) {
+						alert("카드(월)을 입력하세요.");
+					} else if (!rvalyear) {
+						alert("카드(년도)를 입력하세요.");
+					} else if (!rcvc) {
+						alert("CVC번호를 입력하세요.");
+					} else if (!rfirstname) {
+						alert("성을 입력하세요.");
+					} else if (!rlastname) {
+						alert("이름을 입력하세요.");
+					} else if (!rphonenum) {
+						alert("번호를 입력하세요.");
+					}else {
+						$("#submitRsrv").submit();
+					}
+				})
+			})
+
+			</script>
 	</body>
 </html>
