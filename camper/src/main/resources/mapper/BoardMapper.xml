@@ -29,5 +29,11 @@
 	select * from campInfo where cId= #{cid}
 </select>
 
+<insert id="goRsrv">
+	insert into reservation
+	(cId, uId, rCard ,rCardNum ,rValMon ,rValYear ,rFirstName ,rLastName,rPhoneNum, rAddress, rAddressDetail)
+	values(#{cid}, #{uid}, #{rcard}, #{rcardnum}, #{rvalmon},  #{rvalyear},  #{rfirstname},  #{rlastname},  #{rphonenum},  #{raddress},  #{raddressdetail}) 
+</insert>
+
 
 </mapper>

@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import com.camper.domain.BoardVO;
+import com.camper.domain.RsrvVO;
 
 @Mapper
 @Repository
@@ -16,4 +17,6 @@ public interface BoardMapper {
 	//게시물 상세보기
 	BoardVO getDetailCampInfo(Long cid);
 
+	//예약하기
+	public void goRsrv(RsrvVO rvo);
 }

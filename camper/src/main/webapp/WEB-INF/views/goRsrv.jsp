@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE HTML>
 <!--
@@ -28,15 +28,15 @@
 				<div class="inner2">
 					<header>
 						<div class="col-12" style="text-align: center;">
-						<h1>øπæ‡</h1>
+						<h1>ÏòàÏïΩ</h1>
 						</div>
 					</header>
 					<div class="box">
-						<form method="post" action="#">
+						<form method="post" action="/goRsrv">
 							<div class="row gtr-50 gtr-uniform">
 							
 								<div class="col-12">
-									<label>ƒ´µÂ</label>
+									<label>Ïπ¥Îìú</label>
 								</div>
 								<div class = "col-12">
 									<select id = "pamentMethod" name="rcard">
@@ -47,7 +47,7 @@
 								</div>
 								
 								<div class="col-12">
-									<label>ƒ´µÂ π¯»£</label>
+									<label>Ïπ¥Îìú Î≤àÌò∏</label>
 								</div>
 								<div class = "col-12">
 									<input type="text" name="rcardnum" id="rcardnum" value="" placeholder="0000-0000-0000-0000" />
@@ -55,7 +55,7 @@
 								
 								
 								<div class="col-9">
-									<label>¿Ø»ø±‚∞£</label>
+									<label>Ïú†Ìö®Í∏∞Í∞Ñ</label>
 								</div>
 								<div class="col-3">
 									<label>CVC</label>
@@ -102,14 +102,14 @@
 								
 								
 								<div class="col-12">
-									<hr><h3>∞≥¿Œ¡§∫∏ ¿‘∑¬</h3>
+									<Br><h3>Í∞úÏù∏Ï†ïÎ≥¥</h3>
 								</div>
 								
 								<div class="col-6 col-12-mobilep">
-									<input type="text" name="rfirstname" id="rfirstname" value="" placeholder="º∫" />
+									<input type="text" name="rfirstname" id="rfirstname" value="" placeholder="ÏÑ±" />
 								</div>
 								<div class="col-6 col-12-mobilep">
-									<input type="text" name="rlastname" id="rlastname" value="" placeholder= "¿Ã∏ß" />
+									<input type="text" name="rlastname" id="rlastname" value="" placeholder= "Ïù¥Î¶Ñ" />
 								</div>
 								
 								<div class="col-12">
@@ -117,29 +117,31 @@
 								</div>
 								
 								<div class="col-6">
-									<input type="text" name="raddress" id="u_address" value="" placeholder="øÏ∆Ìπ¯»£" />
+									<input type="text" name="raddress" id="u_address" value="" placeholder="Ïö∞Ìé∏Î≤àÌò∏" />
 								</div>
 								<div class="col-3">
-									<input type="button" name="find_zipcode" id="find_zipcode" value="øÏ∆Ìπ¯»£ √£±‚" />
+									<input type="button" name="find_zipcode" id="find_zipcode" value="Ïö∞Ìé∏Î≤àÌò∏ Ï∞æÍ∏∞" />
 								</div>
 
 								<div class="col-12">
-									<input type="text" name="raddressdetail" id="u_address_detail" value="" placeholder="ªÛºº¡÷º“" />
+									<input type="text" name="raddressdetail" id="u_address_detail" value="" placeholder="ÏÉÅÏÑ∏Ï£ºÏÜå" />
 								</div>
 								
 								<div class="col-12">
-									<br><h3>ƒ∑«Œ ªÛºº¡§∫∏</h3>
+									<br><h3>Ï∫†Ìïë ÏÉÅÏÑ∏Ï†ïÎ≥¥</h3>
 								</div>
-								<input type="hidden" name="rmoney">
-								<input type="hidden" name="rstartdate">
-								<input type="hidden" name="renddate">
-								<input type="hidden" name="rplace">
-								<input type="hidden" name="rtel">
+								<input type="hidden" name="cid" value="${board.cid}">
+								<input type="hidden" name="uid" value="wjdrms">
+			<%-- 					<input type="hidden" name="rmoney" value="${board.cmoney}">
+								<input type="hidden" name="rstartdate" value="${board.cstartDate}">
+								<input type="hidden" name="renddate" value="${board.cendDate}">
+								<input type="hidden" name="rplace" value="${board.cplace}">
+								<input type="hidden" name="rtel" value="${board.ctel}"> --%>
 								<div class="col-12">
 								<table style="border:1px">
 									<tr>
 										<td><span style="float: left;" id="cmoney" >\:${board.cmoney}</span></td>
-										<td><span style="float: right;">øπæ‡ ≥Ø¬• : ${board.cstartDate} ~ ${board.cendDate}</span></td>
+										<td><span style="float: right;">ÏòàÏïΩ ÎÇ†Ïßú : ${board.cstartDate} ~ ${board.cendDate}</span></td>
 									</tr>
 									<tr>
 										<td><img src="images/map.png" width="30px" height="30px" style="margin-right: 5px;"> ${board.cplace}</td>
@@ -155,8 +157,8 @@
 								<div class = "col-12">
 								<hr>
 									<ul class = "actions special">
-										<li><input type = "submit" value = "∞·¡¶"></li>
-										<li><input type = "button" onclick="history.back()" value = "√Îº“" class="primary"></li>
+										<li><input type = "submit" value = "Í≤∞Ï†ú"></li>
+										<li><input type = "button" onclick="history.back()" value = "Ï∑®ÏÜå" class="primary"></li>
 									</ul>
 								</div>
 							</div>

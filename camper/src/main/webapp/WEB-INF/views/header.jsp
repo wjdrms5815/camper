@@ -50,10 +50,7 @@
 						   </ul>
 						  </li>
 						 </div>
- 						<div id="nav">
 						<li><a href="/=">로그아웃</a></li>
-						</div>
-						</div>
 						
 						<!-- <li><a href="generic.html">상세 페이지</a></li>
 						<li><a href="generic.html">Consequat dolor</a></li>
