@@ -1,16 +1,16 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-	pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
+<meta charset="UTF-8">
 <title>Insert title here</title>
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#nav ul.sub").hide();
 			$("#nav div.menu li").hover(function(){
-				$("ul",this).slideToggle("fast");
+				$("ul",this).slideToggle("slow");
 			});
 		});
 	</script>
@@ -23,10 +23,10 @@
 			<div class="inner">
 				<!-- Logo -->
 				<a href="/" class="logo"> <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">CAMPER</span></a>
-				<span style="float: right;" id="uname" name="uname">¹ÚÁö¿¬´Ô È¯¿µÇÕ´Ï´Ù!</span>
+				<span style="float: right;" id="uname" name="uname">ë°•ì§€ì—°ë‹˜ í™˜ì˜í•©ë‹ˆë‹¤!</span>
 				<nav>
 					<ul>
-						<li><a href="#menu">¸Ş´º</a></li>
+						<li><a href="#menu">ë©”ë‰´</a></li>
 					</ul>
 				</nav>
 				<!-- Menu -->
@@ -34,25 +34,25 @@
 					<h2>Menu</h2>
 					<ul>
 						<div class="nav">
-						<li><a href="/">¸ŞÀÎÈ­¸é</a></li>
+						<li><a href="/">ë©”ì¸í™”ë©´</a></li>
 						</div>
 						<div id="nav">
-						<li><a href="/member/myPage">¸¶ÀÌ ÆäÀÌÁö</a></li>
+						<li><a href="/member/myPage">ë§ˆì´ í˜ì´ì§€</a></li>
 						</div>
 						<div id="nav">
 						 <div class="menu">
-						  <li><a href="#">·Î±×ÀÎ</a>
+						  <li><a href="#">ë¡œê·¸ì¸</a>
 						   <ul class="sub">
-						    <li><a href="/join">È¸¿ø°¡ÀÔ</a></li>
-						    <li><a href="/login">·Î±×ÀÎ</a></li>
-						    <li><a href="/findId">¾ÆÀÌµğ Ã£±â</a></li>
-						    <li><a href="/findPw">ºñ¹Ğ¹øÈ£ Ã£±â</a></li>
+						    <li><a href="/join">íšŒì›ê°€ì…</a></li>
+						    <li><a href="/login">ë¡œê·¸ì¸</a></li>
+						    <li><a href="/findId">ì•„ì´ë”” ì°¾ê¸°</a></li>
+						    <li><a href="/findPw">ë¹„ë°€ë²ˆí˜¸ ì°¾ê¸°</a></li>
 						   </ul>
 						  </li>
 						 </div>
-						<li><a href="/=">·Î±×¾Æ¿ô</a></li>
+						<li><a href="/=">ë¡œê·¸ì•„ì›ƒ</a></li>
 						
-						<!-- <li><a href="generic.html">»ó¼¼ ÆäÀÌÁö</a></li>
+						<!-- <li><a href="generic.html">ìƒì„¸ í˜ì´ì§€</a></li>
 						<li><a href="generic.html">Consequat dolor</a></li>
 						<li><a href="elements.html">Elements</a></li> -->
 						
