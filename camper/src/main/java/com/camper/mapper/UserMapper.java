@@ -30,7 +30,9 @@ public interface UserMapper {
     public void signUpOkay(UserVO vo);
     
     /*아이디 비교*/
-    public UserVO idCheck(UserVO vo);
+    public int idCheck(String id);
+    
+    public String getUid(String userId);
     
     
 }

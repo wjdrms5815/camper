@@ -23,7 +23,7 @@
 			<div class="inner">
 				<!-- Logo -->
 				<a href="/" class="logo"> <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">CAMPER</span></a>
-				<span style="float: right;" id="uname" name="uname">박지연님 환영합니다!</span>
+				<span style="float: right;" id="uname" name="uname">${sessionId}님 환영합니다!</span>
 				<nav>
 					<ul>
 						<li><a href="#menu">메뉴</a></li>
@@ -44,14 +44,17 @@
 						  <li><a href="#">로그인</a>
 						   <ul class="sub">
 						    <li><a href="/join">회원가입</a></li>
-						    <li><a href="/login">로그인</a></li>
+						    <c:if test="${empty userId}">
+						    	<li><a href="/login">로그인</a></li>
+						    </c:if>
 						    <li><a href="/findId">아이디 찾기</a></li>
 						    <li><a href="/findPw">비밀번호 찾기</a></li>
 						   </ul>
 						  </li>
 						 </div>
-						<li><a href="/=">로그아웃</a></li>
-						
+						<c:if test="${not empty userId}">
+							<li><a href="/logout">로그아웃</a></li>
+						</c:if>
 						<!-- <li><a href="generic.html">상세 페이지</a></li>
 						<li><a href="generic.html">Consequat dolor</a></li>
 						<li><a href="elements.html">Elements</a></li> -->
