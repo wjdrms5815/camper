@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +24,9 @@
 			<div class="inner">
 				<!-- Logo -->
 				<a href="/" class="logo"> <span class="symbol"><img src="/images/logo.svg" alt="" /></span><span class="title">CAMPER</span></a>
+				<c:if test="${sessionId != null}">
 				<span style="float: right;" id="uname" name="uname">${sessionId}님 환영합니다!</span>
+				</c:if>
 				<nav>
 					<ul>
 						<li><a href="#menu">메뉴</a></li>
@@ -38,6 +41,7 @@
 						</div>
 						<div id="nav">
 						<li><a href="/member/myPage">마이 페이지</a></li>
+						<li><a href="/member/reservation">예약 내역</a></li>
 						</div>
 						<div id="nav">
 						 <div class="menu">

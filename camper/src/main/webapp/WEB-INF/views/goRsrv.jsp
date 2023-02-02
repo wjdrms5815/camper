@@ -121,7 +121,8 @@
 									<br><h3>캠핑 상세정보</h3>
 								</div>
 								<input type="hidden" name="cid" value="${board.cid}">
-								<input type="hidden" name="uid" value="wjdrms">
+								<input type="hidden" name="uid" value="wjdrms"><!-- 세션으로 id값 받아와야함 -->
+								<input type="text" name="ccheck" value="1">
 			<%-- 					<input type="hidden" name="rmoney" value="${board.cmoney}">
 								<input type="hidden" name="rstartdate" value="${board.cstartDate}">
 								<input type="hidden" name="renddate" value="${board.cendDate}">

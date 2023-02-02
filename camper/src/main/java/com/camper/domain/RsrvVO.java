@@ -23,5 +23,6 @@ public class RsrvVO {
 	private String renddate;
 	private String rplace;
 	private String rtel;
+	private String rcheck;
 	
 }

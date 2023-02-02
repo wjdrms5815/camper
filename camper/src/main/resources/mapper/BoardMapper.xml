@@ -22,7 +22,7 @@
     </sql>
     
 <select id="getAllCampInfo" resultType="com.camper.domain.BoardVO">
-	select * from campInfo
+	select * from campinfo where ccheck ='0'
 </select>
 
 <select id="getDetailCampInfo" resultType="com.camper.domain.BoardVO">
@@ -34,6 +34,12 @@
 	(cId, uId, rCard ,rCardNum ,rValMon ,rValYear ,rCvc, rFirstName ,rLastName,rPhoneNum)
 	values(#{cid}, #{uid}, #{rcard}, #{rcardnum}, #{rvalmon},  #{rvalyear},  #{rcvc},#{rfirstname},  #{rlastname},  #{rphonenum}) 
 </insert>
+
+<insert id="check">
+	update campinfo
+	set ccheck=#{ccheck} where cid=#{cid}
+</insert>
+
 
 
 </mapper>

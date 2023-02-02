@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import com.camper.domain.BoardVO;
+import com.camper.domain.MyPageVO;
 import com.camper.domain.RsrvVO;
 
 @Mapper
@@ -19,4 +20,7 @@ public interface BoardMapper {
 
 	//예약하기
 	public void goRsrv(RsrvVO rvo);
+	
+	//예약체크
+	public void check(MyPageVO vo);
 }

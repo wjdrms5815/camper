@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.camper.domain.BoardVO;
+import com.camper.domain.MyPageVO;
 import com.camper.domain.RsrvVO;
 import com.camper.mapper.BoardMapper;
 
@@ -48,9 +49,11 @@ public class BoardController {
 	
 	//예약하기
 	@PostMapping("goRsrv")
-	public String goRsrvInput(RsrvVO rvo) {
+	public String goRsrvInput(RsrvVO rvo, MyPageVO vo) {
 		boardMapper.goRsrv(rvo);
+		boardMapper.check(vo);
 		System.out.println(rvo);
-		return "redirect:/";
+		System.out.println(vo);
+		return "redirect:/member/reservation";
 	}
 }

@@ -15,4 +15,6 @@ public class MyPageVO {
 	private String ursTime;
 	private int qid;
 	private String uanswer;
+	private String ccheck;
+	private int cid;
 }
