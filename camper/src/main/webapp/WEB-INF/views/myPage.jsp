@@ -11,6 +11,7 @@
 <script
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <head>
+
 <title>My Page</title>
 <meta charset="utf-8" />
 <meta name="viewport"

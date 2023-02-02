@@ -10,5 +10,4 @@
 	update users set upw=#{upw}, ufirstname=#{ufirstname}, ulastname=#{ulastname}, upostcode=#{upostcode}, uaddr=#{uaddr}, uaddrdetail=#{uaddrdetail}, qid=#{qid}, uanswer=#{uanswer}
 	where uid=#{uid}
 </update>
-
 </mapper>

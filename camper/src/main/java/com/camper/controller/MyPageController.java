@@ -45,4 +45,5 @@ public class MyPageController {
 		System.out.println(vo);
 		return "redirect:/myPage";
 	}
+	
 }

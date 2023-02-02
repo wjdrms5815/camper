@@ -17,4 +17,5 @@ public class MyPageVO {
 	private String uanswer;
 	private String ccheck;
 	private int cid;
+	
 }

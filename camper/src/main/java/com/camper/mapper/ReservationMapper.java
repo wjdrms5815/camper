@@ -15,4 +15,5 @@ public interface ReservationMapper {
 	List<ReservationVO> getAllReservation(String userId);
 	
 	void removeReservation(int rid);
+	
 }

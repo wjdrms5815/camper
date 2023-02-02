@@ -32,6 +32,7 @@ public class ReservationController {
 		return "reservation";
 	}
 	
+	
 	@PostMapping("/reservationDelete")
 	public String reservationDelete(@RequestParam List<String> rid, RsrvVO vo) {
 		for(int i=0; i<rid.size(); i++) {

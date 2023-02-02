@@ -12,4 +12,5 @@ public class ReservationVO {
 	private int cid;
 	private int cmoney;
 	private String cimage;
+	
 }

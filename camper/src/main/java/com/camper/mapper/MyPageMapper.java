@@ -13,4 +13,5 @@ public interface MyPageMapper {
 	MyPageVO getMyPage(String userId);
 	
 	public void updateMyPage(MyPageVO vo);
+	
 }
