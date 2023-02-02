@@ -27,8 +27,16 @@
 	</select>
 	
 	<!-- 세션을 위한 유저 아이디 -->
-	 <select id="getUid" resultType="string">
+	<select id="getUid" resultType="string">
         Select uid from users where uid = #{uid}
+    </select>
+    
+    <!-- 아이디 찾기 -->
+    <select id = "findID" resultType = "com.camper.domain.UserVO">
+    	select uid from users
+			where uaddr = #{uaddr}
+			and ufirstname = #{ufirstname}
+			and ulastname = #{ulastname};
     </select>
 
 </mapper>

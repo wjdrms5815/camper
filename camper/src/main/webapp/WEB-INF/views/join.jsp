@@ -28,8 +28,8 @@
 					<div id="main">
 						<div class="inner2">
                             <div class="col-12" style="text-align: center;">
-							<h1>회원가입</h1>
-                        </div>			<!-- Form -->
+								<h1>회원가입</h1>
+                        	</div>			<!-- Form -->
 
 						<form method="post" action="/user/signUp" id = "signUpForm">
 						<div class="box">

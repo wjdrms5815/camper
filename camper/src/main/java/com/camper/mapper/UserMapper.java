@@ -31,8 +31,10 @@ public interface UserMapper {
     
     /*아이디 비교*/
     public int idCheck(String id);
-    
     public String getUid(String userId);
+    
+    /*아이디 찾기*/
+    public UserVO findID(String uaddr, String ufirstname, String ulastname);
     
     
 }

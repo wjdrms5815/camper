@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE HTML>
 <!--
@@ -26,23 +26,27 @@
 					<div id="main">
 						<div class="inner2">
                             <div class="col-12" style="text-align: center;">
-							<h1>¾ÆÀÌµğ Ã£±â</h1>
+							<h1>ì•„ì´ë”” ì°¾ê¸°</h1>
                         </div>			<!-- Form -->
 								<section>
-									<form method="post" action="#">
+									<form method="post" action="/user/findID">
 										<div class="row gtr-uniform">
 											<div class="col-12">
-												<input type="text" name="findaddress" id="findaddress" value="" placeholder="ÁÖ¼Ò" />
+												<input type="text" name="uaddr" id="uaddr" value="" placeholder="ì£¼ì†Œ" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="findNickName" id="findNickName" value="" placeholder="¼º" />
+												<input type="text" name="ufirstname" id="ufirstname" value="" placeholder="ì„±" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="findLastName" id="findLastName" value="" placeholder="ÀÌ¸§" />
+												<input type="text" name="ulastname" id="ulastname" value="" placeholder="ì´ë¦„" />
 											</div>
-
+											<div class="col-6">
+												<!-- <input type="text" value="${user.uid}" placeholder="ì•„ì´ë””" /> -->
+												<span id = "spanid" name = "spanid" style = "color:red; font-size:8pt"></span>
+											</div>
+											
 											<div class="col-12" style="text-align: center;">
-                                                <input type="submit" value="È®ÀÎ" class="primary" />
+                                                <input id = "uidCheck" type="submit" value="í™•ì¸" class="primary" />
 											</div>
 										</div>
 									</form>
@@ -61,6 +65,20 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+			$('#uidCheck').click(function(){
+				var addr = $('#uaddr').val();
+				var firstname = $('#ufirstname').val();
+				var lastname = $('#ulastname').val();
+				var data = {uaddr : addr, ufirstname : firstname, ulastname : lastname}
+				$.ajax({
+					type:"get",
+					url:"/user/findid",
+					data:data,
+					success:function(result){
+							$('#spanid').text('${user.uid}')
+				})
+			});
+			</script>
 	</body>
 </html>

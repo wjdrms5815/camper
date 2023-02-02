@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.camper.domain.MyPageVO;
 import com.camper.domain.UserVO;
 import com.camper.mapper.QuestionMapper;
 import com.camper.mapper.UserMapper;
@@ -26,9 +27,6 @@ public class UserController {
 	
 	@Autowired 
 	UserMapper userMapper;
-	
-	@Autowired
-	QuestionMapper questionMapper;
 	
 	public String list(Model m) {
 		List<UserVO> user = userMapper.getAllUser();
@@ -45,7 +43,7 @@ public class UserController {
 			
 			session.setAttribute("sessionId", userMapper.getUid(map.get("uid"))); // 세션값 등록 
 		    model.addAttribute("sessionId", session.getAttribute("sessionId"));
-			 System.out.println(session.getAttribute("sessionId"));
+			 
 	        
 			return "redirect:/";
 		}
@@ -86,5 +84,13 @@ public class UserController {
 		}
 	}
 	
+	//아이디 찾기
+	@PostMapping("/findID")
+	public String findId(UserVO vo, Model m) {
+		UserVO user = userMapper.findID(vo.getUaddr(), vo.getUfirstname(), vo.getUlastname());
+		System.out.println(user);
+		m.addAttribute("user", user);
+		return "idOkay";
+	}
 
 }
