@@ -3,7 +3,7 @@ package com.camper.domain;
 import lombok.Data;
 
 @Data
-public class MyPageVO {
+public class MyPageVO extends BoardVO{
 	private String uid;
 	private String upw;
 	private String ufirstname;
@@ -15,5 +15,6 @@ public class MyPageVO {
 	private String ursTime;
 	private int qid;
 	private String uanswer;
+	private String ccheck;
 	
 }

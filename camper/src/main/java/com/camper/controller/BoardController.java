@@ -59,11 +59,11 @@ public class BoardController {
 	
 	//예약하기
 	@PostMapping("goRsrv")
-	public String goRsrvInput(RsrvVO rvo, MyPageVO vo) {
+	public String goRsrvInput(RsrvVO rvo, MyPageVO vo) throws Exception {
 		boardMapper.goRsrv(rvo);
 		boardMapper.check(vo);
 		System.out.println(rvo);
 		System.out.println(vo);
-		return "redirect:/member/reservation";
+		return "redirect:/reservation";
 	}
 }

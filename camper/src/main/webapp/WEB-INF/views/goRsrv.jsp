@@ -107,7 +107,7 @@
 								</div>
 								
 								<div class="col-6 col-12-mobilep">
-									<input type="text" name="rfirstname" id="rfirstname" value="${userVO.ufirstname}" placeholder="성" />
+									<input type="text" ame="rfirstname" id="rfirstname" value="${userVO.ufirstname}" placeholder="성" />
 								</div>
 								<div class="col-6 col-12-mobilep">
 									<input type="text" name="rlastname" id="rlastname" value="${userVO.ulastname}" placeholder= "이름" />
@@ -121,7 +121,7 @@
 									<br><h3>캠핑 상세정보</h3>
 								</div>
 								<input type="hidden" name="cid" value="${board.cid}">
-								<input type="hidden" name="uid" value="wjdrms"><!-- 세션으로 id값 받아와야함 -->
+								<input type="text" name="uid" value="${userVO.uid}"><!-- 세션으로 id값 받아와야함 -->
 								<input type="text" name="ccheck" value="1">
 			<%-- 					<input type="hidden" name="rmoney" value="${board.cmoney}">
 								<input type="hidden" name="rstartdate" value="${board.cstartDate}">
