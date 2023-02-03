@@ -6,13 +6,7 @@
 <img src="https://img.shields.io/badge/jsp-E34F26?style=for-the-badge&logo=jsp&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/postgresql-181717?style=for-the-badge&logo=postgresql&logoColor=white"> <img src="https://img.shields.io/badge/mybatis-808080?style=for-the-badge&logo=jpa&logoColor=black">
   </div>
   
-<div align="center">
-▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
-█░░░░░░░░▀█▄▀▄▀██████░▀█▄▀▄▀██████░
-░░░░░░░░░░░▀█▄█▄███▀░░░ ▀██▄█▄███▀░
-
-  </div>
-  <br>
+<br>
   <div align="center">
  .⠀⢰⠒⠒⠒⢲⠆⠀⠀⢀⠤⢤⡀⠀⡴⠀⠀⢀⣀⣀⣰⣀⣀⡀⠀⠀⠀⠀⠀
 ⠀⠀⣎⣀⣀⣀⡜⠀⠀⢰⠃⠀⢠⠇⢰⠓⠂⠀⢀⠔⠒⠒⠲⡄⠀⠀⠀⠀⠀⠀
