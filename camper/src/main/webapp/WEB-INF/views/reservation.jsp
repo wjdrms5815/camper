@@ -62,7 +62,7 @@
 						</c:forEach>
 						<div class="col-12" style="text-align: center;">
 							<input type="submit" class="primary" value="예약취소"> <input
-								type="button" value="뒤로가기">
+								type="button" value="뒤로가기" onClick="location.href='/'">
 						</div>
 			</div>
 			</section>

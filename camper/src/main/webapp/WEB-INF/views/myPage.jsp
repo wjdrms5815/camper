@@ -99,7 +99,7 @@
 								<br>
 								<ul class="actions special">
 									<li><input type="submit" value="확인"></li>
-									<li><input type="button" value="취소"></li>
+									<li><input type="button" value="취소" onClick="location.href='/'"></li>
 								</ul>
 							</div>
 						</div>
