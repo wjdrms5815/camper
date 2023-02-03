@@ -32,13 +32,13 @@
 									<form method="post" action="/user/findID">
 										<div class="row gtr-uniform">
 											<div class="col-12">
-												<input type="text" name="uaddr" id="uaddr" value="" placeholder="주소" />
+												<input type="text" name="uaddr" id="uaddr" value="" required placeholder="주소" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="ufirstname" id="ufirstname" value="" placeholder="성" />
+												<input type="text" name="ufirstname" id="ufirstname" value="" required placeholder="성" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="ulastname" id="ulastname" value="" placeholder="이름" />
+												<input type="text" name="ulastname" id="ulastname" value="" required placeholder="이름" />
 											</div>
 											<div class="col-6">
 												<!-- <input type="text" value="${user.uid}" placeholder="아이디" /> -->
