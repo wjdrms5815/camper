@@ -40,7 +40,9 @@ public class MyPageController {
 	}
 	
 	@PostMapping("/myPageModify")
-	public String myPage(MyPageVO vo){
+	public String myPage(MyPageVO vo, HttpSession session){
+		String userId = (String) session.getAttribute("sessionId");
+		vo.setUid(userId);
 		myPageMapper.updateMyPage(vo);
 		System.out.println(vo);
 		return "redirect:/myPage";

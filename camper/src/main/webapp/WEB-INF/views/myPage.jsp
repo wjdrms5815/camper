@@ -38,7 +38,7 @@
 					</div>
 				</header>
 				<div class="box">
-					<form method="post" action="/member/myPageModify">
+					<form method="post" action="/myPageModify">
 						<div class="row gtr-50 gtr-uniform">
 
 							<div class="col-12">
