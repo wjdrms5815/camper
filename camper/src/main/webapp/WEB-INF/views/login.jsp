@@ -53,8 +53,8 @@
 											
 											<div class="col-12" style="text-align: center;">
                                                 <input type="submit" value="로그인" class="primary" />
-                                                <input type="button" value="회원가입"/>
-                                                <input type="button" value="ID/PW 찾기" />
+                                                <input type="button" value="회원가입" onclick = "location.href='/join'"/>
+                                                <input type="button" value="ID/PW 찾기" onclick = "location.href='/findId'"/>
 											</div>
 										</div>
 									</form>

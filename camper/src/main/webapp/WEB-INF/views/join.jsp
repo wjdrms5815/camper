@@ -92,8 +92,9 @@
 								
 								<br>
 								<div class="col-12" style="text-align: center;">
-                                             <input type="submit" name = "signUp_btn" id = "signUp_btn" value="회원가입" class="primary" />
+                                    <input type="submit" name = "signUp_btn" id = "signUp_btn" value="회원가입" class="primary" />
 									<input type="reset" value="내용삭제"  />
+									<input type="button" value="취소" onclick = "history.back(-1)"/>
 								</div>
 								<p id="checking" style="height: 1px; color: #13a2dd; text-align: center;" ></p>
 							</div>

@@ -61,7 +61,7 @@
 
 											<div class="col-12" style="text-align: center;">
                                                 <input type="submit" value="확인" class="primary" />
-                                                <input type="button" value="취소" />
+                                                <input type="button" value="취소" onclick = "history.back(-1)"/>
 											</div>
 										</div>
 									</form>
