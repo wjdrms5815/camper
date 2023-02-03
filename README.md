@@ -7,9 +7,7 @@
   </div>
   
 <br>
-  <table align="center">
-<tr>
- <td>
+
 .　　 ∩
 　　( ⌒)　　∩__
 　　/ ,ノ　　 i　E)
@@ -20,9 +18,6 @@
 ヽ　　　｜ 조장 ★정근★ 따봉!
 　＼　　 ＼
 
- </td>
-   </tr>
-  </table>
 
 
 
