@@ -6,6 +6,31 @@
 <img src="https://img.shields.io/badge/jsp-E34F26?style=for-the-badge&logo=jsp&logoColor=white"> <img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/postgresql-181717?style=for-the-badge&logo=postgresql&logoColor=white"> <img src="https://img.shields.io/badge/mybatis-808080?style=for-the-badge&logo=jpa&logoColor=black">
   </div>
 
+▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄
+█░░░░░░░░▀█▄▀▄▀██████░▀█▄▀▄▀██████░
+░░░░░░░░░░░▀█▄█▄███▀░░░ ▀██▄█▄███▀░
+.⠀⢰⠒⠒⠒⢲⠆⠀⠀⢀⠤⢤⡀⠀⡴⠀⠀⢀⣀⣀⣰⣀⣀⡀⠀⠀⠀⠀⠀
+⠀⠀⣎⣀⣀⣀⡜⠀⠀⢰⠃⠀⢠⠇⢰⠓⠂⠀⢀⠔⠒⠒⠲⡄⠀⠀⠀⠀⠀⠀
+⠤⠤⠤⣤⠤⠤⠤⠄⠀⣇⠀⢀⠞⢀⡯⠤⠀⠀⠹⠤⡤⠤⠞⠁⠀⢠⠔⢤⣀⠆
+ ⠀⠀⢀⡏⠀⠀⠀⠀⠀⠈⠉⠁⠀⡸⠀⠀⠠⠤⠤⠴⠧⠤⠤⠄⠀⠀⠀⠀⠀
+
+╭ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝ ͡ ◜◝╮
+            굿~
+╰ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ͜ ◟◞ ╯
+O °
+ᕱ ᕱ
+( ･ω･)
+/ つΦ . .. . ﹢ ⃰ ଂ ಇ
+
+.　　 ∩
+　　( ⌒)　　∩__
+　　/ ,ノ　　 i　E)
+　 ／/　　　 / /""
+　/ /_、_　／/
+／ / _ノ`) /／
+(　　　　／
+ヽ　　　｜ 조장 ★정근★ 따봉!
+　＼　　 ＼
 
 
 
