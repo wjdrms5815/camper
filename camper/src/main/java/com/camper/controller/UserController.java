@@ -75,11 +75,11 @@ public class UserController {
 		int result = userMapper.idCheck(id);
 		System.out.println(id);
 		if(result == 0) {
-			System.out.println("성공");
+			System.out.println("로그인 성공");
 			return "success";
 		}
 		else {
-			System.out.println("실패");
+			System.out.println("로그인 실패");
 			return "fail";
 		}
 	}
@@ -91,6 +91,17 @@ public class UserController {
 		System.out.println(user);
 		m.addAttribute("user", user);
 		return "idOkay";
+	}
+	
+	//비밀번호 찾기
+	@PostMapping("/findPW")
+	public String findPw(UserVO vo, Model m) {
+		System.out.println(vo);
+		UserVO user = userMapper.findPW(vo.getUid(), vo.getUfirstname(), vo.getUlastname(),
+				vo.getQid(), vo.getUanswer());
+		System.out.println(user);
+		m.addAttribute("user", user);
+		return "pwOkay";
 	}
 
 }

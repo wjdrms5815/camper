@@ -32,31 +32,31 @@
 							<h1>비밀번호 찾기</h1>
                         </div>			<!-- Form -->
 								<section>
-									<form method="post" action="#">
+									<form method="post" action="/user/findPW">
 										<div class="row gtr-uniform">
 										
 											<div class="col-12">
-												<input type="text" name="findpwId" id="findpwId" value="" placeholder="아이디" />
+												<input type="text" name="uid" id="uid" value="" required placeholder="아이디" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="findpwFirstName" id="findpwFirstName" value="" placeholder="성" />
+												<input type="text" name="ufirstname" id="ufirstname" value="" required placeholder="성" />
 											</div>
 											<div class="col-6">
-												<input type="text" name="findpwLastName" id="findpwLastName" value="" placeholder="이름" />
+												<input type="text" name="ulastname" id="ulastname" value="" required placeholder="이름" />
 											</div>
 											<div class="col-12">
-												<select name="spwdq" id="spwdq" required>
-													<option value="기억에 남는 추억의 장소는?">기억에 남는 추억의 장소는?</option>
-													<option value="자신의 인생 좌우명은?">자신의 인생 좌우명은?</option>
-													<option value="가장 기억에 남는 선생님 성함은?">가장 기억에 남는 선생님 성함은?</option>
-													<option value="자신의 보물 제1호는?">자신의 보물 제1호는?</option>
-													<option value="유년시절 가장 생각나는 친구의 이름은?">유년시절 가장 생각나는 친구의 이름은?</option>
-													<option value="다시 태어나면 되고 싶은 것은?">다시 태어나면 되고 싶은 것은?</option>
-													<option value="인상 깊게 읽은 책 이름은?">인상 깊게 읽은 책 이름은?</option>
+												<select name="qid" id="qid" required>
+													<option value= 1>기억에 남는 추억의 장소는?</option>
+													<option value= 2>자신의 인생 좌우명은?</option>
+													<option value= 3>가장 기억에 남는 선생님 성함은?</option>
+													<option value= 4>자신의 보물 제1호는?</option>
+													<option value= 5>유년시절 가장 생각나는 친구의 이름은?</option>
+													<option value= 6>다시 태어나면 되고 싶은 것은?</option>
+													<option value= 7>인상 깊게 읽은 책 이름은?</option>
 												</select>
 												</div>
 												<div class="col-12">
-												<input type="text" name="spwda" id="spwda" value="" required placeholder="정답">
+												<input type="text" name="uanswer" id="uanswer" value="" required placeholder="정답">
 											</div>
 
 											<div class="col-12" style="text-align: center;">

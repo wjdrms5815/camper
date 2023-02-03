@@ -8,7 +8,7 @@
 	
 	<!-- 로그인 -->
 	<select id="loginOkay" resultType="int">
-		select count(*) from users where uid = #{uid} and upw = #{upw}
+		select count(*) from users where uid = #{uid} and upw = #{upw};
 	</select>
 	
 	<!-- 회원가입 -->
@@ -23,12 +23,12 @@
 	
 	<!-- 아이디 중복 체크 -->
 	<select id = "idCheck" resultType = "int">
-		select count(*) from users where uid = #{uid} ;
+		select count(*) from users where uid = #{uid};
 	</select>
 	
 	<!-- 세션을 위한 유저 아이디 -->
 	<select id="getUid" resultType="string">
-        Select uid from users where uid = #{uid}
+        Select uid from users where uid = #{uid};
     </select>
     
     <!-- 아이디 찾기 -->
@@ -38,5 +38,14 @@
 			and ufirstname = #{ufirstname}
 			and ulastname = #{ulastname};
     </select>
-
+    
+    <!-- 비밀번호 찾기 -->
+	<select id = "findPW" resultType = "com.camper.domain.UserVO">
+		select upw from users
+			where uid = #{uid}
+			and ufirstname = #{ufirstname}
+			and ulastname = #{ulastname}
+			and qid = #{qid}
+			and uanswer = #{uanswer};
+	</select>
 </mapper>
