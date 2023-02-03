@@ -23,4 +23,5 @@ public interface BoardMapper {
 	
 	//예약체크
 	public void check(MyPageVO vo);
+	
 }

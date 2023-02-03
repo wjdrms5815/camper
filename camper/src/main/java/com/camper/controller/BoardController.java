@@ -13,12 +13,18 @@ import com.camper.domain.BoardVO;
 import com.camper.domain.MyPageVO;
 import com.camper.domain.RsrvVO;
 import com.camper.mapper.BoardMapper;
+import com.camper.mapper.MyPageMapper;
+import com.camper.mapper.UserMapper;
+
+import jakarta.servlet.http.HttpSession;
 
 @Controller
 @RequestMapping("/")
 public class BoardController {
 
 	@Autowired BoardMapper boardMapper;
+	@Autowired UserMapper userMapper;
+	@Autowired MyPageMapper myPageMapper;
 	
 	
 	//메인페이지 게시판
@@ -41,9 +47,13 @@ public class BoardController {
 	
 	//예약하기 이동
 	@GetMapping("/goRsrv")
-	public String goRsrv(Model m, Long cid) {
+	public String goRsrv(Model m, Long cid, HttpSession session) {
+		String userId = (String) session.getAttribute("sessionId");
 		m.addAttribute("board", boardMapper.getDetailCampInfo(cid));
+		m.addAttribute("userId",userId);
+		m.addAttribute("userVO",myPageMapper.getMyPage(userId));
 		System.out.println("예약하러가기 : " + boardMapper.getDetailCampInfo(cid));
+		
 		return "goRsrv";
 	}
 	

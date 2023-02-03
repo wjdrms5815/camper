@@ -107,10 +107,10 @@
 								</div>
 								
 								<div class="col-6 col-12-mobilep">
-									<input type="text" name="rfirstname" id="rfirstname" value="" placeholder="성" />
+									<input type="text" name="rfirstname" id="rfirstname" value="${userVO.ufirstname}" placeholder="성" />
 								</div>
 								<div class="col-6 col-12-mobilep">
-									<input type="text" name="rlastname" id="rlastname" value="" placeholder= "이름" />
+									<input type="text" name="rlastname" id="rlastname" value="${userVO.ulastname}" placeholder= "이름" />
 								</div>
 								
 								<div class="col-12">
