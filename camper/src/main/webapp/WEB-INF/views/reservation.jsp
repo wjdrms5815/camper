@@ -52,6 +52,7 @@
 							<div class="col-12">
 								<input type="checkbox" name="rid" value="${reservation.rid}">
 								<input type="hidden" name="uid" value="${reservation.uid }">
+								<input type="hidden" name="cid" value="${reservation.cid}">
 								<div style="margin-left: 50px; margin-top: -20px;">
 								예약자명 : <span>${reservation.rfirstname}${reservation.rlastname }</span><br> 
 								예약 장소 : <span>${reservation.cplace}</span><br>

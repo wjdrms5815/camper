@@ -10,4 +10,8 @@
 <delete id="removeReservation">
 	delete from reservation where rid=#{rid} 
 </delete>
+
+<update id="upateCampInfo">
+	update campinfo set ccheck=0 where cid=#{cid}
+</update>
 </mapper>
