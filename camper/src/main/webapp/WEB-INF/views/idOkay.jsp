@@ -32,9 +32,15 @@
 									<form >
 										<div class="row gtr-uniform">
 											<div class="col-12">
-												<input type="text" name="uaddr" id="uaddr" value="${user.uid }" disabled align = "center"/>
+												<c:choose>
+													<c:when test = "${empty user}">
+														<input type="text" name="uaddr" id="uaddr" disabled align = "center" placeholder="조회 결과가 없습니다." />
+													</c:when>
+													<c:otherwise>
+														<input type="text" name="uaddr" id="uaddr" value="${user.uid }" disabled align = "center"/>
+													</c:otherwise>
+												</c:choose>
 											</div>
-											
 											<div class="col-12" style="text-align: center;">
                                                 <button type = "button" class="primary" onclick = "history.back(-1)">확인</button>
 											</div>

@@ -41,10 +41,8 @@
 												<input type="text" name="ulastname" id="ulastname" value="" required placeholder="이름" />
 											</div>
 											<div class="col-6">
-												<!-- <input type="text" value="${user.uid}" placeholder="아이디" /> -->
 												<span id = "spanid" name = "spanid" style = "color:red; font-size:8pt"></span>
 											</div>
-											
 											<div class="col-12" style="text-align: center;">
                                                 <input id = "uidCheck" type="submit" value="확인" class="primary" />
 												<input type="button" value="취소" onclick = "history.back(-1)"/>
@@ -68,7 +66,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			<script>
-			$('#uidCheck').click(function(){
+			/* $('#uidCheck').click(function(){
 				var addr = $('#uaddr').val();
 				var firstname = $('#ufirstname').val();
 				var lastname = $('#ulastname').val();
@@ -80,7 +78,8 @@
 					success:function(result){
 							$('#spanid').text('${user.uid}')
 				})
-			});
+			}); */
+			
 			</script>
 	</body>
 </html>
