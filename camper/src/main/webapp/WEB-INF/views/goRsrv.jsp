@@ -120,9 +120,9 @@
 								<div class="col-12">
 									<br><h3>캠핑 상세정보</h3>
 								</div>
-								<input type="hidden" name="cid" value="${board.cid}">
-								<input type="text" name="uid" value="${userVO.uid}"><!-- 세션으로 id값 받아와야함 -->
-								<input type="text" name="ccheck" value="1">
+								<input type="hidden" name="cid" value="${board.cid}" disabled >
+								<input type="text" name="uid" value="${userVO.uid}" disabled ><!-- 세션으로 id값 받아와야함 -->
+								<input type="text" name="ccheck" value="1" disabled >
 			<%-- 					<input type="hidden" name="rmoney" value="${board.cmoney}">
 								<input type="hidden" name="rstartdate" value="${board.cstartDate}">
 								<input type="hidden" name="renddate" value="${board.cendDate}">
@@ -132,7 +132,7 @@
 								<table style="border:1px">
 									<tr>
 										<td><span style="float: left;" id="cmoney" >\:${board.cmoney}</span></td>
-										<td><span style="float: right;">예약 날짜 : ${board.cstartDate} ~ ${board.cendDate}</span></td>
+										<td><span style="float: right;" >예약 날짜 : ${board.cstartDate} ~ ${board.cendDate}</span></td>
 									</tr>
 									<tr>
 										<td><img src="images/map.png" width="30px" height="30px" style="margin-right: 5px;"> ${board.cplace}</td>
