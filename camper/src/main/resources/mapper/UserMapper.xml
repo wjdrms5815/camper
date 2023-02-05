@@ -40,7 +40,7 @@
     </select>
     
     <!-- 비밀번호 찾기 -->
-	<select id = "findPW" resultType = "com.camper.domain.UserVO">
+	<select id = "findPWokay" resultType = "com.camper.domain.UserVO">
 		select upw from users
 			where uid = #{uid}
 			and ufirstname = #{ufirstname}

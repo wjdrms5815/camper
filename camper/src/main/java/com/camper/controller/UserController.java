@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.camper.domain.MyPageVO;
+import com.camper.domain.QuestionVO;
 import com.camper.domain.UserVO;
 import com.camper.mapper.QuestionMapper;
 import com.camper.mapper.UserMapper;
@@ -27,6 +28,9 @@ public class UserController {
 	
 	@Autowired 
 	UserMapper userMapper;
+	
+	@Autowired
+	QuestionMapper questionMapper;
 	
 	public String list(Model m) {
 		List<UserVO> user = userMapper.getAllUser();
@@ -61,11 +65,19 @@ public class UserController {
     }
 	
 	//회원가입
-	@PostMapping("/signUp")
+	@PostMapping("/signUpOkay")
 	public String signUpPage(UserVO vo) {
 		userMapper.signUpOkay(vo);
 		System.out.println(vo);
 		return "login";
+	}
+	
+	@GetMapping("/signUp")
+	public String signUp(Model m, HttpSession session) throws Exception{
+		List<QuestionVO> question = questionMapper.getQuestion();
+		System.out.println(question);
+		m.addAttribute("question", question);
+		return "join";
 	}
 	
 	//아이디 중복 체크
@@ -95,14 +107,22 @@ public class UserController {
 	}
 	
 	//비밀번호 찾기
-	@PostMapping("/findPW")
+	@PostMapping("/findPWokay")
 	public String findPw(UserVO vo, Model m) {
 		System.out.println(vo);
-		UserVO user = userMapper.findPW(vo.getUid(), vo.getUfirstname(), vo.getUlastname(),
+		UserVO user = userMapper.findPWokay(vo.getUid(), vo.getUfirstname(), vo.getUlastname(),
 				vo.getQid(), vo.getUanswer());
 		System.out.println(user);
 		m.addAttribute("user", user);
 		return "pwOkay";
+	}
+	
+	@GetMapping("/findPW")
+	public String findPw(Model m, HttpSession session) throws Exception{
+		List<QuestionVO> question = questionMapper.getQuestion();
+		System.out.println(question);
+		m.addAttribute("question", question);
+		return "findPw";
 	}
 
 }

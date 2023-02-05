@@ -48,12 +48,12 @@
 						 <div class="menu">
 						  <li><a href="#">로그인</a>
 						   <ul class="sub">
-						    <li><a href="/join">회원가입</a></li>
+						    <li><a href="/user/signUp">회원가입</a></li>
 						    <c:if test="${empty sessionId}">
 						    	<li><a href="/login">로그인</a></li>
 						    </c:if>
 						    <li><a href="/findId">아이디 찾기</a></li>
-						    <li><a href="/findPw">비밀번호 찾기</a></li>
+						    <li><a href="/user/findPW">비밀번호 찾기</a></li>
 						   </ul>
 						  </li>
 						 </div>

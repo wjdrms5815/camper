@@ -13,8 +13,8 @@
 		<title>Untitled</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="stylesheet" href="/assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
 	</head>
 	
 	<body class="is-preload">
@@ -31,7 +31,7 @@
 								<h1>회원가입</h1>
                         	</div>			<!-- Form -->
 
-						<form method="post" action="/user/signUp" id = "signUpForm">
+						<form method="post" action="/user/signUpOkay" id = "signUpForm">
 						<div class="box">
 							<div class="row gtr-uniform">
 								<div class="col-7">
@@ -53,13 +53,9 @@
 								
 								<div class="col-12">
 								<select name="qid" id="qid" >
-									<option value =1>기억에 남는 추억의 장소는?</option>
-									<option value =2>자신의 인생 좌우명은?</option>
-									<option value =3>가장 기억에 남는 선생님 성함은?</option>
-									<option value =4>자신의 보물 제1호는?</option>
-									<option value =5>유년시절 가장 생각나는 친구의 이름은?</option>
-									<option value =6>다시 태어나면 되고 싶은 것은?</option>
-									<option value =7>인상 깊게 읽은 책 이름은?</option>
+									<c:forEach var="question" items="${question}">
+										<option value="${question.qid }">${question.qques}</option>
+									</c:forEach>
 								</select>
 								</div>
 								

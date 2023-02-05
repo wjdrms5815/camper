@@ -37,7 +37,7 @@ public interface UserMapper {
     public UserVO findID(String uaddr, String ufirstname, String ulastname);
     
     /*비밀번호 찾기*/
-    public UserVO findPW(String uid, String ufirstname, String ulastname, int qid, String uanswer);
+    public UserVO findPWokay(String uid, String ufirstname, String ulastname, int qid, String uanswer);
     
 }
 

@@ -37,10 +37,10 @@ public class HomeController {
     }
     
     //findPw
-    @RequestMapping("/findPw")
-    public String findPw() {
-        return "findPw";
-    }
+    //@RequestMapping("/findPw")
+    //public String findPw() {
+    //    return "findPw";
+    //}
     
     
     //generic 상세보기
@@ -72,6 +72,7 @@ public class HomeController {
 //		m.addAttribute("user",user);
 //		return "myPage";
 //    }
+    
     //payment
     @RequestMapping("/payment")
     public String payment() {
