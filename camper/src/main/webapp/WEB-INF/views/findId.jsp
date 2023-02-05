@@ -46,7 +46,7 @@
 											<div class="col-12" style="text-align: center;">
                                                 <input id = "uidCheck" type="submit" value="확인" class="primary" />
 												<input type="button" value="취소" onclick = "history.back(-1)"/>
-												<input type="button" value="비밀번호 찾기" onclick = "location.href='/findPw'"/>
+												<input type="button" value="비밀번호 찾기" onclick = "location.href='/user/findPW'"/>
 											</div>
 										</div>
 									</form>
