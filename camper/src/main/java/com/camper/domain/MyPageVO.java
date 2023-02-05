@@ -16,5 +16,4 @@ public class MyPageVO extends BoardVO{
 	private int qid;
 	private String uanswer;
 	private String ccheck;
-	
 }

@@ -94,6 +94,12 @@
 								<input type="text" name="uaddrdetail" id="addressDetail"
 									value="${ mypage.uaddrdetail }" placeholder="상세주소" />
 							</div>
+							
+							<div class="col-12">
+							포인트
+								<input type="text" name="uwallet" id="uwallet"
+									value="${ mypage.uwallet }" disabled/>
+							</div>
 
 							<div class="col-12">
 								<br>
