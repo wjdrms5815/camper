@@ -63,7 +63,8 @@
 									<table><tr>
 									
 									<td>\:</td>
-									<td><input type="text" disabled value="${userVO.uwallet}" id="uwallet">
+									<td><input type="text"  value="${userVO.uwallet}" id="uwallet">
+									<input type="text" name="uwallet" value="${userVO.uwallet-board.cmoney}">
 									
 									</td>
 									<td>
@@ -80,7 +81,7 @@
 								<input type="hidden" name="uid" id="uid"value="${userVO.uid}"  >
 								<input type="hidden" name="ccheck" id="ccheck"value="1"  >
 								<div class="col-12">
-								<input type="hidden" name="cmoney" id="cmoney" value="${board.cmoney}" disabled >
+								<input type="hidden" name="cmoney" id="cmoney" value="${board.cmoney}"  >
 								<table style="border:1px">
 									<tr>
 										<td><span style="float: left;" id="cmoney" >\:${board.cmoney}</span></td>

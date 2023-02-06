@@ -12,7 +12,7 @@ public class UserVO {
 	private Long upostcode;
 	private String uaddr;
 	private String uaddrdetail;
-	private String uwallet;
+	private int uwallet;
 	private String ursTime;
 	private int qid;
 	private String uanswer;

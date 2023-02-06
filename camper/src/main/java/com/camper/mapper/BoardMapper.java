@@ -32,4 +32,7 @@ public interface BoardMapper {
 	
 	//포인트 체크
 	public int pointCheck(String uid);
+	
+	//포인트 차감
+	public void updateWallet(String uid);
 }
