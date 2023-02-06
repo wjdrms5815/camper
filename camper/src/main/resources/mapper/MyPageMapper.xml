@@ -11,7 +11,11 @@
 	where uid=#{uid}
 </update>
 
+<select id="getMoney" resultType="int">
+	select uwallet from users where uid=#{userId}
+</select>
+
 <update id="updateWallet">
-	update users set uwallet=#{money} where uid=#{userId}
+	update users set uwallet=#{finalMoney} where uid=#{userId}
 </update>
 </mapper>

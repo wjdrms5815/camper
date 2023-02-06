@@ -26,7 +26,9 @@ public class ChargeController {
 	@GetMapping("/chargeSuccess")
 	public @ResponseBody String chargePoint(int amount, HttpSession session) {
 		String userId = (String) session.getAttribute("sessionId");
-		myPageMapper.updateWallet(userId, amount);
+		int money = myPageMapper.getMoney(userId);
+		int finalMoney = amount + money;
+		myPageMapper.updateWallet(userId, finalMoney);
 		return "redirect:/";
 	}
 }

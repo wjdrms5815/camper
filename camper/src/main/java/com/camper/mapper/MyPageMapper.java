@@ -16,5 +16,7 @@ public interface MyPageMapper {
 	
 	public void updateMyPage(MyPageVO vo);
 	
-	public void updateWallet(@Param("userId") String userId, @Param("money") int money);
+	int getMoney(@Param("userId") String userId);
+	
+	public void updateWallet(@Param("userId") String userId, @Param("finalMoney") int finalMoney);
 }
