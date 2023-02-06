@@ -31,7 +31,7 @@
 								<h1>회원가입</h1>
                         	</div>			<!-- Form -->
 
-						<form method="post" action="/user/signUpOkay" id = "signUpForm">
+						<form method="post" action="/signUpOkay" id = "signUpForm">
 						<div class="box">
 							<div class="row gtr-uniform">
 								<div class="col-7">

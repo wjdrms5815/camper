@@ -30,7 +30,7 @@
 							<h1>로그인</h1>
                         </div>			<!-- Form -->
 								<section>
-									<form action="/user/Login" method="post">
+									<form action="/Login" method="post">
 										<div class="row gtr-uniform">
 											<div class="col-12">
 												<input type="text" name="uid" id="uid" value="" placeholder="아이디" />
