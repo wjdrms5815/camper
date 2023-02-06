@@ -28,8 +28,6 @@
 
 		<!-- Header -->
 		<jsp:include page="header.jsp"></jsp:include>
-
-
 		<!-- Main -->
 		<div id="main" align="center">
 			<div class="inner2" align="center">
@@ -38,6 +36,12 @@
 				<h1>포인트 충전소</h1>
 				</div>
 				<!-- Form -->
+						<c:if test="${sessionId == null}">
+					<div align = "center" class="box">
+				 	<h2>로그인이 필요한 페이지입니다.</h2><br><h3>로그인 후 이용해주세요</h3>	 		
+				 	</div>
+					</c:if>
+		<c:if test="${sessionId != null}">
 				<section class="box">
 						<p style="font-weight: bold; margin-bottom:-5px;">현재 사용 가능 금액 : ${mypage.uwallet }원</p>
 						<div align="center" style="margin-left: 45px;">
@@ -62,11 +66,9 @@
 						<button type="button" id="charge_kakao">충전</button>
 				</section>
 
-
-
 			</div>
 		</div>
-
+</c:if>
 	</div>
 	
 	<script>

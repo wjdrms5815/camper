@@ -37,14 +37,19 @@
 
 		<!-- Header -->
 		<jsp:include page="header.jsp"></jsp:include>
-
-
+		
 		<!-- Main -->
 		<div id="main">
 			<div class="inner2">
 				<div class="col-12" style="text-align: center;">
 					<h1>예약내역</h1>
 				</div>
+						<c:if test="${sessionId == null}">
+					<div align = "center" class="box">
+				 		<h2>로그인이 필요한 페이지입니다.</h2><br><h3>로그인 후 이용해주세요</h3>	 		
+				 	</div>
+					</c:if>
+					<c:if test="${sessionId != null}">
 				<!-- Form -->
 				<form action="/reservationDelete" method="post">
 					<section>
@@ -68,9 +73,11 @@
 			</div>
 			</section>
 			</form>
+			
 
 
 		</div>
+		</c:if>
 	</div>
 
 	</div>

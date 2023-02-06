@@ -21,7 +21,7 @@
 
 				<!-- Header -->
 				<jsp:include page = "header.jsp"></jsp:include>
-
+				
 			<!-- Main -->
 				<section id="main" class="container medium">
 				<div class="inner2">
@@ -30,6 +30,12 @@
 						<h1>결제</h1>
 						</div>
 					</header>
+					<c:if test="${sessionId == null}">
+					<div align = "center" class="box">
+				 		<h2>로그인이 필요한 페이지입니다.</h2><br><h3>로그인 후 이용해주세요</h3>	 		
+				 	</div>
+					</c:if>
+					<c:if test="${sessionId != null}">
 					<div class="box">
 						<form method="post" action="#">
 							<div class="row gtr-50 gtr-uniform">
@@ -139,22 +145,7 @@
 					</div>
 					
 				</section>
-
-			<!-- Footer -->
-				<footer id="footer">
-
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Untitled. All rights reserved.</li>
-						</ul>
-				</footer>
+</c:if>
 
 		</div>
 

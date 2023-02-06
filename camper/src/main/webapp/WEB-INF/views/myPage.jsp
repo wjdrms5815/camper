@@ -27,7 +27,7 @@
 
 		<!-- Header -->
 		<jsp:include page="header.jsp"></jsp:include>
-
+		
 		<!-- Main -->
 		<section id="main" class="container medium">
 			<div class="inner2">
@@ -37,6 +37,12 @@
 						<h1>마이 페이지</h1>
 					</div>
 				</header>
+				<c:if test="${sessionId == null}">
+					<div align = "center" class="box">
+				 		<h2>로그인이 필요한 페이지입니다.</h2><br><h3>로그인 후 이용해주세요</h3>	 		
+				 	</div>
+					</c:if>
+					<c:if test="${sessionId != null}">
 				<div class="box">
 					<form method="post" action="/myPageModify">
 						<div class="row gtr-50 gtr-uniform">
@@ -111,9 +117,10 @@
 							</div>
 						</div>
 					</form>
+					</div>
 				</div>
 		</section>
-
+</c:if>
 		<!-- Footer -->
 
 	</div>
