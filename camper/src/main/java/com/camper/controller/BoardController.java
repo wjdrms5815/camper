@@ -52,6 +52,7 @@ public class BoardController {
 		m.addAttribute("board", boardMapper.getDetailCampInfo(cid));
 		m.addAttribute("userId",userId);
 		m.addAttribute("userVO",myPageMapper.getMyPage(userId));
+//		m.addAttribute("pointCheck", boardMapper.pointCheck(userId));
 		System.out.println("예약하러가기 : " + boardMapper.getDetailCampInfo(cid));
 		
 		return "goRsrv";

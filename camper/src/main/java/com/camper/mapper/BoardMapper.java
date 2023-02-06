@@ -27,5 +27,9 @@ public interface BoardMapper {
 	//날짜 검색
 	List<BoardVO> searchCampInfo(String cstartDate);
 
+	//검색 리스틑 체크
 	public int searchCampInfoCount(String cstartDate);
+	
+	//포인트 체크
+	public int pointCheck(String uid);
 }

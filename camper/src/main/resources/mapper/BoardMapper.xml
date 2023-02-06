@@ -11,10 +11,13 @@
 	select * from campInfo where cId= #{cid}
 </select>
 
+<select id="pointCheck" resultType="int">
+	select uwallet from users where uid=#{uid}
+</select>
 <insert id="goRsrv">
 	insert into reservation
-	(cId, uId, rCard ,rCardNum ,rValMon ,rValYear ,rCvc, rFirstName ,rLastName,rPhoneNum)
-	values(#{cid}, #{uid}, #{rcard}, #{rcardnum}, #{rvalmon},  #{rvalyear},  #{rcvc},#{rfirstname},  #{rlastname},  #{rphonenum}) 
+	(cId, uId, rFirstName ,rLastName,rPhoneNum)
+	values(#{cid}, #{uid},#{rfirstname},  #{rlastname},  #{rphonenum}) 
 </insert>
 
 <insert id="check">

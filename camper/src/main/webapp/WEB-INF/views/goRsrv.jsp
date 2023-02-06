@@ -10,6 +10,7 @@
 	 
 -->
 <html>
+
 	<head>
 		<title>Camper</title>
 		<meta charset="utf-8" />
@@ -32,11 +33,19 @@
 						<h1>예약</h1>
 						</div>
 					</header>
+					<c:if test="${sessionId == null}">
+					<div align = "center" class="box">
+				 		<h2>로그인이 필요한 페이지입니다.</h2><br><h3>로그인 후 이용해주세요</h3>
+				 		
+				 	</div>
+				
+					</c:if>
+<c:if test="${sessionId != null}">
 					<div class="box">
 						<form method="post" action="/goRsrv" id="submitRsrv">
 							<div class="row gtr-50 gtr-uniform">
 							
-								<div class="col-12">
+								<!-- <div class="col-12">
 									<label>카드</label>
 								</div>
 								<div class = "col-12">
@@ -100,7 +109,7 @@
 								<div class="col-3">
 									<input type="text" name="rcvc" id="rcvc" value="" placeholder="cvc" />
 								</div>
-								
+								 -->
 								
 								<div class="col-12">
 									<Br><h3>개인정보</h3>
@@ -118,17 +127,33 @@
 								</div>
 								
 								<div class="col-12">
+									<Br><h3>보유 포인트</h3>
+									<table><tr>
+									
+									<td>\:</td>
+									<td><input type="text" disabled value="${userVO.uwallet}" id="uwallet">
+									
+									</td>
+									<td>
+									<button type="button" onclick="location.href='/charge'">충전</button>
+									</td>
+									</tr></table>
+									
+								</div>
+								
+								<div class="col-12">
 									<br><h3>캠핑 상세정보</h3>
 								</div>
 								<input type="hidden" name="cid" value="${board.cid}" disabled >
-								<input type="text" name="uid" value="${userVO.uid}" disabled ><!-- 세션으로 id값 받아와야함 -->
-								<input type="text" name="ccheck" value="1" disabled >
+								<input type="hidden" name="uid" value="${userVO.uid}" disabled ><!-- 세션으로 id값 받아와야함 -->
+								<input type="hidden" name="ccheck" value="1" disabled >
 			<%-- 					<input type="hidden" name="rmoney" value="${board.cmoney}">
 								<input type="hidden" name="rstartdate" value="${board.cstartDate}">
 								<input type="hidden" name="renddate" value="${board.cendDate}">
 								<input type="hidden" name="rplace" value="${board.cplace}">
 								<input type="hidden" name="rtel" value="${board.ctel}"> --%>
 								<div class="col-12">
+								<input type="hidden" name="cmoney" id="cmoney" value="${board.cmoney}" disabled >
 								<table style="border:1px">
 									<tr>
 										<td><span style="float: left;" id="cmoney" >\:${board.cmoney}</span></td>
@@ -156,6 +181,7 @@
 							</div>
 						</form>
 					</div>
+					</c:if>
 					</div>
 				</section>
 
@@ -184,31 +210,25 @@
 			<script>
 			$(document).ready(function (e) {
 				$("#goRsrv").click(function () {
-					const rcardnum = $("#rcardnum").val().replaceAll(" ", "");
-					const rvalmon = $("#rvalmon").val().replaceAll(" ", "");
-					const rvalyear = $("#rvalyear").val().replaceAll(" ", "");
-					const rcvc = $("#rcvc").val().replaceAll(" ", "");
 					const rfirstname = $("#rfirstname").val().replaceAll(" ", "");
 					const rlastname = $("#rlastname").val().replaceAll(" ", "");
 					const rphonenum = $("#rphonenum").val().replaceAll(" ", "");
 					const raddress = $("#raddress");
+					const uwallet = $("#uwallet").val();
+					const cmoney = $("#cmoney").val();
 					const raddressdetail = $("#raddressdetail");
 
-					if (!rcardnum) {
-						alert("카드번호를 입력하세요.");
-					} else if (!rvalmon) {
-						alert("카드(월)을 입력하세요.");
-					} else if (!rvalyear) {
-						alert("카드(년도)를 입력하세요.");
-					} else if (!rcvc) {
-						alert("CVC번호를 입력하세요.");
-					} else if (!rfirstname) {
+					if (!rfirstname) {
 						alert("성을 입력하세요.");
-					} else if (!rlastname) {
+					}else if (!rlastname) {
 						alert("이름을 입력하세요.");
 					} else if (!rphonenum) {
 						alert("번호를 입력하세요.");
-					}else {
+						console.log(uwallet);
+						console.log(cmoney);
+					} else if(uwallet < cmoney){
+						alert("보유 포인트가 부족합니다.");
+					} else{
 						$("#submitRsrv").submit();
 					}
 				})
