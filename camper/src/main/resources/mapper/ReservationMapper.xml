@@ -14,4 +14,8 @@
 <update id="upateCampInfo">
 	update campinfo set ccheck=0 where cid=#{cid}
 </update>
+
+<select id="searchReservationCount" resultType="int">
+	select count(*) from reservation where uid=#{uid}
+</select>
 </mapper>

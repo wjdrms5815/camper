@@ -62,15 +62,27 @@
 									<Br><h3>보유 포인트</h3>
 									<table><tr>
 									
-									<td>\:</td>
+									<td>결제 전 :</td>
 									<td><input type="text"  value="${userVO.uwallet}" id="uwallet">
-									<input type="text" name="uwallet" value="${userVO.uwallet-board.cmoney}">
+									
 									
 									</td>
 									<td>
 									<button type="button" onclick="location.href='/charge'">충전</button>
 									</td>
-									</tr></table>
+									
+									
+									</tr>
+									<tr>
+									<td>
+									결제 후 :
+									</td>
+									<td colspan="1">
+									<input type="text" name="uwallet" value="${userVO.uwallet-board.cmoney}">
+									</td>
+									
+									</tr>
+									</table>
 									
 								</div>
 								 

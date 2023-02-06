@@ -64,7 +64,9 @@ public class BoardController {
 	public String goRsrvInput(RsrvVO rvo, MyPageVO vo, UserVO uvo) throws Exception {
 		boardMapper.goRsrv(rvo);
 		boardMapper.check(vo);
-		boardMapper.updateWallet(uvo.getUid());
+		String uid = uvo.getUid();
+		boardMapper.updateWallet(uvo);
+		System.out.println(uvo);
 		System.out.println(rvo);
 		System.out.println(vo);
 		return "redirect:/reservation";

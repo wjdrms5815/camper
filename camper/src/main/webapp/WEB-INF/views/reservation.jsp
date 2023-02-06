@@ -49,11 +49,19 @@
 				 		<h2>로그인이 필요한 페이지입니다.</h2><br><h3>로그인 후 이용해주세요</h3>	 		
 				 	</div>
 					</c:if>
-					<c:if test="${sessionId != null}">
 				<!-- Form -->
+				<section>
+				<c:if test="${check == 0}">
+					<div align = "center" class="box">
+				 		<h2>Camper</h2><br><h3>예약 내역이 없습니다.</h3>	 		
+				 	</div>
+					</c:if>
+				<c:if test="${check !=0}">
+					
 				<form action="/reservationDelete" method="post">
-					<section>
-						<c:forEach var="reservation" items="${reservation}">
+				<c:forEach var="reservation" items="${reservation}">
+					
+						
 							<div class="col-12">
 								<input type="checkbox" name="rid" value="${reservation.rid}">
 								<input type="hidden" name="uid" value="${reservation.uid }">
@@ -64,8 +72,13 @@
 								결제 금액 : <span>${reservation.cmoney}</span>
 								</div>
 							</div>
+							
+							<input type="text" name="uwallet" value="${userVO.uwallet+reservation.cmoney}">
 							<br>
-						</c:forEach>
+						
+					
+				</c:forEach>
+				</c:if>
 						<div class="col-12" style="text-align: center;">
 							<input type="submit" class="primary" value="예약취소"> <input
 								type="button" value="뒤로가기" onClick="location.href='/'">
@@ -77,7 +90,6 @@
 
 
 		</div>
-		</c:if>
 	</div>
 
 	</div>
