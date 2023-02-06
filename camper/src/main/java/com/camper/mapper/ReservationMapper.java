@@ -17,4 +17,6 @@ public interface ReservationMapper {
 	void removeReservation(int rid);
 	
 	void upateCampInfo(int cid);
+	
+	int searchReservationCount(String uid);
 }

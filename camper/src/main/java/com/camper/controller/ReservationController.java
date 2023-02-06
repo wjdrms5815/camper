@@ -27,9 +27,9 @@ public class ReservationController {
 	public String getReservation(Model model, HttpSession session) {
 		String userId = (String) session.getAttribute("sessionId");
 		List<ReservationVO> reservation = reservationMapper.getAllReservation(userId);
-		System.out.println(reservation);
 		model.addAttribute("reservation", reservation);
-		System.out.println("test");
+		model.addAttribute("check",reservationMapper.searchReservationCount(userId));
+		System.out.println(reservationMapper.searchReservationCount(userId));
 		return "reservation";
 	}
 	
