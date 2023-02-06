@@ -47,7 +47,7 @@ public class ReservationController {
 			System.out.println(rid.get(i));
 			reservationMapper.removeReservation(Integer.parseInt(rid.get(i)));
 			boardMapper.updateWallet(uvo);
-		} 
+		}  
 		for(int i=0; i<cid.size(); i++) {
 			System.out.println(cid.get(i));
 			reservationMapper.upateCampInfo(Integer.parseInt(cid.get(i)));
