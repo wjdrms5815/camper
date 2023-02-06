@@ -33,6 +33,6 @@ public class ChargeController {
 		int money = myPageMapper.getMoney(userId);
 		int finalMoney = amount + money;
 		myPageMapper.updateWallet(userId, finalMoney);
-		return "redirect:/";
+		return "redirect:/charge";
 	}
 }
