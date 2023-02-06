@@ -40,11 +40,12 @@
 								</div>
                                 <div class="col-12">
 									<input type="password" name="upw" id="upw" value="" required  placeholder="비밀번호" />
+									<span id = "spanpw" name = "spanpw" style = "color:red; font-size:10pt"></span>
 								</div>
 								
 								<div class="col-12">
 									<input type="password" name="passwordCheck" id="passwordCheck" value="" required placeholder="비밀번호 재입력" />
-									<span id = "spanpw" name = "spanpw" style = "color:red; font-size:10pt"></span>
+									<span id = "spanpwokay" name = "spanpwokay" style = "color:red; font-size:10pt"></span>
 								</div>
 								
 								<div class="col-12">
@@ -119,22 +120,6 @@
 	               }).open();
 	            });
 			
-			/* 패스워드 일치 여부 */
-			$('#passwordCheck').keyup(function(){
-				var p1 = $('#upw').val();
-				var p2 = $(this).val();
-				var nullpw = "";
-				if(p1==p2){
-					$('#spanpw').text("비밀번호가 일치합니다.");
-					$("#signUp_btn").attr('disabled', false);
-				}
-				else{
-					$('#spanpw').text("비밀번호가 일치하지 않습니다.");
-					$("#signUp_btn").attr('disabled', true);
-				}
-				
-			});
-			
 			/* 아이디 정규식 */
 			$('#uid').keyup(function(){
 				var idRegular = RegExp(/[^a-zA-Z0-9]$/);
@@ -166,6 +151,37 @@
 				})
 			});
 			
+			//비밀번호 정규식
+			$('#upw').keyup(function(){
+				var RegExp = /^[a-zA-Z0-9]{4,12}$/; 
+				var p = $(this).val();
+				var nullpw = "";
+				if(!RegExp.test(p)){
+					$('#spanpw').text("패스워드는 4~12자의 영문 대소문자와 숫자로만 입력해주세요.");
+					$("#signUp_btn").attr('disabled', true);
+				}
+				else{
+					$('#spanpw').text("사용할 수 있는 패스워드입니다.");
+					$("#signUp_btn").attr('disabled', false);
+				}
+				
+			});
+			
+			/* 패스워드 일치 여부 */
+			$('#passwordCheck').keyup(function(){
+				var p1 = $('#upw').val();
+				var p2 = $(this).val();
+				var nullpw = "";
+				if(p1==p2){
+					$('#spanpwokay').text("비밀번호가 일치합니다.");
+					$("#signUp_btn").attr('disabled', false);
+				}
+				else{
+					$('#spanpwokay').text("비밀번호가 일치하지 않습니다.");
+					$("#signUp_btn").attr('disabled', true);
+				}
+				
+			});
 			
 			</script>
 					
