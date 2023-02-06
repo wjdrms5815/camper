@@ -41,9 +41,9 @@
 						<li><a href="/">메인화면</a></li>
 						</div>
 						<div id="nav">
+						<c:if test="${not empty sessionId}">
 						<li><a href="/myPage">마이 페이지</a></li>
 						<li><a href="/reservation">예약 내역</a></li>
-						<c:if test="${not empty sessionId}">
 							<li><a href="/charge">포인트 충전</a></li>
 						</c:if>
 						</div>
