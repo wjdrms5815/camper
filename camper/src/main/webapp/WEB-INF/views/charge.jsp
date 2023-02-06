@@ -31,25 +31,34 @@
 
 
 		<!-- Main -->
-		<div id="main">
-			<div class="inner2">
-				<div class="col-12" style="text-align: center;">
-					<h1>포인트 충전소</h1>
+		<div id="main" align="center">
+			<div class="inner2" align="center">
+				<div class="col-12" align="center" style="display: flex;">
+				<img src="/images/kakao.png" width="120px" height="50px" style="margin-top:10px; margin-right:15px; margin-left: 120px;">
+				<h1>포인트 충전소</h1>
 				</div>
 				<!-- Form -->
-				<section>
-						<p style="font-weight: bold">현재 남은 금액</p>
-						<input type="radio" name="cp_item" value="5000"><div style="margin-top: -10px; margin-left: 60px;">5,000원</div>
-						<input type="radio" name="cp_item" value="10000"><div style="margin-top: -10px; margin-left: 60px;">10,000원</div>
-						<input type="radio" name="cp_item" value="15000"><div style="margin-top: -10px; margin-left: 60px;">15,000원</div>
-						<input type="radio" name="cp_item" value="20000"><div style="margin-top: -10px; margin-left: 60px;">20,000원</div>
-						<input type="radio" name="cp_item" value="25000"><div style="margin-top: -10px; margin-left: 60px;">25,000원</div>
-						<input type="radio" name="cp_item" value="30000"><div style="margin-top: -10px; margin-left: 60px;">30,000원</div> 
-						<input type="radio" name="cp_item" value="35000"><div style="margin-top: -10px; margin-left: 60px;">35,000원</div> 
-						<input type="radio" name="cp_item" value="40000"><div style="margin-top: -10px; margin-left: 60px;">40,000원</div>
-						<input type="radio" name="cp_item" value="50000"><div style="margin-top: -10px; margin-left: 60px;">50,000원</div>
+				<section class="box">
+						<p style="font-weight: bold; margin-bottom:-5px;">현재 사용 가능 금액 : ${mypage.uwallet }원</p>
+						<div align="center" style="margin-left: 45px;">
+						<div style="display: flex;">
+						<input type="radio" name="cp_item" value="10000" style="margin-top: 20px;"><div style="margin : 20px 50px 0px -20px">10,000원</div>
+						<input type="radio" name="cp_item" value="50000" style="margin-top: 20px; margin-left: 20px;"><div style="margin : 20px 70px 0px -20px">50,000원</div>
+						<input type="radio" name="cp_item" value="100000" style="margin-top: 20px;"><div style="margin : 20px 50px 0px -20px">100,000원</div>
+						</div>
+						<div style="display: flex;">
+						<input type="radio" name="cp_item" value="150000" style="margin-top: 20px;"><div style="margin : 20px 50px 0px -20px">150,000원</div>
+						<input type="radio" name="cp_item" value="200000" style="margin-top: 20px; margin-left: 10px;"><div style="margin : 20px 50px 0px -20px">200,000원</div>
+						<input type="radio" name="cp_item" value="250000" style="margin-top: 20px; margin-left: 10px;"><div style="margin : 20px 50px 0px -20px">250,000원</div> 
+						</div>
+						<div style="display: flex;">
+						<input type="radio" name="cp_item" value="300000" style="margin-top: 20px;"><div style="margin : 20px 50px 0px -20px">300,000원</div> 
+						<input type="radio" name="cp_item" value="350000" style="margin-top: 20px; margin-left: 5px;"><div style="margin : 20px 50px 0px -20px">350,000원</div>
+						<input type="radio" name="cp_item" value="500000" style="margin-top: 20px; margin-left: 10px;"><div style="margin : 20px 50px 0px -20px">500,000원</div>
+						</div>
+						</div>
 						<p style="color: #ac2925; margin-top: 30px">
-						카카오페이의 최소 충전금액은 5,000원이며 <br />최대 충전금액은 50,000원 입니다.</p>
+						카카오페이의 최소 충전금액은 10,000원이며 최대 충전금액은 500,000원 입니다.</p>
 						<button type="button" id="charge_kakao">충전</button>
 				</section>
 
@@ -83,10 +92,7 @@
             console.log(rsp);
             if (rsp.success) {
                 var msg = money + '원 결제가 완료되었습니다.';
-                msg += '고유ID : ' + rsp.imp_uid;
-                msg += '상점 거래ID : ' + rsp.merchant_uid;
                 msg += '결제 금액 : ' + rsp.paid_amount;
-                msg += '카드 승인번호 : ' + rsp.apply_num;
                 $.ajax({
                     type: "GET", 
                     url: "/chargeSuccess", //충전 금액값을 보낼 url 설정

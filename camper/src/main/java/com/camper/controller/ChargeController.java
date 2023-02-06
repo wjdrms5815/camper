@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.camper.domain.MyPageVO;
 import com.camper.mapper.MyPageMapper;
 
 import jakarta.servlet.http.HttpSession;
@@ -19,7 +20,10 @@ public class ChargeController {
 	MyPageMapper myPageMapper;
 
 	@GetMapping("/charge")
-	public String charge() {
+	public String charge(Model model, HttpSession session) {
+		String userId = (String) session.getAttribute("sessionId");
+		MyPageVO mypage = myPageMapper.getMyPage(userId);
+		model.addAttribute("mypage", mypage);
 		return "charge";
 	}
 	
