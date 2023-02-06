@@ -12,7 +12,7 @@
 	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <head>
 
-<title>My Page</title>
+<title>Camper</title>
 <meta charset="utf-8" />
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, user-scalable=no" />
@@ -50,12 +50,13 @@
 							</div>
 
 							<div class="col-6 col-12-mobilep">
-								<input type="password" name="upw" id="password"
+								<input type="password" name="upw" id="upw"
 									value="${mypage.upw}" placeholder="패스워드" />
 							</div>
 							<div class="col-6 col-12-mobilep">
 								<input type="password" name="newPassword" id="newPassword"
 									value="" placeholder="패스워드 재입력" />
+									<span id = "spanpw" name = "spanpw" style = "color:red; font-size:15pt"></span>
 							</div>
 
 							<div class="col-12">
@@ -70,11 +71,11 @@
 
 
 							<div class="col-6 col-12-mobilep">
-								<input type="text" name="ufirstname" id="firstName"
+								<input type="text" name="ufirstname" id="ufirstName"
 									value="${ mypage.ufirstname }" placeholder="이름" />
 							</div>
 							<div class="col-6 col-12-mobilep">
-								<input type="text" name="ulastName" id="LastName"
+								<input type="text" name="ulastname" id=ulastName"
 									value="${mypage.ulastname}" placeholder="이름" />
 							</div>
 							<div class="col-6">
@@ -132,6 +133,39 @@
 	                  }
 	               }).open();
 	            });
+			
+			function Validation(){
+				
+			}
+			
+			/* 패스워드 일치 여부 */
+			$('#newPassword').keyup(function(){
+				var p1 = $('#upw').val();
+				var p2 = $(this).val();
+				var nullpw = "";
+				if(p1==p2){
+					$('#spanpw').text("비밀번호가 일치합니다.");
+				}
+				else{
+					$('#spanpw').text("비밀번호가 일치하지 않습니다.");
+					return false;
+				}
+				
+			});
+			
+			$('#upw').keyup(function(){
+				var RegExp = /^[a-zA-Z0-9]{4,12}$/; 
+				var p = $(this).val();
+				var nullpw = "";
+				if(!RegExp.test(p)){
+					$('#spanpw').text("패스워드는 4~12자의 영문 대소문자와 숫자로만 입력해주세요.");
+					return false;
+				}
+				else{
+					$('#spanpw').text("사용할 수 있는 패스워드입니다.");
+				}
+				
+			});
 			</script>
 	<script src="assets/js/jquery.min.js"></script>
 	<script src="assets/js/jquery.dropotron.min.js"></script>

@@ -38,7 +38,7 @@ public class ReservationController {
 	public String reservationDelete(@RequestParam List<String> rid, @RequestParam List<String>cid, ReservationVO vo) {
 		for(int i=0; i<rid.size(); i++) {
 			System.out.println(rid.get(i));
-			reservationMapper.removeReservation(Integer.parseInt(rid.get(i)));zz
+			reservationMapper.removeReservation(Integer.parseInt(rid.get(i)));
 		}
 		for(int i=0; i<cid.size(); i++) {
 			System.out.println(cid.get(i));

@@ -10,7 +10,7 @@
 -->
 <html>
 <head>
-<title>Untitled</title>
+<title>Camper</title>
 <meta charset="utf-8" />
 
 <meta name="viewport"
