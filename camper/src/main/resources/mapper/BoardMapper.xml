@@ -11,9 +11,6 @@
 	select * from campInfo where cId= #{cid}
 </select>
 
-<select id="pointCheck" resultType="int">
-	select uwallet from users where uid=#{uid}
-</select>
 <insert id="goRsrv">
 	insert into reservation
 	(cId, uId, rFirstName ,rLastName,rPhoneNum)

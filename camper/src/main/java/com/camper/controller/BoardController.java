@@ -59,7 +59,7 @@ public class BoardController {
 	}
 	
 	//예약하기
-	@PostMapping("goRsrv")
+	@PostMapping("/goRsrv")
 	public String goRsrvInput(RsrvVO rvo, MyPageVO vo) throws Exception {
 		boardMapper.goRsrv(rvo);
 		boardMapper.check(vo);

@@ -35,88 +35,20 @@
 					</header>
 					<c:if test="${sessionId == null}">
 					<div align = "center" class="box">
-				 		<h2>로그인이 필요한 페이지입니다.</h2><br><h3>로그인 후 이용해주세요</h3>
-				 		
+				 		<h2>로그인이 필요한 페이지입니다.</h2><br><h3>로그인 후 이용해주세요</h3>	 		
 				 	</div>
-				
 					</c:if>
-<c:if test="${sessionId != null}">
+					<c:if test="${sessionId != null}">
 					<div class="box">
 						<form method="post" action="/goRsrv" id="submitRsrv">
 							<div class="row gtr-50 gtr-uniform">
-							
-								<!-- <div class="col-12">
-									<label>카드</label>
-								</div>
-								<div class = "col-12">
-									<select id = "pamentMethod" name="rcard" id="rcard">
-										<option value = "visa">Visa</option>
-										<option value = "mastercard">MasterCard</option>
-										<option value = "jcb">JCB</option>
-									</select>
-								</div>
-								
-								<div class="col-12">
-									<label>카드 번호</label>
-								</div>
-								<div class = "col-12">
-									<input type="text" name="rcardnum" id="rcardnum" value="" placeholder="0000-0000-0000-0000" />
-								</div>
-								
-								
-								<div class="col-9">
-									<label>유효기간</label>
-								</div>
-								<div class="col-3">
-									<label>CVC</label>
-								</div>
-								
-								<div class="col-2">
-									<select id = "rvalmon" name="rvalmon">
-										<option value = "01">01</option>
-										<option value = "02">02</option>
-										<option value = "03">03</option>
-										<option value = "04">04</option>
-										<option value = "05">05</option>
-										<option value = "06">06</option>
-										<option value = "07">07</option>
-										<option value = "08">08</option>
-										<option value = "09">09</option>
-										<option value = "10">10</option>
-										<option value = "11">11</option>
-										<option value = "12">12</option>
-									</select>
-								</div>
-								
-								<div class="col-3">
-									<select id = "rvalyear" name="rvalyear">
-										<option value = "2023">2023</option>
-										<option value = "2024">2024</option>
-										<option value = "2025">2025</option>
-										<option value = "2026">2026</option>
-										<option value = "2027">2027</option>
-										<option value = "2028">2028</option>
-										<option value = "2029">2029</option>
-										<option value = "2030">2030</option>
-										<option value = "2031">2031</option>
-										<option value = "2032">2032</option>
-										<option value = "2033">2033</option>
-									</select>
-								</div>
-								
-								<div class = "col-4"></div>
-								
-								<div class="col-3">
-									<input type="text" name="rcvc" id="rcvc" value="" placeholder="cvc" />
-								</div>
-								 -->
-								
+	
 								<div class="col-12">
 									<Br><h3>개인정보</h3>
 								</div>
 								
 								<div class="col-6 col-12-mobilep">
-									<input type="text" ame="rfirstname" id="rfirstname" value="${userVO.ufirstname}" placeholder="성" />
+									<input type="text" name="rfirstname" id="rfirstname" value="${userVO.ufirstname}" placeholder="성" />
 								</div>
 								<div class="col-6 col-12-mobilep">
 									<input type="text" name="rlastname" id="rlastname" value="${userVO.ulastname}" placeholder= "이름" />
@@ -144,14 +76,9 @@
 								<div class="col-12">
 									<br><h3>캠핑 상세정보</h3>
 								</div>
-								<input type="hidden" name="cid" value="${board.cid}" disabled >
-								<input type="hidden" name="uid" value="${userVO.uid}" disabled ><!-- 세션으로 id값 받아와야함 -->
-								<input type="hidden" name="ccheck" value="1" disabled >
-			<%-- 					<input type="hidden" name="rmoney" value="${board.cmoney}">
-								<input type="hidden" name="rstartdate" value="${board.cstartDate}">
-								<input type="hidden" name="renddate" value="${board.cendDate}">
-								<input type="hidden" name="rplace" value="${board.cplace}">
-								<input type="hidden" name="rtel" value="${board.ctel}"> --%>
+								<input type="hidden" name="cid" id="cid" value="${board.cid}"  >
+								<input type="hidden" name="uid" id="uid"value="${userVO.uid}"  >
+								<input type="hidden" name="ccheck" id="ccheck"value="1"  >
 								<div class="col-12">
 								<input type="hidden" name="cmoney" id="cmoney" value="${board.cmoney}" disabled >
 								<table style="border:1px">
@@ -224,8 +151,6 @@
 						alert("이름을 입력하세요.");
 					} else if (!rphonenum) {
 						alert("번호를 입력하세요.");
-						console.log(uwallet);
-						console.log(cmoney);
 					} else if(uwallet < cmoney){
 						alert("보유 포인트가 부족합니다.");
 					} else{

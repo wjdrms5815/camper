@@ -29,6 +29,7 @@ public class ReservationController {
 		List<ReservationVO> reservation = reservationMapper.getAllReservation(userId);
 		System.out.println(reservation);
 		model.addAttribute("reservation", reservation);
+		System.out.println("test");
 		return "reservation";
 	}
 	
@@ -37,7 +38,7 @@ public class ReservationController {
 	public String reservationDelete(@RequestParam List<String> rid, @RequestParam List<String>cid, ReservationVO vo) {
 		for(int i=0; i<rid.size(); i++) {
 			System.out.println(rid.get(i));
-			reservationMapper.removeReservation(Integer.parseInt(rid.get(i)));
+			reservationMapper.removeReservation(Integer.parseInt(rid.get(i)));zz
 		}
 		for(int i=0; i<cid.size(); i++) {
 			System.out.println(cid.get(i));
