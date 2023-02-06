@@ -126,9 +126,11 @@
 				var nullpw = "";
 				if(p1==p2){
 					$('#spanpw').text("비밀번호가 일치합니다.");
+					$("#signUp_btn").attr('disabled', false);
 				}
 				else{
 					$('#spanpw').text("비밀번호가 일치하지 않습니다.");
+					$("#signUp_btn").attr('disabled', true);
 				}
 				
 			});
@@ -141,6 +143,7 @@
 				}
 				else{
 					$('#spanid').text("특수문자는 사용할 수 없습니다.");
+					$("#signUp_btn").attr('disabled', true);
 				}
 				//아이디 중복 확인
 				var id = $('#uid').val();
@@ -153,9 +156,11 @@
 						if(result == 'success'){
 							$('#spanid').text("사용할 수 있는 아이디입니다.");
 							//$("#uidCheck").attr('disabled', true);
+							$("#signUp_btn").attr('disabled', false);
 						}
 						if(result == 'fail'){ 
 							$('#spanid').text("중복된 아이디입니다.");
+							$("#signUp_btn").attr('disabled', true);
 						}
 					}
 				})
