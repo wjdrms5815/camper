@@ -32,8 +32,6 @@
 
 
 <update id="updateWallet">
-	update users
-	set uwallet=#{uwallet}::INTEGER
-	where uid=#{uid}
+	update users set uwallet=(#{uwallet}::INTEGER) where uid=(#{uid}::varchar)
 </update>
 </mapper>

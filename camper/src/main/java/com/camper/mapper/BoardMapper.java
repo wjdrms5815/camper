@@ -8,6 +8,7 @@ import org.springframework.stereotype.Repository;
 import com.camper.domain.BoardVO;
 import com.camper.domain.MyPageVO;
 import com.camper.domain.RsrvVO;
+import com.camper.domain.UserVO;
 
 @Mapper
 @Repository
@@ -34,5 +35,5 @@ public interface BoardMapper {
 	public int pointCheck(String uid);
 	
 	//포인트 차감
-	public void updateWallet(String uid);
+	public void updateWallet(UserVO vo);
 }
