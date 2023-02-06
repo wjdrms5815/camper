@@ -36,7 +36,7 @@
 							<div class="row gtr-uniform">
 								<div class="col-12">
 									<input type="text" name="uid" id="uid" value="" required placeholder="아이디" />
-									<span id = "spanid" name = "spanid" style = "color:red; font-size:8pt"></span>
+									<span id = "spanid" name = "spanid" style = "color:red; font-size:10pt"></span>
 								</div>
                                 <div class="col-12">
 									<input type="password" name="upw" id="upw" value="" required  placeholder="비밀번호" />
@@ -44,7 +44,7 @@
 								
 								<div class="col-12">
 									<input type="password" name="passwordCheck" id="passwordCheck" value="" required placeholder="비밀번호 재입력" />
-									<span id = "spanpw" name = "spanpw" style = "color:red; font-size:8pt"></span>
+									<span id = "spanpw" name = "spanpw" style = "color:red; font-size:10pt"></span>
 								</div>
 								
 								<div class="col-12">
