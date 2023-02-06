@@ -56,7 +56,7 @@
 				 		<h2>Camper</h2><br><h3>예약 내역이 없습니다.</h3>	 		
 				 	</div>
 					</c:if>
-				<c:if test="${check == 1}">
+				<c:if test="${check !=0}">
 					
 				<form action="/reservationDelete" method="post">
 				<c:forEach var="reservation" items="${reservation}">
@@ -72,6 +72,8 @@
 								결제 금액 : <span>${reservation.cmoney}</span>
 								</div>
 							</div>
+							
+							<input type="text" name="uwallet" value="${userVO.uwallet+reservation.cmoney}">
 							<br>
 						
 					
