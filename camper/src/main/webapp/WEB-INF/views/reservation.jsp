@@ -30,7 +30,10 @@
 			}
 		}).open();
 	});
-</script>
+			
+	</script>
+	
+
 <body class="is-preload">
 	<!-- Wrapper -->
 	<div id="wrapper">
@@ -58,12 +61,12 @@
 					</c:if>
 				<c:if test="${check !=0}">
 					
-				<form action="/reservationDelete" method="post">
+				<form action="/reservationDelete" method="post" id="deleteForm">
 				<c:forEach var="reservation" items="${reservation}">
 					
 						
 							<div class="col-12">
-								<input type="checkbox" name="rid" value="${reservation.rid}">
+								<input type="checkbox" name="rid" id="rid" value="${reservation.rid}">
 								<input type="hidden" name="uid" value="${reservation.uid }">
 								<input type="hidden" name="cid" value="${reservation.cid}">
 								<div style="margin-left: 50px; margin-top: -20px;">
@@ -80,7 +83,7 @@
 				</c:forEach>
 				</c:if>
 						<div class="col-12" style="text-align: center;">
-							<input type="submit" class="primary" value="예약취소"> <input
+							<input type="submit" class="primary" id="delete" value="예약취소"> <input
 								type="button" value="뒤로가기" onClick="location.href='/'">
 						</div>
 			</div>
@@ -101,5 +104,16 @@
 	<script src="assets/js/main.js"></script>
 	<script src="https://ssl.daumcdn.net/dmaps/map_js_init/postcode.v2.js"></script>
 </body>
+<script>
 
+				$("#delete").click(function () {
+
+					const rid = $("#rid").val();
+					console.log(rid);
+					if (!$("input:checked[id='rid']").is(":checked")){ 
+						alert("취소할 상품을 선택하세요");
+						return false;
+					} 
+				})
+			</script>
 </html>
