@@ -34,14 +34,10 @@
 						<form method="post" action="/signUpOkay" id = "signUpForm">
 						<div class="box">
 							<div class="row gtr-uniform">
-								<div class="col-7">
+								<div class="col-12">
 									<input type="text" name="uid" id="uid" value="" required placeholder="아이디" />
 									<span id = "spanid" name = "spanid" style = "color:red; font-size:8pt"></span>
 								</div>
-								<div class="col-4">
-									<input type="button" name="uidCheck" id="uidCheck" required value="중복확인"/>
-								</div>
-								
                                 <div class="col-12">
 									<input type="password" name="upw" id="upw" value="" required  placeholder="비밀번호" />
 								</div>
@@ -146,11 +142,7 @@
 				else{
 					$('#spanid').text("특수문자는 사용할 수 없습니다.");
 				}
-			});
-			
-			
-			/* 아이디 중복 확인 */
-			$('#uidCheck').click(function(){
+				//아이디 중복 확인
 				var id = $('#uid').val();
 				var data = {id : id}
 				$.ajax({
