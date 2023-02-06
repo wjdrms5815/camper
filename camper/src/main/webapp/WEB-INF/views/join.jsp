@@ -155,7 +155,7 @@
 				var data = {id : id}
 				$.ajax({
 					type:"get",
-					url:"/user/idCheck",
+					url:"/idCheck",
 					data:data,
 					success:function(result){
 						if(result == 'success'){

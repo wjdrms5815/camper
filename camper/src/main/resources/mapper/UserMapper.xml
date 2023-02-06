@@ -15,10 +15,10 @@
 	<select id = "signUpOkay" resultType = "com.camper.domain.UserVO">
 		insert into users (uid, upw, ufirstname, ulastname, 
 		upostcode, uaddr, uaddrdetail, 
-		 ursvtime, qid, uanswer) 
+		uwallet, ursvtime, qid, uanswer) 
 		values(#{uid}, #{upw}, #{ufirstname}, #{ulastname}, 
 		#{upostcode}, #{uaddr}, #{uaddrdetail}, 
-		now(), ${qid}, #{uanswer});
+		100, now(), ${qid}, #{uanswer});
 	</select>
 	
 	<!-- 아이디 중복 체크 -->
