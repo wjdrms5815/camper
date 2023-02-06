@@ -160,7 +160,7 @@
 					success:function(result){
 						if(result == 'success'){
 							$('#spanid').text("사용할 수 있는 아이디입니다.");
-							$("#uidCheck").attr('disabled', true);
+							//$("#uidCheck").attr('disabled', true);
 						}
 						if(result == 'fail'){ 
 							$('#spanid').text("중복된 아이디입니다.");
