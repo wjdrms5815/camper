@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
     pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE HTML>
 <!--
 	Phantom by Pixelarity
@@ -40,7 +41,7 @@
 								</tr>
 								<tr>
 									<td><img src="images/map.png" width="30px" height="30px" style="margin-right: 5px;" id="cplace"> ${board.cplace}</td>
-									<td><span style="float: right;" id="cmoney" name="cmoney">\:${board.cmoney}</span></td>
+									<td><span style="float: right;" id="cmoney" name="cmoney">\:<fmt:formatNumber value="${board.cmoney}" pattern="#,###"/></span></td>
 								</tr>
 								<tr>
 									<td colspan="2"><div id="map" style="width:100%;height:300px;"></div></td>

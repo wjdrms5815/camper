@@ -2,6 +2,7 @@
     pageEncoding="utf-8"%>
     <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE HTML>
 <!--
 	Alpha by Pixelarity
@@ -63,7 +64,7 @@
 									<table><tr>
 									
 									<td>결제 전 :</td>
-									<td><input type="text"  value="${userVO.uwallet}" id="uwallet">
+									<td><input type="text"  value="<fmt:formatNumber value="${userVO.uwallet}" pattern="#,###"/>" id="uwallet">
 									
 									
 									</td>
@@ -78,7 +79,7 @@
 									결제 후 :
 									</td>
 									<td colspan="1">
-									<input type="text" name="uwallet" value="${userVO.uwallet-board.cmoney}">
+									<input type="text" name="uwallet" value="<fmt:formatNumber value="${userVO.uwallet-board.cmoney}" pattern="#,###"/>">
 									</td>
 									
 									</tr>
@@ -96,7 +97,7 @@
 								<input type="hidden" name="cmoney" id="cmoney" value="${board.cmoney}"  >
 								<table style="border:1px">
 									<tr>
-										<td><span style="float: left;" id="cmoney" >\:${board.cmoney}</span></td>
+										<td><span style="float: left;" id="cmoney" >\:<fmt:formatNumber value="${board.cmoney}" pattern="#,###"/></span></td>
 										<td><span style="float: right;" >예약 날짜 : ${board.cstartDate} ~ ${board.cendDate}</span></td>
 									</tr>
 									<tr>

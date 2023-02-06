@@ -70,13 +70,25 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			
 			<script type = "text/javascript">
-				//로그인 실패
+			//var id = document.getElementById($('uid')).value;
+			
 				var message = '${msg}';
 				var returnUrl = '${url}';
-				alert(message);
-				document.location.href = url;
+				if(message !== "") {
+					//console.log(typeof message);
+					//console.log(message === "");
+					//console.log(message);
+					//console.log(returnUrl);
+					alert(message);
+				}
+				
+
+				
+				
 			</script>
+			
 
 	</body>
 </html>
