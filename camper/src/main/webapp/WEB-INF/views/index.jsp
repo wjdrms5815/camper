@@ -23,12 +23,32 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
+							<div>
 							<header>
 								<h1>Let's go camping together!</h1>
-								<p>전국 캠핑장을 한 눈에 편리하게</p>
+								<span style="float: left;" id="ctel" name="ctel">전국 캠핑장을 한 눈에 편리하게</span>
+								
+								<form method="post" action="/searchCampInfo">
+								<span style="float: right;">
+									날짜 검색 : <input type="date" name="cstartDate" value="${cstartDate}">&nbsp;&nbsp;<button class="button primary small">검색</button>
+								</span>
+								</form>
+								<br><br><hr>
 							</header>
+							<c:if test="${infoCount == 0}">
+							<div align="center">
+
+							<span style="float: center;"><h2>Camper</h2></span>
+						            
+						               <p>선택하신 날짜에는 예약가능한 캠핑장이 없습니다.</p>
+								<hr>
+							</div>
+							</c:if>
 							<section class="tiles">
+							
 							<c:forEach var="board" items="${ board }">
+														
+							
 							<article class="style${board.cid}">
 								
 									<span class="image">
@@ -47,6 +67,7 @@
 									</a>
 									
 								</article>
+								
 							</c:forEach>
 								
 							</section>

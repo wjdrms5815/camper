@@ -24,4 +24,8 @@ public interface BoardMapper {
 	//예약체크
 	public void check(MyPageVO vo);
 	
+	//날짜 검색
+	List<BoardVO> searchCampInfo(String cstartDate);
+
+	public int searchCampInfoCount(String cstartDate);
 }

@@ -66,4 +66,16 @@ public class BoardController {
 		System.out.println(vo);
 		return "redirect:/reservation";
 	}
+	
+	//시작날짜 검색
+	@PostMapping("/searchCampInfo")
+	public String searchCampInfo(Model m, String cstartDate)throws Exception {
+		List<BoardVO> board = boardMapper.searchCampInfo(cstartDate);
+		int infoCount = boardMapper.searchCampInfoCount(cstartDate);
+		System.out.println("search"+board);
+		m.addAttribute("infoCount", infoCount);
+		m.addAttribute("cstartDate", cstartDate);
+		m.addAttribute("board", board);
+		return "index";
+	}
 }
