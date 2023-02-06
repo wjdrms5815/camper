@@ -73,7 +73,7 @@
 								</div>
 							</div>
 							
-							<input type="text" name="uwallet" value="${userVO.uwallet+reservation.cmoney}">
+							<input type="hidden" name="uwallet" value="${userVO.uwallet+reservation.cmoney}">
 							<br>
 						
 					
