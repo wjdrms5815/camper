@@ -105,7 +105,7 @@
 							<div class="col-12">
 								<br>
 								<ul class="actions special">
-									<li><input type="submit" value="확인"></li>
+									<li><input type="submit" value="확인" id="modifyBtn"></li>
 									<li><input type="button" value="취소" onClick="location.href='/'"></li>
 								</ul>
 							</div>
@@ -145,10 +145,11 @@
 				var nullpw = "";
 				if(p1==p2){
 					$('#spanpw').text("비밀번호가 일치합니다.");
+					$("#modifyBtn").attr('disabled', false);
 				}
 				else{
 					$('#spanpw').text("비밀번호가 일치하지 않습니다.");
-					return false;
+					$("#modifyBtn").attr('disabled', true);
 				}
 				
 			});
@@ -159,10 +160,11 @@
 				var nullpw = "";
 				if(!RegExp.test(p)){
 					$('#spanpw').text("패스워드는 4~12자의 영문 대소문자와 숫자로만 입력해주세요.");
-					return false;
+					$("#modifyBtn").attr('disabled', true);
 				}
 				else{
 					$('#spanpw').text("사용할 수 있는 패스워드입니다.");
+					$("#modifyBtn").attr('disabled', false);
 				}
 				
 			});
