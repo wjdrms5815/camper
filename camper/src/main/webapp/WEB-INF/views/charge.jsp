@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE HTML>
 <!--
 	Phantom by Pixelarity
@@ -43,7 +44,7 @@
 					</c:if>
 		<c:if test="${sessionId != null}">
 				<section class="box">
-						<p style="font-weight: bold; margin-bottom:-5px;">현재 사용 가능 금액 : ${mypage.uwallet }원</p>
+						<p style="font-weight: bold; margin-bottom:-5px;">현재 사용 가능 금액 : <fmt:formatNumber value="${mypage.uwallet}" pattern="#,###"/>원</p>
 						<div align="center" style="margin-left: 45px;">
 						<div style="display: flex;">
 						<input type="radio" name="cp_item" value="10000" style="margin-top: 20px;"><div style="margin : 20px 50px 0px -20px">10,000원</div>

@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE HTML>
 <!--
 	Phantom by Pixelarity
@@ -55,7 +56,7 @@
 										<img src="${board.cimage}" alt="" style="float: center; width:100%; height:300px;">
 <%-- 										${board.cid} --%>
 									<span style="float: left;" id="ctel" name="ctel">Tel:${board.ctel}</span>
-									<span style="float: right;" id="cmoney" name="cmoney">\:${board.cmoney}</span>
+									<span style="float: right;" id="cmoney" name="cmoney">\:<fmt:formatNumber value="${board.cmoney}" pattern="#,###"/></span>
 							
 									</span>
 									<a href="/goDetail?cid=${board.cid}">

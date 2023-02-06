@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE HTML>
 <!--
    Alpha by Pixelarity
@@ -105,7 +106,7 @@
 							<div class="col-12">
 							포인트
 								<input type="text" name="uwallet" id="uwallet"
-									value="${ mypage.uwallet }" disabled/>
+									value="<fmt:formatNumber value="${mypage.uwallet }" pattern="#,###"/>" disabled/>
 							</div>
 
 							<div class="col-12">
