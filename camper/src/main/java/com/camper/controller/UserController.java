@@ -47,12 +47,13 @@ public class UserController {
 			
 			session.setAttribute("sessionId", userMapper.getUid(map.get("uid"))); // 세션값 등록 
 		    model.addAttribute("sessionId", session.getAttribute("sessionId"));
-			 
 	        
 			return "redirect:/";
 		}
 		else {
 			System.out.println("실패");
+			model.addAttribute("msg", "로그인에 실패하셨습니다. 아이디 및 비밀번호를 확인해주세요.");
+			model.addAttribute("url", "login.jsp");
 			return "login";
 		}
 	}
@@ -87,11 +88,11 @@ public class UserController {
 		int result = userMapper.idCheck(id);
 		System.out.println(id);
 		if(result == 0) {
-			System.out.println("로그인 성공");
+			System.out.println("아이디 중복 없음");
 			return "success";
 		}
 		else {
-			System.out.println("로그인 실패");
+			System.out.println("아이디 중복 있음");
 			return "fail";
 		}
 	}

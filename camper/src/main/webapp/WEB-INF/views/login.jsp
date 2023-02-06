@@ -30,15 +30,15 @@
 							<h1>로그인</h1>
                         </div>			<!-- Form -->
 								<section>
-									<form action="/Login" method="post">
+									<form action="/Login" method="post" id="submitLogin">
 										<div class="row gtr-uniform">
 											<div class="col-12">
-												<input type="text" name="uid" id="uid" value="" placeholder="아이디" />
+												<input type="text" name="uid" id="uid" value="" required placeholder="아이디" />
 															
 											</div>
                                             <div class="col-12">
-												<input type="password" name="upw" id="upw" value="" placeholder="비밀번호" />
-											
+												<input type="password" name="upw" id="upw" value="" required placeholder="비밀번호" />
+												<span id = "spanlogin" name = "spanlogin" style = "color:red; font-size:10pt"></span>
 											</div>
 											
                                             <br>
@@ -52,16 +52,13 @@
 											</div> -->
 											
 											<div class="col-12" style="text-align: center;">
-                                                <input type="submit" value="로그인" class="primary" />
+                                                <input type="submit" name = "login_btn" id = "login_btn" value="로그인" class="primary" />
                                                 <input type="button" value="회원가입" onclick = "location.href='/join'"/>
                                                 <input type="button" value="ID/PW 찾기" onclick = "location.href='/findId'"/>
 											</div>
 										</div>
 									</form>
 								</section>
-
-
-
 						</div>
 					</div>
 
@@ -73,6 +70,13 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script type = "text/javascript">
+				//로그인 실패
+				var message = '${msg}';
+				var returnUrl = '${url}';
+				alert(message);
+				document.location.href = url;
+			</script>
 
 	</body>
 </html>
