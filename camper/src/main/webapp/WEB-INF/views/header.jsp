@@ -49,17 +49,17 @@
 						 <div class="menu">
 						  <li><a href="#">로그인</a>
 						   <ul class="sub">
-						    <li><a href="/user/signUp">회원가입</a></li>
+						    <li><a href="/signUp">회원가입</a></li>
 						    <c:if test="${empty sessionId}">
 						    	<li><a href="/login">로그인</a></li>
 						    </c:if>
 						    <li><a href="/findId">아이디 찾기</a></li>
-						    <li><a href="/user/findPW">비밀번호 찾기</a></li>
+						    <li><a href="/findPW">비밀번호 찾기</a></li>
 						   </ul>
 						  </li>
 						 </div>
 						<c:if test="${not empty sessionId}">
-							<li><a href="/user/logout">로그아웃</a></li>
+							<li><a href="/logout">로그아웃</a></li>
 						</c:if>
 						<!-- <li><a href="generic.html">상세 페이지</a></li>
 						<li><a href="generic.html">Consequat dolor</a></li>

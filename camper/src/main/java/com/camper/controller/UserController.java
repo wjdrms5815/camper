@@ -23,7 +23,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
-@RequestMapping("/user")
+@RequestMapping("/")
 public class UserController {
 	
 	@Autowired 
@@ -97,7 +97,6 @@ public class UserController {
 	}
 	
 	//아이디 찾기
-	
 	@PostMapping("/findID")
 	public String findId(UserVO vo, Model m) {
 		UserVO user = userMapper.findID(vo.getUaddr(), vo.getUfirstname(), vo.getUlastname());

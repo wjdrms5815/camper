@@ -29,7 +29,7 @@
 							<h1>아이디 찾기</h1>
                         </div>			<!-- Form -->
 								<section>
-									<form method="post" action="/user/findID">
+									<form method="post" action="/findID">
 										<div class="row gtr-uniform">
 											<div class="col-12">
 												<input type="text" name="uaddr" id="uaddr" value="" required placeholder="주소" />
@@ -46,7 +46,7 @@
 											<div class="col-12" style="text-align: center;">
                                                 <input id = "uidCheck" type="submit" value="확인" class="primary" />
 												<input type="button" value="취소" onclick = "history.back(-1)"/>
-												<input type="button" value="비밀번호 찾기" onclick = "location.href='/user/findPW'"/>
+												<input type="button" value="비밀번호 찾기" onclick = "location.href='/findPW'"/>
 											</div>
 										</div>
 									</form>

@@ -9,20 +9,23 @@
 -->
 <html>
 	<head>
-		<title>Untitled</title>
+		<title>find PW</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport"
+			content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="/assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="/assets/css/noscript.css" /></noscript>
+		<noscript>
+			<link rel="stylesheet" href="/assets/css/noscript.css" />
+		</noscript>
 	</head>
 	<body class="is-preload">
 	
 		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 			
 			<!-- Header -->
-			<jsp:include page = "header.jsp"></jsp:include>
-
+			<jsp:include page="header.jsp"></jsp:include>
+		
 				<!-- Main -->
 					<div id="main">
 						<div class="inner2">
@@ -30,9 +33,8 @@
 							<h1>비밀번호 찾기</h1>
                         </div>			<!-- Form -->
 								<section>
-									<form method="post" action="/user/findPWokay">
+									<form method="post" action="/findPWokay">
 										<div class="row gtr-uniform">
-										
 											<div class="col-12">
 												<input type="text" name="uid" id="uid" value="" required placeholder="아이디" />
 											</div>
