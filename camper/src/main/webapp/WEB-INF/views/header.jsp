@@ -43,20 +43,22 @@
 						<div id="nav">
 						<li><a href="/myPage">마이 페이지</a></li>
 						<li><a href="/reservation">예약 내역</a></li>
-						<li><a href="/charge">포인트 충전</a>
+						<c:if test="${not empty sessionId}">
+							<li><a href="/charge">포인트 충전</a></li>
+						</c:if>
 						</div>
 						<div id="nav">
 						 <div class="menu">
-						  <li><a href="#">로그인</a>
-						   <ul class="sub">
-						    <li><a href="/signUp">회원가입</a></li>
-						    <c:if test="${empty sessionId}">
+						 <c:if test="${empty sessionId}">
+							  <li><a href="#">로그인</a>
+							   <ul class="sub">
+						    	<li><a href="/signUp">회원가입</a></li>
 						    	<li><a href="/login">로그인</a></li>
-						    </c:if>
-						    <li><a href="/findId">아이디 찾기</a></li>
-						    <li><a href="/findPW">비밀번호 찾기</a></li>
-						   </ul>
-						  </li>
+							    <li><a href="/findId">아이디 찾기</a></li>
+							    <li><a href="/findPW">비밀번호 찾기</a></li>
+							   </ul>
+							  </li>
+						  </c:if>
 						 </div>
 						<c:if test="${not empty sessionId}">
 							<li><a href="/logout">로그아웃</a></li>
