@@ -53,7 +53,6 @@ public class UserController {
 		else {
 			System.out.println("실패");
 			model.addAttribute("msg", "로그인에 실패하셨습니다. 아이디 및 비밀번호를 확인해주세요.");
-			model.addAttribute("url", "login.jsp");
 			return "login";
 		}
 	}
