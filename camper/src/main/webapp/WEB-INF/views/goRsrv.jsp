@@ -65,7 +65,7 @@
 									
 									<td>결제 전 :</td>
 									<td><input type="text"  value="<fmt:formatNumber value="${userVO.uwallet}" pattern="#,###"/>" >
-									<input type="text" value="${userVO.uwallet }" id="uwallet">
+									<input type="hidden" value="${userVO.uwallet }" id="uwallet">
 									
 									
 									</td>
@@ -100,7 +100,7 @@
 								<table style="border:1px">
 									<tr>
 										<td><span style="float: left;" id="cmoney" >\:<fmt:formatNumber value="${board.cmoney}" pattern="#,###"/></span></td>
-										<td><span style="float: right;" >예약 날짜 : ${board.cstartDate} ~ ${board.cendDate}</span></td>
+										<td><span style="float: right;" >${board.cstartDate} ~ ${board.cendDate}</span></td>
 									</tr>
 									<tr>
 										<td><img src="images/map.png" width="30px" height="30px" style="margin-right: 5px;"> ${board.cplace}</td>
