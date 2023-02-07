@@ -15,7 +15,15 @@
 	update campinfo set ccheck=0 where cid=#{cid}
 </update>
 
+<update id="returnMoney">
+	update users set uwallet=#{sum} where uid=#{userId}
+</update>
+
 <select id="searchReservationCount" resultType="int">
 	select count(*) from reservation where uid=#{uid}
+</select>
+
+<select id="findWallet" resultType="int">
+	select uwallet from users where uid=#{userId}
 </select>
 </mapper>

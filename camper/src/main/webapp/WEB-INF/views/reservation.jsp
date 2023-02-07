@@ -74,12 +74,12 @@
 								<div style="margin-left: 50px; margin-top: -20px;">
 								예약자명 : <span>${reservation.rfirstname}${reservation.rlastname }</span><br> 
 								예약 장소 : <span>${reservation.cplace}</span><br>
-								결제 금액 : <span><fmt:formatNumber value="${reservation.cmoney}" pattern="#,###"/></span>
+								결제 금액 : <span><input type="text" name="cmoney" value="${reservation.cmoney}"></span>
 								
 								</div>
 							</div>
 							
-							<input type="hidden" name="uwallet" value="${userVO.uwallet+reservation.cmoney}">
+							<%-- <input type="hidden" name="uwallet" value="${userVO.uwallet+reservation.cmoney}"> --%>
 							<br>
 						
 					

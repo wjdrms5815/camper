@@ -28,6 +28,8 @@ public class ReservationController {
 	BoardMapper boardMapper;
 	@Autowired MyPageMapper myPageMapper;
 	
+	private int sum = 0;
+	
 	@GetMapping("/reservation")
 	public String getReservation(Model model, HttpSession session, UserVO uvo) {
 		String userId = (String) session.getAttribute("sessionId");
@@ -42,16 +44,21 @@ public class ReservationController {
 	
 	
 	@PostMapping("/reservationDelete")
-	public String reservationDelete(@RequestParam List<String> rid, @RequestParam List<String>cid, ReservationVO vo,  UserVO uvo) {
+	public String reservationDelete(@RequestParam List<String> rid, @RequestParam List<String> cid,
+			HttpSession session, @RequestParam List<Integer> cmoney, ReservationVO vo,  UserVO uvo) {
+		String userId = (String) session.getAttribute("sessionId");
 		for(int i=0; i<rid.size(); i++) {
-			System.out.println(rid.get(i));
 			reservationMapper.removeReservation(Integer.parseInt(rid.get(i)));
-			boardMapper.updateWallet(uvo);
+			int wallet = reservationMapper.findWallet(userId);
+			System.out.println("캠프장 금액 : " + cmoney.get(i));
+			sum = wallet + cmoney.get(i);
+			System.out.println("합계 : " + sum);
+			reservationMapper.returnMoney(sum, userId);
+//			boardMapper.updateWallet(uvo);
 		}  
 		for(int i=0; i<cid.size(); i++) {
-			System.out.println(cid.get(i));
 			reservationMapper.upateCampInfo(Integer.parseInt(cid.get(i)));
-			boardMapper.updateWallet(uvo);
+//			boardMapper.updateWallet(uvo);
 		}
 		return "redirect:/reservation";
 	}
