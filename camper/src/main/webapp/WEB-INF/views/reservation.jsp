@@ -1,6 +1,8 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+    <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <!DOCTYPE HTML>
 
 <!--
@@ -72,7 +74,8 @@
 								<div style="margin-left: 50px; margin-top: -20px;">
 								예약자명 : <span>${reservation.rfirstname}${reservation.rlastname }</span><br> 
 								예약 장소 : <span>${reservation.cplace}</span><br>
-								결제 금액 : <span>${reservation.cmoney}</span>
+								결제 금액 : <span><fmt:formatNumber value="${reservation.cmoney}" pattern="#,###"/></span>
+								
 								</div>
 							</div>
 							

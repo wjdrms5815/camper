@@ -64,7 +64,8 @@
 									<table><tr>
 									
 									<td>결제 전 :</td>
-									<td><input type="text"  value="<fmt:formatNumber value="${userVO.uwallet}" pattern="#,###"/>" id="uwallet">
+									<td><input type="text"  value="<fmt:formatNumber value="${userVO.uwallet}" pattern="#,###"/>" >
+									<input type="text" value="${userVO.uwallet }" id="uwallet">
 									
 									
 									</td>
@@ -79,7 +80,8 @@
 									결제 후 :
 									</td>
 									<td colspan="1">
-									<input type="text" name="uwallet" value="<fmt:formatNumber value="${userVO.uwallet-board.cmoney}" pattern="#,###"/>">
+									<input type="text"  value="<fmt:formatNumber value="${userVO.uwallet-board.cmoney}" pattern="#,###"/>">
+									<input type="hidden" name="uwallet" value="${userVO.uwallet-board.cmoney}" >
 									</td>
 									
 									</tr>
@@ -164,6 +166,9 @@
 					}else if (!rlastname) {
 						alert("이름을 입력하세요.");
 					} else if (!rphonenum) {
+						console.log("@@@@@@@@@@@@@@2");
+						console.log(uwallet);
+						console.log(cmoney);
 						alert("번호를 입력하세요.");
 					} else if(uwallet < cmoney){
 						alert("보유 포인트가 부족합니다.");
