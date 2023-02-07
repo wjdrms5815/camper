@@ -65,7 +65,7 @@
 									
 									<td>결제 전 :</td>
 									<td><input type="text"  value="<fmt:formatNumber value="${userVO.uwallet}" pattern="#,###"/>" >
-									<input type="hidden" value="${userVO.uwallet }" id="uwallet">
+									<input type="text" value="${userVO.uwallet }" id="uwallet">
 									
 									
 									</td>
@@ -170,7 +170,7 @@
 						console.log(uwallet);
 						console.log(cmoney);
 						alert("번호를 입력하세요.");
-					} else if(uwallet < cmoney){
+					} else if(parseInt(uwallet) < parseInt(cmoney)){
 						alert("보유 포인트가 부족합니다.");
 					} else{
 						$("#submitRsrv").submit();
