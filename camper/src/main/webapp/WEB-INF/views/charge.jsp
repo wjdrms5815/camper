@@ -44,7 +44,7 @@
 					</c:if>
 		<c:if test="${sessionId != null}">
 				<section class="box">
-						<p style="font-weight: bold; margin-bottom:-5px;">현재 사용 가능 금액 : <fmt:formatNumber value="${mypage.uwallet}" pattern="#,###"/>원</p>
+						
 						<input type="hidden" value="${mypage.uwallet}" id="uwallet">
 						<div align="center" style="margin-left: 45px;">
 						<div style="display: flex;">
@@ -101,7 +101,8 @@
                 var amount = parseInt(rsp.paid_amount);
                 var uwallet2 = parseInt(uwallet);
                 var sum = parseInt(amount+uwallet2);
-                msg += '    현재 잔액 :' + ' ' + sum;
+                var sum2 = sum.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+                msg += ' \n충전 후 잔액 :' + ' ' + sum2;
                 $.ajax({
                     type: "GET", 
                     url: "/chargeSuccess", //충전 금액값을 보낼 url 설정
@@ -114,7 +115,6 @@
                 msg += '에러내용 : ' + rsp.error_msg;
             }
             alert(msg);
-            location.reload(true);
              /* document.location.href=""; //alert창 확인 후 이동할 url 설정  */
         });
     });
