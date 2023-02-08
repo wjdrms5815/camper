@@ -65,7 +65,7 @@
 									
 									<td>결제 전 :</td>
 									<td><input type="text"  value="<fmt:formatNumber value="${userVO.uwallet}" pattern="#,###"/>" >
-									<input type="text" value="${userVO.uwallet }" id="uwallet">
+									<input type="hidden" value="${userVO.uwallet }" id="uwallet" >
 									
 									
 									</td>

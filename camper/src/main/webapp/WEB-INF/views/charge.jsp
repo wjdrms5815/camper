@@ -45,6 +45,7 @@
 		<c:if test="${sessionId != null}">
 				<section class="box">
 						<p style="font-weight: bold; margin-bottom:-5px;">현재 사용 가능 금액 : <fmt:formatNumber value="${mypage.uwallet}" pattern="#,###"/>원</p>
+						<input type="hidden" value="${mypage.uwallet}" id="uwallet">
 						<div align="center" style="margin-left: 45px;">
 						<div style="display: flex;">
 						<input type="radio" name="cp_item" value="10000" style="margin-top: 20px;"><div style="margin : 20px 50px 0px -20px">10,000원</div>
@@ -64,7 +65,8 @@
 						</div>
 						<p style="color: #ac2925; margin-top: 30px">
 						카카오페이의 최소 충전금액은 10,000원이며 최대 충전금액은 500,000원 입니다.</p>
-						<button type="button" id="charge_kakao">충전</button>
+						<input type="button" id="charge_kakao" value="충전"></button>
+						<input type="button" value="뒤로가기" onclick = "window.location = document.referrer;"/>
 				</section>
 
 			</div>
@@ -78,6 +80,7 @@
         var IMP = window.IMP;
         IMP.init('imp58371652');
         var money = $('input[name="cp_item"]:checked').val();
+        var uwallet = $("#uwallet").val();
         console.log(money);
 
         IMP.request_pay({
@@ -95,7 +98,10 @@
             console.log(rsp);
             if (rsp.success) {
                 var msg = money + '원 결제가 완료되었습니다.';
-                msg += '결제 금액 : ' + rsp.paid_amount;
+                var amount = parseInt(rsp.paid_amount);
+                var uwallet2 = parseInt(uwallet);
+                var sum = parseInt(amount+uwallet2);
+                msg += '    현재 잔액 :' + ' ' + sum;
                 $.ajax({
                     type: "GET", 
                     url: "/chargeSuccess", //충전 금액값을 보낼 url 설정
@@ -108,7 +114,8 @@
                 msg += '에러내용 : ' + rsp.error_msg;
             }
             alert(msg);
-            document.location.href="/charge"; //alert창 확인 후 이동할 url 설정
+            location.reload(true);
+             /* document.location.href=""; //alert창 확인 후 이동할 url 설정  */
         });
     });
 </script>
